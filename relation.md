@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-05-14 13:04:09 CST)
+(The last generation time: 2026-05-15 14:34:52 CST)
 
 ### Packages
 
@@ -129,7 +129,7 @@
  app-i18n/libime-jyutping                              | 1.0.14             |            | https://github.com/fcitx/libime-jyutping                                                | A library make use of libime to implement jyutping input method
                                                        | 1.0.15             |            |                                                                                         |
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-i18n/lunar                                        | 2.2-r6             |            | https://packages.debian.org/unstable/utils/lunar                                        | Chinese Lunar Calendar conversion utility
+ app-i18n/lunar                                        | 2.2_p10            |            | https://packages.debian.org/unstable/utils/lunar                                        | Chinese Lunar Calendar conversion utility
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-i18n/vocotype                                     | 2.1.3-r1           |            | https://github.com/LeonardNJU/VocoType-linux                                            | Linux offline voice input method based on FunASR Paraformer
    app-i18n/fcitx                                      | 9999               |  D, RD     | https://fcitx-im.org/                                                                   | Fcitx 5 is a generic input method framework
