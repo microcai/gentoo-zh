@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-05-16 20:03:02 CST)
+(The last generation time: 2026-05-16 21:53:37 CST)
 
 ### Packages
 
@@ -245,6 +245,7 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-text/wiki2man_on_rust                             | 0.1.10             |            | https://gitlab.com/vitaly-zdanevich/wiki2man_on_rust                                    | Convert MediaWiki XML dumps into man(7) pages - so you can read Wikipedia in man
                                                        | 0.2.1              |            |                                                                                         |
+                                                       | 0.5.1              |            |                                                                                         |
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-vim/easymotion                                    | 1.3                |            | http://www.vim.org/scripts/script.php?script_id=3526                                    | vim plugin: Vim motions on speed!
                                                        | 3.0.1              |            |                                                                                         |
