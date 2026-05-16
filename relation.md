@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-05-15 19:05:28 CST)
+(The last generation time: 2026-05-16 12:39:21 CST)
 
 ### Packages
 
@@ -244,6 +244,7 @@
  app-text/wik                                          | 2.0.1              |            | https://github.com/yashsinghcodes/wik                                                   | Wikipedia like a man - in the terminal, without images, with caching
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-text/wiki2man_on_rust                             | 0.1.10             |            | https://gitlab.com/vitaly-zdanevich/wiki2man_on_rust                                    | Convert MediaWiki XML dumps into man(7) pages - so you can read Wikipedia in man
+                                                       | 0.2.1              |            |                                                                                         |
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-vim/easymotion                                    | 1.3                |            | http://www.vim.org/scripts/script.php?script_id=3526                                    | vim plugin: Vim motions on speed!
                                                        | 3.0.1              |            |                                                                                         |
