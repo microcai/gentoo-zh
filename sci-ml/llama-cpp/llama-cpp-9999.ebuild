@@ -170,6 +170,7 @@ src_configure() {
 		-DLLAMA_BUILD_EXAMPLES="$(usex examples)"
 		-DLLAMA_BUILD_SERVER="$(usex server)"
 		-DLLAMA_BUILD_UI="$(usex webui)"
+		-DLLAMA_BUILD_WEBUI="$(usex webui)"
 
 		-DGGML_RPC="$(usex rpc)"
 		-DGGML_CUDA="$(usex cuda)"
