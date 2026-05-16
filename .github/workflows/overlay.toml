@@ -1489,13 +1489,6 @@ prefix = "v"
 # high update frequency
 # ["net-proxy/trojan-go-fork"]
 
-["net-proxy/tun2socks"]
-source = "github"
-github = "xjasonlyu/tun2socks"
-use_latest_tag = true
-github_account = "peeweep"
-prefix = "v"
-
 ["net-proxy/v2ray"]
 source = "github"
 github = "v2fly/v2ray-core"
