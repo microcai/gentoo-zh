@@ -8,6 +8,12 @@ ROCM_VERSION="6.3"
 inherit cmake cuda rocm linux-info
 
 TINY_LLAMAS_COMMIT="99dd1a73db5a37100bd4ae633f4cfce6560e1567"
+LLAMACPP_WEBUI_ASSETS=(
+	index.html
+	bundle.js
+	bundle.css
+	loading.html
+)
 
 DESCRIPTION="LLM inference in C/C++"
 HOMEPAGE="https://github.com/ggml-org/llama.cpp"
@@ -16,9 +22,14 @@ if [[ ${PV} == *9999* ]]; then
 	inherit git-r3
 	EGIT_REPO_URI="https://github.com/ggml-org/llama.cpp.git"
 else
-	MY_PV="${PV#0_pre}"
-	SRC_URI="https://github.com/ggml-org/llama.cpp/archive/refs/tags/b${MY_PV}.tar.gz -> ${P}.tar.gz"
-	S="${WORKDIR}/llama.cpp-b${MY_PV}"
+	MY_PV="b${PV#0_pre}"
+	SRC_URI="https://github.com/ggml-org/llama.cpp/archive/refs/tags/${MY_PV}.tar.gz -> ${P}.tar.gz"
+	SRC_URI+=" webui? ("
+	for asset in "${LLAMACPP_WEBUI_ASSETS[@]}"; do
+		SRC_URI+=" https://huggingface.co/buckets/ggml-org/llama-ui/resolve/${MY_PV}/${asset} -> ${P}-webui_asset-${asset}"
+	done
+	SRC_URI+=" )"
+	S="${WORKDIR}/llama.cpp-${MY_PV}"
 	KEYWORDS="~amd64 ~riscv"
 fi
 
@@ -48,19 +59,28 @@ X86_CPU_FLAGS=(
 	amx_int8
 	amx_bf16
 )
-RISCV_CPU_FLAGS=( v zfh zvfh zicbop zihintpause xtheadvector )
+RISCV_CPU_FLAGS=( v zba zfh zvfh zicbop zihintpause xtheadvector )
 CPU_FLAGS=(
 	"${X86_CPU_FLAGS[@]/#/cpu_flags_x86_}"
 	"${RISCV_CPU_FLAGS[@]/#/cpu_flags_riscv_}"
 )
 
-IUSE="openblas +openmp blis rocm cuda opencl vulkan flexiblas wmma examples rpc +server ${CPU_FLAGS[*]}"
+IUSE="openblas +openmp blis rocm cuda opencl vulkan flexiblas wmma examples rpc +server webui spacemit ${CPU_FLAGS[*]}"
 
 REQUIRED_USE="
 	?? ( openblas blis flexiblas )
-	rocm? ( ${ROCM_REQUIRED_USE} )
+	rocm? ( ${ROCM_REQUIRED_USE} !riscv )
 	wmma? ( rocm )
-	riscv? ( !rocm )
+	webui? ( server )
+	spacemit? (
+		riscv
+		cpu_flags_riscv_v
+		cpu_flags_riscv_zfh
+		cpu_flags_riscv_zvfh
+		cpu_flags_riscv_zicbop
+		cpu_flags_riscv_zihintpause
+		cpu_flags_riscv_zba
+	)
 "
 
 CDEPEND="
@@ -99,6 +119,30 @@ pkg_setup() {
 	fi
 }
 
+src_unpack() {
+	if [[ ${PV} == *9999* ]]; then
+		git-r3_src_unpack
+	else
+		default
+	fi
+
+	if use webui; then
+		mkdir -p "${WORKDIR}/webui-dist"
+		sed -Ei "s:LOCAL_UI_DIR \"[^\"]+\":LOCAL_UI_DIR \"${WORKDIR}/webui-dist\":" "${S}/tools/ui/CMakeLists.txt" || die
+
+		if [[ ${PV} == *9999* ]]; then
+			for asset in "${LLAMACPP_WEBUI_ASSETS[@]}"; do
+				wget -O "${WORKDIR}/webui-dist/${asset}" \
+					"https://huggingface.co/buckets/ggml-org/llama-ui/resolve/latest/${asset}" || die
+			done
+		else
+			for asset in "${LLAMACPP_WEBUI_ASSETS[@]}"; do
+				cp -v "${DISTDIR}/${P}-webui_asset-${asset}" "${WORKDIR}/webui-dist/${asset}" || die
+			done
+		fi
+	fi
+}
+
 src_prepare() {
 	use cuda && cuda_src_prepare
 	cmake_src_prepare
@@ -112,46 +156,49 @@ src_prepare() {
 src_configure() {
 	if [[ ${PV} == *9999* ]]; then
 		local mycmakeargs=(
-			-DLLAMA_BUILD_NUMBER=$(git rev-list --count HEAD)
-			-DLLAMA_BUILD_COMMIT=$(git rev-parse HEAD)
+			-DLLAMA_BUILD_NUMBER="$(git rev-list --count HEAD)"
+			-DLLAMA_BUILD_COMMIT="$(git rev-parse HEAD)"
 		)
 	else
-		local mycmakeargs=( -DLLAMA_BUILD_NUMBER=${MY_PV} )
+		local mycmakeargs=( -DLLAMA_BUILD_NUMBER="${MY_PV#b}" )
 	fi
 
 	mycmakeargs+=(
+		-DGGML_CCACHE=OFF
 		-DCMAKE_SKIP_BUILD_RPATH=ON
 		-DLLAMA_BUILD_TESTS=OFF
-		-DLLAMA_BUILD_EXAMPLES=$(usex examples)
-		-DLLAMA_BUILD_SERVER=$(usex server)
+		-DLLAMA_BUILD_EXAMPLES="$(usex examples)"
+		-DLLAMA_BUILD_SERVER="$(usex server)"
+		-DLLAMA_BUILD_UI="$(usex webui)"
 
-		-DGGML_RPC=$(usex rpc)
-		-DGGML_CUDA=$(usex cuda)
-		-DGGML_OPENCL=$(usex opencl)
-		-DGGML_OPENMP=$(usex openmp)
-		-DGGML_VULKAN=$(usex vulkan)
+		-DGGML_RPC="$(usex rpc)"
+		-DGGML_CUDA="$(usex cuda)"
+		-DGGML_OPENCL="$(usex opencl)"
+		-DGGML_OPENMP="$(usex openmp)"
+		-DGGML_VULKAN="$(usex vulkan)"
 
 		-DGGML_NATIVE=OFF
-		-DGGML_SSE42=$(usex cpu_flags_x86_sse4_2)
-		-DGGML_AVX=$(usex cpu_flags_x86_avx)
-		-DGGML_AVX_VNNI=$(usex cpu_flags_x86_avx_vnni)
-		-DGGML_AVX2=$(usex cpu_flags_x86_avx2)
-		-DGGML_BMI2=$(usex cpu_flags_x86_bmi2)
-		-DGGML_AVX512_VBMI=$(usex cpu_flags_x86_avx512vbmi)
-		-DGGML_AVX512_VNNI=$(usex cpu_flags_x86_avx512_vnni)
-		-DGGML_AVX512_BF16=$(usex cpu_flags_x86_avx512_bf16)
-		-DGGML_FMA=$(usex cpu_flags_x86_fma3)
-		-DGGML_F16C=$(usex cpu_flags_x86_f16c)
-		-DGGML_AMX_TILE=$(usex cpu_flags_x86_amx_tile)
-		-DGGML_AMX_INT8=$(usex cpu_flags_x86_amx_int8)
-		-DGGML_AMX_BF16=$(usex cpu_flags_x86_amx_bf16)
+		-DGGML_SSE42="$(usex cpu_flags_x86_sse4_2)"
+		-DGGML_AVX="$(usex cpu_flags_x86_avx)"
+		-DGGML_AVX_VNNI="$(usex cpu_flags_x86_avx_vnni)"
+		-DGGML_AVX2="$(usex cpu_flags_x86_avx2)"
+		-DGGML_BMI2="$(usex cpu_flags_x86_bmi2)"
+		-DGGML_AVX512_VBMI="$(usex cpu_flags_x86_avx512vbmi)"
+		-DGGML_AVX512_VNNI="$(usex cpu_flags_x86_avx512_vnni)"
+		-DGGML_AVX512_BF16="$(usex cpu_flags_x86_avx512_bf16)"
+		-DGGML_FMA="$(usex cpu_flags_x86_fma3)"
+		-DGGML_F16C="$(usex cpu_flags_x86_f16c)"
+		-DGGML_AMX_TILE="$(usex cpu_flags_x86_amx_tile)"
+		-DGGML_AMX_INT8="$(usex cpu_flags_x86_amx_int8)"
+		-DGGML_AMX_BF16="$(usex cpu_flags_x86_amx_bf16)"
 
-		-DGGML_RVV=$(usex cpu_flags_riscv_v)
-		-DGGML_RV_ZFH=$(usex cpu_flags_riscv_zfh)
-		-DGGML_RV_ZVFH=$(usex cpu_flags_riscv_zvfh)
-		-DGGML_RV_ZICBOP=$(usex cpu_flags_riscv_zicbop)
-		-DGGML_RV_ZIHINTPAUSE=$(usex cpu_flags_riscv_zihintpause)
-		-DGGML_XTHEADVECTOR=$(usex cpu_flags_riscv_xtheadvector)
+		-DGGML_RVV="$(usex cpu_flags_riscv_v)"
+		-DGGML_RV_ZFH="$(usex cpu_flags_riscv_zfh)"
+		-DGGML_RV_ZVFH="$(usex cpu_flags_riscv_zvfh)"
+		-DGGML_RV_ZICBOP="$(usex cpu_flags_riscv_zicbop)"
+		-DGGML_RV_ZIHINTPAUSE="$(usex cpu_flags_riscv_zihintpause)"
+		-DGGML_XTHEADVECTOR="$(usex cpu_flags_riscv_xtheadvector)"
+		-DGGML_CPU_RISCV64_SPACEMIT="$(usex spacemit)"
 	)
 
 	if use cpu_flags_x86_avx512f &&
@@ -190,12 +237,16 @@ src_configure() {
 	fi
 
 	if use rocm; then
-		rocm_use_hipcc
+		export HIPCXX="$(hipconfig -l)/clang" HIP_PATH="$(hipconfig -R)"
 		mycmakeargs+=(
 			-DAMDGPU_TARGETS="$(get_amdgpu_flags)"
 			-DGGML_HIP=ON
 			-DGGML_HIP_ROCWMMA_FATTN="$(usex wmma)"
 		)
+	fi
+
+	if use spacemit; then
+		mycmakeargs+=( -DCMAKE_TOOLCHAIN_FILE="${S}/cmake/riscv64-spacemit-linux-gnu-gcc.cmake" )
 	fi
 
 	cmake_src_configure
