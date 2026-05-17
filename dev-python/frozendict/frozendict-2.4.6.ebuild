@@ -10,12 +10,11 @@ inherit distutils-r1
 DESCRIPTION="A simple immutable dictionary for Python"
 HOMEPAGE="https://github.com/Marco-Sulla/python-frozendict"
 SRC_URI="https://github.com/Marco-Sulla/python-frozendict/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+S="${WORKDIR}/python-${PN}-${PV}"
 
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64"
-
-S="${WORKDIR}/python-${PN}-${PV}"
 
 BDEPEND="
 	$(python_gen_cond_dep 'dev-python/setuptools-scm[${PYTHON_USEDEP}]')
