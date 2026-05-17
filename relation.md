@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-05-16 21:53:37 CST)
+(The last generation time: 2026-05-17 10:53:45 CST)
 
 ### Packages
 
@@ -158,6 +158,7 @@
  app-misc/ccal                                         | 2.5.3              |            | http://ccal.chinesebay.com/ccal/ccal.htm                                                | A simple command line calendar for Chinese lunar
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-misc/cc-switch                                    | 3.14.1             |            | https://github.com/farion1231/cc-switch                                                 | All-in-One Assistant for Claude Code, Codex & Gemini CLI
+                                                       | 3.15.0             |            |                                                                                         |
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-misc/cc-switch-bin                                | 3.14.1             |            | https://github.com/farion1231/cc-switch                                                 | All-in-one manager for Claude Code, Codex, Gemini CLI, OpenCode, and OpenClaw
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
