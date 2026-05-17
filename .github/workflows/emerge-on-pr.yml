@@ -97,6 +97,8 @@ jobs:
       matrix:
         package: ${{ fromJSON(needs.scan.outputs.packages) }}
         profile:
+          - amd64-systemd
+          - amd64-llvm-systemd
           - amd64-desktop-openrc
           - amd64-desktop-systemd
 
@@ -107,68 +109,48 @@ jobs:
 
     steps:
     - name: sync gentoo main tree
-      run: |
-        emerge-webrsync
+      run: emerge-webrsync
 
-    - name: cat binrepos
-      run: |
-        cat /etc/portage/binrepos.conf/*
+    - name: fetch repo
+      uses: actions/checkout@v6
+      with:
+        repository: ${{ github.event.pull_request.head.repo.full_name }}
+        ref: ${{ github.event.pull_request.head.sha }}
 
-    - name: setup features
+    - name: setup repo
       run: |
-        echo 'FEATURES="getbinpkg"' >> /etc/portage/make.conf
-        getuto
+        mkdir -p /etc/portage/repos.conf
+        cat > /etc/portage/repos.conf/repo.conf << EOF
+        [$(cat profiles/repo_name)]
+        location = $(realpath .)
+        priority = 0
+        EOF
+
+    - name: setup portage make.conf
+      run: |
+        cat >> /etc/portage/make.conf << EOF
+        FEATURES="\${FEATURES} getbinpkg"
+        MAKEOPTS="\${MAKEOPTS} -j$(nproc)"
+        PORTAGE_ELOG_CLASSES="qa warn error"
+        PORTAGE_ELOG_SYSTEM="save"
+        EOF
+        cat /etc/portage/make.conf
+
+    - name: setup keyring for binpkgs
+      run: getuto
 
     - name: setup distfiles permissions
       run: |
-        mkdir -p /var/cache/distfiles
-        chown root:portage /var/cache/distfiles
-        chmod 775 /var/cache/distfiles
-        install -d -o portage -g portage -m 775 /var/cache/distfiles/git3-src
-
-    - name: install depends
-      run: |
-        emerge --verbose --quiet --jobs $(nproc) --autounmask y --autounmask-continue y \
-        app-eselect/eselect-repository \
-        app-misc/jq \
-        dev-vcs/git
-
-    - name: setup gentoo git repo
-      run: |
-        eselect repository add gentoo git https://github.com/gentoo-mirror/gentoo.git
-        rm -rf /var/db/repos/gentoo
-        emaint sync -r gentoo
-
-    - name: fetch
-      uses: actions/checkout@v6
-      with:
-        fetch-depth: 0
-        repository: ${{ github.event.pull_request.head.repo.full_name }}
-        ref: ${{ github.event.pull_request.head.sha }}
-        path: gentoo-zh
-
-    - name: setup gentoo-zh repo
-      run: |
-        eselect repository add gentoo-zh git `realpath ./gentoo-zh`
-        emaint sync -r gentoo-zh
-
-    - name: setup elogs
-      run: |
-        echo 'PORTAGE_ELOG_CLASSES="qa warn error"' >> /etc/portage/make.conf
-        echo 'PORTAGE_ELOG_SYSTEM="save"' >> /etc/portage/make.conf
-
-    - name: cat /etc/portage/make.conf
-      run: |
-        cat /etc/portage/make.conf
+        install -dm775 -o root -g portage /var/cache/distfiles
+        install -dm775 -o portage -g portage /var/cache/distfiles/git3-src
 
     - name: emerge --onlydeps packages
       run: |
         emerge --quiet --autounmask=y --autounmask-write=y --autounmask-continue=y --onlydeps ${{ matrix.package }}
-        rm -rf /var/log/portage/elog/
+        rm -rf /var/log/portage/elog/*
 
     - name: emerge packages
-      run: |
-        emerge --quiet --autounmask=y --autounmask-write=y --autounmask-continue=y ${{ matrix.package }}
+      run: emerge --verbose --autounmask=y --autounmask-write=y --autounmask-continue=y ${{ matrix.package }}
 
     - name: check Portage elog (fail if exists)
       run: |
@@ -176,6 +158,5 @@ jobs:
           echo "❌ Found Portage elog messages:"
           cat /var/log/portage/elog/*
           exit 1
-        else
-          echo "✅ No elog messages found."
         fi
+        echo "✅ No elog messages found."
