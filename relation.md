@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-05-17 16:35:39 CST)
+(The last generation time: 2026-05-17 21:03:45 CST)
 
 ### Packages
 
@@ -814,7 +814,7 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  sci-electronics/openfpgaloader                        | 1.1.1              |            | https://trabucayre.github.io/openFPGALoader                                             | Universal utility for programming FPGAs
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- sci-ml/llama-cpp                                      | 0_pre8583          |            | https://github.com/ggml-org/llama.cpp                                                   | LLM inference in C/C++
+ sci-ml/llama-cpp                                      | 0_pre9174          |            | https://github.com/ggml-org/llama.cpp                                                   | LLM inference in C/C++
                                                        | 9999               |            |                                                                                         |
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  sec-policy/apparmor-profile-deepinwine                | 1.0.0              |            | https://gitlab.com/apparmor/apparmor/wikis/home                                         | A collection of AppArmor profiles for Deepinwine6
