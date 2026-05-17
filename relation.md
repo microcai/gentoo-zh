@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-05-17 10:53:45 CST)
+(The last generation time: 2026-05-17 11:09:51 CST)
 
 ### Packages
 
@@ -387,7 +387,7 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/maixvision                                   | 1.2.2-r1           |            | https://www.sipeed.com/maixvision                                                       | MaixVision - AIoT development platform
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-util/opencode-bin                                 | 1.15.0             |            | https://opencode.ai                                                                     | The open source AI coding agent
+ dev-util/opencode-bin                                 | 1.15.3             |            | https://opencode.ai                                                                     | The open source AI coding agent
                                                        | 9999               |            |                                                                                         |
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/osc                                          | 1.26.0             |            | https://github.com/openSUSE/osc                                                         | The Command Line Interface to work with an Open Build Service
@@ -729,7 +729,7 @@
                                                        | 9999               |            |                                                                                         |
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/clash-verge-rev                             | 2.4.7              |            | https://www.clashverge.dev                                                              | GUI client based on Tauri for tailored proxy experience
-   net-proxy/mihomo                                    | 1.19.24            | BD, RD     | https://wiki.metacubex.one/                                                             | Another Clash Kernel, formerly Clash.Meta
+   net-proxy/mihomo                                    | 1.19.25            | BD, RD     | https://wiki.metacubex.one/                                                             | Another Clash Kernel, formerly Clash.Meta
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/dae                                         | 1.0.0              |            | https://github.com/daeuniverse/dae                                                      | A lightweight and high-performance transparent proxy solution based on eBPF
                                                        | 1.1.0              |            |                                                                                         |
