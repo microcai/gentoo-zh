@@ -1,11 +1,14 @@
-# Copyright 1999-2024 Gentoo Authors
+# Copyright 1999-2026 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
 
 MY_PV_YEAR="$(ver_cut 1)"
 MY_PV="$(ver_cut 2).$(ver_cut 3).$(ver_cut 4).$(ver_cut 5)"
-MY_PGK_NAME="com.zwsoft.${PN}${MY_PV_YEAR}"
+# The 2026 deb dropped the com.zwsoft prefix and the files/ sub-directory,
+# so PKG_NAME is just zwcadYYYY and the install root is /opt/apps/PKG_NAME.
+PKG_NAME="${PN}${MY_PV_YEAR}"
+
 inherit desktop unpacker xdg
 
 DESCRIPTION="CAD software for 2D drawing, reviewing and printing work"
@@ -13,7 +16,7 @@ HOMEPAGE="https://www.zwsoft.cn/product/zwcad/linux"
 
 URI_ANACONDA="https://anaconda.org/anaconda"
 SRC_URI="
-	${PN}${MY_PV_YEAR}_${MY_PV}_amd64.deb
+	${PKG_NAME}_${MY_PV}_amd64.deb
 	${URI_ANACONDA}/python/3.8.20/download/linux-64/python-3.8.20-he870216_0.tar.bz2 -> ${PN}-python-3.8.20.tar.bz2
 "
 S=${WORKDIR}
@@ -24,13 +27,15 @@ KEYWORDS="-* ~amd64"
 
 RESTRICT="strip mirror bindist fetch"
 
+# ZWCAD ships its own Qt and dotnet runtimes inside /opt/apps/${PKG_NAME}/
+# (RPATH below points there), so no system dev-qt/* deps are required.
 RDEPEND="
 	media-libs/fontconfig
 	media-libs/libglvnd
 	media-libs/tiff-compat:4
 	sys-apps/util-linux
-	virtual/zlib
 	virtual/libcrypt:=
+	virtual/zlib
 "
 
 DEPEND="${RDEPEND}"
@@ -40,58 +45,55 @@ BDEPEND="dev-util/patchelf"
 QA_PREBUILT="*"
 
 src_unpack() {
-	unpack_deb "${DISTDIR}/${PN}${MY_PV_YEAR}_${MY_PV}_amd64.deb"
+	unpack_deb "${DISTDIR}/${PKG_NAME}_${MY_PV}_amd64.deb"
 	tar -xf "${DISTDIR}/${PN}-python-3.8.20.tar.bz2" \
-		-C "${S}/opt/apps/"${MY_PGK_NAME}"/files/ZwPyRuntime/python3.8/" || die
+		-C "${S}/opt/apps/${PKG_NAME}/ZwPyRuntime/python3.8/" || die
 }
 
 src_install() {
-	# Install scalable icons
-	doicon -s scalable "${S}"/opt/apps/${MY_PGK_NAME}/entries/icons/hicolor/scalable/apps/com.zwsoft.zwcad2026.svg
+	# Drop bundled older Python runtimes that we are not using
+	local v
+	for v in 3.4 3.5 3.6; do
+		rm -rf "${S}/opt/apps/${PKG_NAME}/ZwPyRuntime/python${v}" || die
+		rm -f  "${S}/opt/apps/${PKG_NAME}/libZwPythonLoad${v#3.}.so" || die
+	done
+	rm -rf "${S}/opt/apps/${PKG_NAME}/ZwPyRuntime/python3.8/compiler_compat" || die
 
-	# Fix python and QA problems about python
-	rm -rf "${S}/opt/apps/"${MY_PGK_NAME}"/files/ZwPyRuntime/python3.6/" || die
-	rm -rf "${S}/opt/apps/"${MY_PGK_NAME}"/files/libZwPythonLoad6.so" || die
-	rm -rf "${S}/opt/apps/"${MY_PGK_NAME}"/files/ZwPyRuntime/python3.5/" || die
-	rm -rf "${S}/opt/apps/"${MY_PGK_NAME}"/files/libZwPythonLoad5.so" || die
-	rm -rf "${S}/opt/apps/"${MY_PGK_NAME}"/files/ZwPyRuntime/python3.4/" || die
-	rm -rf "${S}/opt/apps/"${MY_PGK_NAME}"/files/libZwPythonLoad4.so" || die
-	rm -rf "${S}/opt/apps/"${MY_PGK_NAME}"/files/ZwPyRuntime/python3.8/compiler_compat" || die
-
-	# Set RPATH for preserve-libs handling
-	pushd "${S}"/opt/apps/${MY_PGK_NAME}/files || die
-	local x
-	for x in $(find) ; do
+	# Set RPATH so the bundled libs in /opt/apps/${PKG_NAME}/ are found
+	pushd "${S}/opt/apps/${PKG_NAME}" || die
+	local x RPATH_ROOT="/opt/apps/${PKG_NAME}"
+	local RPATH_S="${RPATH_ROOT}/:"
+	RPATH_S+="${RPATH_ROOT}/lib/:"
+	RPATH_S+="${RPATH_ROOT}/lib/stdcpp/:"
+	RPATH_S+="${RPATH_ROOT}/lib/GL/:"
+	RPATH_S+="${RPATH_ROOT}/lib/freetype/:"
+	RPATH_S+="${RPATH_ROOT}/plugins/:"
+	RPATH_S+="${RPATH_ROOT}/zh-CN/:"
+	RPATH_S+="${RPATH_ROOT}/ZwPyRuntime/python3.7/lib"
+	for x in $(find); do
 		# Use \x7fELF header to separate ELF executables and libraries
 		[[ -f "${x}" && "${x: -2}" != ".o" && $(od -t x1 -N 4 "${x}") == *"7f 45 4c 46"* ]] || continue
-		local RPATH_ROOT="/opt/apps/${MY_PGK_NAME}/files"
-		local RPATH_S="${RPATH_ROOT}/:${RPATH_ROOT}/lib/:${RPATH_ROOT}/lib/mono/lib/:${RPATH_ROOT}/plugins/:${RPATH_ROOT}/zh-CN/:${RPATH_ROOT}/ZwPyRuntime/python3.7/lib"
 		patchelf --set-rpath "${RPATH_S}" "${x}" || \
 			die "patchelf failed on ${x}"
 	done
 	popd || die
 
-	# Fix desktop files
-	sed -E -i 's/^Exec=.*$/Exec=zwcad %F/g' \
-		"${S}/opt/apps/${MY_PGK_NAME}/entries/applications/${MY_PGK_NAME}.desktop" || die
-	sed -E -i 's/Application;//g' "${S}/opt/apps/${MY_PGK_NAME}/entries/applications/${MY_PGK_NAME}.desktop" || die
-	# The Version entry in a .desktop file doesn't refer to the version of the
-	# target program. It's the version of the desktop file specification that
-	# this desktop file conforms to.
-	sed -E -i 's/^Version=.*$/Version=1.0/g' \
-		"${S}/opt/apps/${MY_PGK_NAME}/entries/applications/${MY_PGK_NAME}.desktop" || die
-	sed -E -i 's/^Categories=.*$/Categories=Graphics;VectorGraphics;Engineering;Construction;2DGraphics;/g' \
-		"${S}/opt/apps/${MY_PGK_NAME}/entries/applications/${MY_PGK_NAME}.desktop" || die
-	domenu "${S}/opt/apps/${MY_PGK_NAME}/entries/applications/${MY_PGK_NAME}.desktop"
+	# Fix .desktop file: drop non-standard Application category and the
+	# upstream Version=26.1.3.4 (this field is the desktop-file spec
+	# version, not the application version).
+	sed -E -i 's/^Categories=.*$/Categories=Graphics;VectorGraphics;Engineering;Construction;2DGraphics;/' \
+		"${S}/usr/share/applications/${PKG_NAME}.desktop" || die
+	sed -E -i 's/^Version=.*$/Version=1.0/' \
+		"${S}/usr/share/applications/${PKG_NAME}.desktop" || die
+	domenu "${S}/usr/share/applications/${PKG_NAME}.desktop"
 
-	sed -i "1i\\export MONO_PATH=/opt/apps/${MY_PGK_NAME}/files/lib/mono/lib/mono/4.5\n" \
-		"${S}/opt/apps/${MY_PGK_NAME}/files/ZWCADRUN.sh" || die
-	sed -E -i 's/export QT_IM_MODULE=fcitx//g' "${S}/opt/apps/${MY_PGK_NAME}/files/ZWCADRUN.sh" || die
+	# Let the user's running input method override the hard-coded
+	# QT_IM_MODULE=fcitx that ZWCADRUN.sh exports otherwise.
+	sed -E -i 's/export QT_IM_MODULE=fcitx//' \
+		"${S}/opt/apps/${PKG_NAME}/ZWCADRUN.sh" || die
 
-	# Add zw3d command
-	mkdir -p "${S}"/usr/bin/ || die
-
-	cat >> "${S}"/opt/apps/${MY_PGK_NAME}/zwcad <<- EOF || die
+	# Install zwcad wrapper
+	cat >> "${S}/opt/apps/${PKG_NAME}/zwcad" <<- EOF || die
 #!/bin/sh
 if [ -z "\${QT_IM_MODULE}" ]
 then
@@ -109,22 +111,22 @@ then
 		export QT_IM_MODULE=fcitx
 	fi
 fi
-export MONO_PATH=/opt/apps/${MY_PGK_NAME}/files/lib/mono/lib/mono/4.5
-sh /opt/apps/${MY_PGK_NAME}/files/ZWCADRUN.sh \$*
+sh /opt/apps/${PKG_NAME}/ZWCADRUN.sh \$*
 	EOF
 
-	ln -s /opt/apps/${MY_PGK_NAME}/zwcad "${S}"/usr/bin/zwcad || die
+	mkdir -p "${S}/usr/bin/" || die
+	ln -s "/opt/apps/${PKG_NAME}/zwcad" "${S}/usr/bin/zwcad" || die
 
 	# Install package and fix permissions
 	insinto /opt/apps/
-	doins -r opt/apps/${MY_PGK_NAME}
+	doins -r "opt/apps/${PKG_NAME}"
 	insinto /usr
 	doins -r usr/*
 
-	fperms 0755 /opt/apps/${MY_PGK_NAME}/zwcad
+	fperms 0755 "/opt/apps/${PKG_NAME}/zwcad"
 
 	pushd "${S}" || die
-	for x in $(find "opt/apps/${MY_PGK_NAME}") ; do
+	for x in $(find "opt/apps/${PKG_NAME}") ; do
 		# Fix shell script permissions
 		[[ "${x: -3}" == ".sh" ]] && fperms 0755 "/${x}"
 		# Use \x7fELF header to separate ELF executables and libraries
