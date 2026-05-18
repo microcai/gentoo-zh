@@ -3,15 +3,13 @@
 
 EAPI=8
 
-MY_PGK_NAME="com.zwsoft.zw3d2026"
-
+MY_PV_YEAR="$(ver_cut 1)"
+MY_PGK_NAME="com.zwsoft.zw3d${MY_PV_YEAR}"
 inherit unpacker xdg
 
 DESCRIPTION="CAD/CAM software for 3D design and processing"
 HOMEPAGE="https://www.zwsoft.cn/product/zw3d/linux"
-SRC_URI="
-	amd64? ( signed_${MY_PGK_NAME}_${PV}_amd64.deb )
-"
+SRC_URI="signed_com.zwsoft.zw3d${MY_PV_YEAR}_${PV}_amd64.deb"
 
 S="${WORKDIR}"
 
@@ -21,6 +19,8 @@ KEYWORDS="-* ~amd64"
 
 RESTRICT="strip mirror bindist fetch"
 
+# ZW3D bundles its own Qt 5.9.7 in files/libqt/ and RPATH points there
+# (see src_install below), so the system does not need any dev-qt/*:5.
 RDEPEND="
 	app-arch/bzip2
 	app-arch/xz-utils
@@ -29,11 +29,6 @@ RDEPEND="
 	dev-libs/glib:2
 	dev-libs/libpcre
 	dev-libs/libxml2
-	dev-qt/qtcore:5
-	dev-qt/qtgui:5
-	dev-qt/qtnetwork:5
-	dev-qt/qtprintsupport:5
-	dev-qt/qtsvg:5
 	media-fonts/noto-cjk
 	media-gfx/imagemagick
 	media-libs/freetype
@@ -44,7 +39,7 @@ RDEPEND="
 	media-libs/tiff
 	media-libs/tiff-compat:4
 	net-libs/zeromq
-	virtual/zlib:=
+	virtual/zlib
 	x11-libs/cairo
 	x11-libs/gdk-pixbuf:2
 	x11-libs/gtk+:3
@@ -117,15 +112,6 @@ export IBUS_USE_PORTAL=1
 
 	# Use system libraries
 	rm -rf "${S}"/opt/apps/${MY_PGK_NAME}/files/lib3rd/libfreetype* || die
-
-	# Fix coredump while draw 2D sketch due to not find fonts
-	# media-fonts/noto-cjk is required
-	# and should use /usr/share/fonts/noto-cjk/NotoSansCJK-Regular.ttc
-	local MY_FONT_PATH_OLD="/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc"
-	local MY_FONT_PATH_NEW="//////usr/share/fonts/noto-cjk/NotoSansCJK-Regular.ttc"
-#	bbe -e "s|${MY_FONT_PATH_OLD}|${MY_FONT_PATH_NEW}|" "${S}/opt/apps/${MY_PGK_NAME}/files/libdisp.so" \
-#		> "${S}/opt/apps/${MY_PGK_NAME}/files/libdisp.so.tmp" && \
-#	mv "${S}/opt/apps/${MY_PGK_NAME}/files/libdisp.so.tmp" "${S}/opt/apps/${MY_PGK_NAME}/files/libdisp.so" || die
 
 	# Install package and fix permissions
 	insinto /opt/apps
