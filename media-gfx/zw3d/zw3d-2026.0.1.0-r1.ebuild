@@ -57,7 +57,6 @@ RDEPEND="
 DEPEND="${RDEPEND}"
 
 BDEPEND="
-	dev-util/bbe
 	dev-util/patchelf
 "
 
