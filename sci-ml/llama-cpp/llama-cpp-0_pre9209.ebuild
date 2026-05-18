@@ -251,10 +251,3 @@ src_configure() {
 
 	cmake_src_configure
 }
-
-src_install() {
-	cmake_src_install
-
-	# remove convert_hf_to_gguf.py due to unsatisfied dependencies
-	rm -v "${D}/usr/bin/convert_hf_to_gguf.py"
-}
