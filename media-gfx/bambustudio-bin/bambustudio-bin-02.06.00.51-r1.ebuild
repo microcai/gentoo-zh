@@ -22,21 +22,30 @@ LICENSE="AGPL-3"
 SLOT="0"
 KEYWORDS="-* ~amd64"
 RDEPEND="
+	dev-libs/glib:2
+	dev-libs/wayland
 	media-gfx/openvdb
+	media-libs/fontconfig
 	media-libs/glew:0=
 	>=media-libs/glm-0.9.9.1
+	media-libs/gst-plugins-base
 	media-libs/gstreamer
 	media-libs/libglvnd
 	media-libs/mesa
 	net-libs/libsoup:2.4
 	net-libs/webkit-gtk:4.1
 	>=sci-libs/opencascade-7.3.0:0=
+	sys-apps/dbus
 	virtual/glu
+	virtual/zlib
 	>=x11-libs/cairo-1.8.8:=
+	x11-libs/gdk-pixbuf:2
+	x11-libs/gtk+:3
+	x11-libs/libX11
 	x11-libs/libxkbcommon
+	x11-libs/pango
 	>=x11-libs/pixman-0.30
 	x11-libs/wxGTK:${WX_GTK_VER}=[X,opengl]
-	virtual/zlib
 "
 DEPEND="${RDEPEND}"
 BDEPEND="
