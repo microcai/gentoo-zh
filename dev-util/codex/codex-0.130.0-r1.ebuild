@@ -123,8 +123,14 @@ src_compile() {
 	use amd64 && rusty_v8_triple=x86_64-unknown-linux-musl
 	use arm64 && rusty_v8_triple=aarch64-unknown-linux-musl
 
+	# Override upstream's fat LTO (Cargo.toml [profile.release] lto = "fat",
+	# codegen-units = 1): on machines with ~25-30 GB free RAM the final
+	# link of the codex binary gets OOM-killed. Thin LTO parallelises the
+	# work and roughly halves peak memory at the cost of a slightly larger
+	# binary, which is acceptable for a standalone Gentoo install.
 	RUSTY_V8_ARCHIVE="${DISTDIR}/rusty_v8_${RUSTY_V8_TAG}_librusty_v8_release_${rusty_v8_triple}.a.gz" \
 	RUSTY_V8_SRC_BINDING_PATH="${DISTDIR}/rusty_v8_${RUSTY_V8_TAG}_src_binding_release_${rusty_v8_triple}.rs" \
+	CARGO_PROFILE_RELEASE_LTO=thin \
 		cargo_src_compile --package codex-cli
 }
 
