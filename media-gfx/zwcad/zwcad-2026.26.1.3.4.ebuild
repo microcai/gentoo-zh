@@ -1,4 +1,4 @@
-# Copyright 1999-2023 Gentoo Authors
+# Copyright 1999-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -11,18 +11,18 @@ inherit desktop unpacker xdg
 DESCRIPTION="CAD software for 2D drawing, reviewing and printing work"
 HOMEPAGE="https://www.zwsoft.cn/product/zwcad/linux"
 
-URI_UNIONTECH="https://home-store-packages.uniontech.com/appstore/pool/appstore/c"
 URI_ANACONDA="https://anaconda.org/anaconda"
 SRC_URI="
-	${URI_UNIONTECH}/${MY_PGK_NAME}/${MY_PGK_NAME}_${MY_PV}_amd64.deb -> ${P}.deb
-	${URI_ANACONDA}/python/3.7.13/download/linux-64/python-3.7.13-h12debd9_0.tar.bz2 -> ${PN}-python-3.7.13.tar.bz2
+	${PN}${MY_PV_YEAR}_${MY_PV}_amd64.deb
+	${URI_ANACONDA}/python/3.8.20/download/linux-64/python-3.8.20-he870216_0.tar.bz2 -> ${PN}-python-3.8.20.tar.bz2
 "
+S=${WORKDIR}
 
 LICENSE="all-rights-reserved"
 SLOT="0"
 KEYWORDS="-* ~amd64"
 
-RESTRICT="bindist mirror preserve-libs strip"
+RESTRICT="strip mirror bindist fetch"
 
 RDEPEND="
 	media-libs/fontconfig
@@ -37,19 +37,17 @@ DEPEND="${RDEPEND}"
 
 BDEPEND="dev-util/patchelf"
 
-S=${WORKDIR}
-
 QA_PREBUILT="*"
 
 src_unpack() {
-	unpack_deb "${DISTDIR}/${P}.deb"
-	tar -xf "${DISTDIR}/${PN}-python-3.7.13.tar.bz2" \
-		-C "${S}/opt/apps/"${MY_PGK_NAME}"/files/ZwPyRuntime/python3.7/" || die
+	unpack_deb "${DISTDIR}/${PN}${MY_PV_YEAR}_${MY_PV}_amd64.deb"
+	tar -xf "${DISTDIR}/${PN}-python-3.8.20.tar.bz2" \
+		-C "${S}/opt/apps/"${MY_PGK_NAME}"/files/ZwPyRuntime/python3.8/" || die
 }
 
 src_install() {
 	# Install scalable icons
-	doicon -s scalable "${S}"/opt/apps/${MY_PGK_NAME}/files/Icons/ZWCAD.svg
+	doicon -s scalable "${S}"/opt/apps/${MY_PGK_NAME}/entries/icons/hicolor/scalable/apps/com.zwsoft.zwcad2026.svg
 
 	# Fix python and QA problems about python
 	rm -rf "${S}/opt/apps/"${MY_PGK_NAME}"/files/ZwPyRuntime/python3.6/" || die
@@ -58,7 +56,7 @@ src_install() {
 	rm -rf "${S}/opt/apps/"${MY_PGK_NAME}"/files/libZwPythonLoad5.so" || die
 	rm -rf "${S}/opt/apps/"${MY_PGK_NAME}"/files/ZwPyRuntime/python3.4/" || die
 	rm -rf "${S}/opt/apps/"${MY_PGK_NAME}"/files/libZwPythonLoad4.so" || die
-	rm -rf "${S}/opt/apps/"${MY_PGK_NAME}"/files/ZwPyRuntime/python3.7/compiler_compat" || die
+	rm -rf "${S}/opt/apps/"${MY_PGK_NAME}"/files/ZwPyRuntime/python3.8/compiler_compat" || die
 
 	# Set RPATH for preserve-libs handling
 	pushd "${S}"/opt/apps/${MY_PGK_NAME}/files || die
@@ -76,7 +74,6 @@ src_install() {
 	# Fix desktop files
 	sed -E -i 's/^Exec=.*$/Exec=zwcad %F/g' \
 		"${S}/opt/apps/${MY_PGK_NAME}/entries/applications/${MY_PGK_NAME}.desktop" || die
-	sed -E -i 's/^Icon=.*$/Icon=ZWCAD/g' "${S}/opt/apps/${MY_PGK_NAME}/entries/applications/${MY_PGK_NAME}.desktop" || die
 	sed -E -i 's/Application;//g' "${S}/opt/apps/${MY_PGK_NAME}/entries/applications/${MY_PGK_NAME}.desktop" || die
 	# The Version entry in a .desktop file doesn't refer to the version of the
 	# target program. It's the version of the desktop file specification that
@@ -134,4 +131,10 @@ sh /opt/apps/${MY_PGK_NAME}/files/ZWCADRUN.sh \$*
 		[[ -f ${x} && $(od -t x1 -N 4 "${x}") == *"7f 45 4c 46"* ]] && fperms 0755 "/${x}"
 	done
 	popd || die
+}
+
+pkg_nofetch() {
+	einfo "Please download the installation file ${SRC_URI}"
+	einfo "and place the file in your DISTDIR directory."
+	einfo "Note that to actually run and use ${P} you need a valid license."
 }
