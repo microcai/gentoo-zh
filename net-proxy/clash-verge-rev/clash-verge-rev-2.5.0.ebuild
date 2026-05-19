@@ -10,10 +10,10 @@ CRATES="
 
 declare -A GIT_CRATES=(
 	[clash_verge_logger]='https://github.com/clash-verge-rev/clash-verge-logger;e4768e3852c4868ed86e7210df82c1178467820d;clash-verge-logger-%commit%'
-	[clash_verge_service_ipc]='https://github.com/clash-verge-rev/clash-verge-service-ipc;360f205a12c6c2fe229d09252a41e3253ed6be3e;clash-verge-service-ipc-%commit%'
+	[clash_verge_service_ipc]='https://github.com/clash-verge-rev/clash-verge-service-ipc;21e661fa141e5ad3c705ee4cdb86efff8df6f769;clash-verge-service-ipc-%commit%'
 	[dark-light]='https://github.com/rust-dark-light/dark-light;0f18d2fbcaa5d1c175db8aae7d53428988d7e961;dark-light-%commit%'
-	[sysproxy]='https://github.com/clash-verge-rev/sysproxy-rs;6aa9ecb1c6bb9779b9dc8e4adc68780fc1d5edb6;sysproxy-rs-%commit%'
-	[tauri-plugin-mihomo]='https://github.com/clash-verge-rev/tauri-plugin-mihomo;1cc80bc0fbe1245315617f4cecd93710a152325b;tauri-plugin-mihomo-%commit%'
+	[sysproxy]='https://github.com/clash-verge-rev/sysproxy-rs;f0775f6f4173c9dd6228cd7c3d183019b9ba6a7b;sysproxy-rs-%commit%'
+	[tauri-plugin-mihomo]='https://github.com/clash-verge-rev/tauri-plugin-mihomo;a185fe1a8802367d0b3d50d402cb823759d2c57e;tauri-plugin-mihomo-%commit%'
 )
 
 RUST_MIN_VER="1.91"
@@ -32,8 +32,8 @@ SRC_URI="
 	${DEPS_URI}/${P}/${P}-web.tar.xz
 "
 # Use macthing commit from git crates
-SERVICE_PV="2.1.3" # pycargoebuild use version from Cargo.toml in generated filename
-SERVICE_COMMIT="360f205a12c6c2fe229d09252a41e3253ed6be3e"
+SERVICE_PV="2.3.0" # pycargoebuild use version from Cargo.toml in generated filename
+SERVICE_COMMIT="21e661fa141e5ad3c705ee4cdb86efff8df6f769"
 SERVICE_P="clash-verge-service-ipc-${SERVICE_COMMIT}"
 SRC_URI+="
 	${DEPS_URI}/${SERVICE_P}/clash_verge_service_ipc-${SERVICE_PV}-crates.tar.xz -> ${SERVICE_P}-crates.tar.xz
@@ -43,7 +43,7 @@ LICENSE="GPL-3"
 # Dependent crate licenses
 LICENSE+="
 	0BSD Apache-2.0 Apache-2.0-with-LLVM-exceptions BSD Boost-1.0
-	CC0-1.0 CDLA-Permissive-2.0 GPL-3 ISC MIT MPL-2.0 MPL-2.0 openssl
+	CC0-1.0 CDLA-Permissive-2.0 GPL-3 ISC MIT MPL-2.0 MPL-2.0
 	Unicode-3.0 WTFPL-2 ZLIB BZIP2
 "
 SLOT="0"
