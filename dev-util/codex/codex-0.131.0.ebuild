@@ -39,7 +39,10 @@ RUST_MIN_VER="1.93.0"
 # python3 .github/scripts/rusty_v8_bazel.py resolved-v8-crate-version
 RUSTY_V8_TAG="146.4.0"
 
-inherit cargo
+inherit cargo check-reqs toolchain-funcs
+
+CHECKREQS_MEMORY="16G"
+CHECKREQS_DISK_BUILD="20G"
 
 DESCRIPTION="Codex CLI - OpenAI's AI-powered coding agent"
 HOMEPAGE="https://github.com/openai/codex"
@@ -88,6 +91,20 @@ BDEPEND="virtual/pkgconfig"
 # rust does not use *FLAGS from make.conf, silence portage warning
 QA_FLAGS_IGNORED="usr/bin/${PN}"
 
+pkg_pretend() {
+	check-reqs_pkg_pretend
+}
+
+pkg_setup() {
+	check-reqs_pkg_setup
+	rust_pkg_setup
+	if tc-is-lto; then
+		export CARGO_PROFILE_RELEASE_LTO=thin
+	else
+		export CARGO_PROFILE_RELEASE_LTO=false
+	fi
+}
+
 gen_git_crate_dir() {
 	# https://github.com/gentoo/gentoo/blob/b09dd88412fe2d5eee5a8891e08bfa2d67848da3/eclass/cargo.eclass#L442
 	IFS=';' read -r crate_uri commit crate_dir <<<"${GIT_CRATES[$1]}"
@@ -123,14 +140,8 @@ src_compile() {
 	use amd64 && rusty_v8_triple=x86_64-unknown-linux-musl
 	use arm64 && rusty_v8_triple=aarch64-unknown-linux-musl
 
-	# Override upstream's fat LTO (Cargo.toml [profile.release] lto = "fat",
-	# codegen-units = 1): on machines with ~25-30 GB free RAM the final
-	# link of the codex binary gets OOM-killed. Thin LTO parallelises the
-	# work and roughly halves peak memory at the cost of a slightly larger
-	# binary, which is acceptable for a standalone Gentoo install.
 	RUSTY_V8_ARCHIVE="${DISTDIR}/rusty_v8_${RUSTY_V8_TAG}_librusty_v8_release_${rusty_v8_triple}.a.gz" \
 	RUSTY_V8_SRC_BINDING_PATH="${DISTDIR}/rusty_v8_${RUSTY_V8_TAG}_src_binding_release_${rusty_v8_triple}.rs" \
-	CARGO_PROFILE_RELEASE_LTO=thin \
 		cargo_src_compile --package codex-cli
 }
 
