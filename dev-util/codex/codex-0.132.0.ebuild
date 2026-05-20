@@ -41,7 +41,7 @@ RUSTY_V8_TAG="146.4.0"
 
 inherit cargo check-reqs toolchain-funcs
 
-CHECKREQS_MEMORY="16G"
+CHECKREQS_MEMORY="15G"
 CHECKREQS_DISK_BUILD="20G"
 
 DESCRIPTION="Codex CLI - OpenAI's AI-powered coding agent"
