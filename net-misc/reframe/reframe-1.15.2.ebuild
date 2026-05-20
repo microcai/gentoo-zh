@@ -26,7 +26,7 @@ RDEPEND="
 	gui-libs/gtk:4
 	x11-libs/libdrm
 	media-libs/libepoxy
-	!neatvnc? ( net-libs/libvncserver )
+	net-libs/libvncserver
 	x11-libs/libxkbcommon
 	neatvnc? (
 		gui-libs/neatvnc
@@ -38,10 +38,6 @@ RDEPEND="
 DEPEND="
 	${RDEPEND}
 "
-
-PATCHES=(
-	"${FILESDIR}/${P}-libvncserver-optional.patch"
-)
 
 src_prepare() {
 	rm -rf "${S}/deps/mvmath"
