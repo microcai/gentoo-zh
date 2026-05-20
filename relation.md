@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-05-20 12:56:41 CST)
+(The last generation time: 2026-05-20 15:39:43 CST)
 
 ### Packages
 
@@ -688,7 +688,7 @@
                                                        | 1.2.0              |            |                                                                                         |
                                                        | 1.2.2              |            |                                                                                         |
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-misc/reframe                                      | 1.15.1             |            | https://reframe.alynx.one/                                                              | DRM/KMS based remote desktop for Linux
+ net-misc/reframe                                      | 1.15.2             |            | https://reframe.alynx.one/                                                              | DRM/KMS based remote desktop for Linux
    acct-group/reframe                                  | 0                  |  D, RD     |                                                                                         | group for reframe
    acct-user/reframe                                   | 0                  |  D, RD     |                                                                                         | user for reframe
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
