@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-05-21 22:19:19 CST)
+(The last generation time: 2026-05-22 01:42:41 CST)
 
 ### Packages
 
@@ -379,8 +379,8 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/deepseek-bin                                 | 9999               |            | https://github.com/douglarek/deepseek-tui-nightly                                       | Coding agent for DeepSeek models with terminal TUI
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-util/fvm                                          | 4.0.5              |            | https://github.com/leoafarias/fvm                                                       | Flutter Version Management
-   dev-lang/dart                                       | 3.11.3             |  D, RD     | https://dart.dev                                                                        | The Dart SDK
+ dev-util/fvm                                          | 4.1.0              |            | https://github.com/leoafarias/fvm                                                       | Flutter Version Management
+   dev-lang/dart                                       | 3.12.0             |  D, RD     | https://dart.dev                                                                        | The Dart SDK
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/gemini-cli                                   | 0.42.0             |            | https://github.com/google-gemini/gemini-cli                                             | Gemini CLI - a command-line AI workflow tool by Google
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
