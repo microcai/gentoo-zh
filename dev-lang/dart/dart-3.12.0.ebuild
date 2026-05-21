@@ -33,6 +33,7 @@ BDEPEND="
 	app-arch/unzip
 	dev-build/gn
 	dev-build/ninja
+	dev-vcs/git
 	clang? (
 		$(llvm_gen_dep '
 			llvm-core/clang:${LLVM_SLOT}
@@ -46,7 +47,6 @@ PATCHES=(
 	"${FILESDIR}/${PN}-3.10.2-use_system_clang.patch"
 	"${FILESDIR}/${PN}-3.10.2-use_lld_when_using_clang.patch"
 	"${FILESDIR}/${PN}-3.10.2-custom_flags.patch"
-	"${FILESDIR}/${PN}-3.11.0-fix-gcc-msan.patch"
 )
 
 src_prepare() {
