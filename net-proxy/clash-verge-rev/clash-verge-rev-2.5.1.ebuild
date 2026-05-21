@@ -13,7 +13,7 @@ declare -A GIT_CRATES=(
 	[clash_verge_service_ipc]='https://github.com/clash-verge-rev/clash-verge-service-ipc;21e661fa141e5ad3c705ee4cdb86efff8df6f769;clash-verge-service-ipc-%commit%'
 	[dark-light]='https://github.com/rust-dark-light/dark-light;0f18d2fbcaa5d1c175db8aae7d53428988d7e961;dark-light-%commit%'
 	[sysproxy]='https://github.com/clash-verge-rev/sysproxy-rs;f0775f6f4173c9dd6228cd7c3d183019b9ba6a7b;sysproxy-rs-%commit%'
-	[tauri-plugin-mihomo]='https://github.com/clash-verge-rev/tauri-plugin-mihomo;a185fe1a8802367d0b3d50d402cb823759d2c57e;tauri-plugin-mihomo-%commit%'
+	[tauri-plugin-mihomo]='https://github.com/clash-verge-rev/tauri-plugin-mihomo;1cc80bc0fbe1245315617f4cecd93710a152325b;tauri-plugin-mihomo-%commit%'
 )
 
 RUST_MIN_VER="1.91"
