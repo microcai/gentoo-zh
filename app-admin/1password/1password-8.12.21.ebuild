@@ -28,7 +28,9 @@ DEPEND="
 	app-crypt/gnupg
 	dev-libs/nss
 	media-libs/alsa-lib
+	media-libs/mesa
 	net-misc/curl
+	net-print/cups
 	x11-libs/gtk+:3
 	x11-libs/libxkbcommon
 "
