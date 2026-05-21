@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>2073201758GD@gmail.com</email>
+		<name>liuyujielol</name>
+	</maintainer>
+	<use>
+		<flag name="glfw">Use bundled GLFW</flag>
+		<flag name="hwaccel">Hardware Video Decoding support</flag>
+		<flag name="opencc">Chinese Simplified and Chinese Traditional Conversion support</flag>
+		<flag name="sdl2">Use system libSDl2 instead of bundled GLFW</flag>
+		<flag name="webp">webp image compression format support</flag>
+	</use>
+	<upstream>
+		<remote-id type="github">xfangfang/wiliwili</remote-id>
+	</upstream>
+</pkgmetadata>
