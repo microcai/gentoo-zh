@@ -34,7 +34,7 @@ KEYWORDS="~amd64"
 IUSE="clang"
 
 RDEPEND="
-	>=gui-libs/gtk-4.18
+	>=gui-libs/gtk-4.21
 	>=gui-libs/libadwaita-1.7
 	media-libs/gstreamer
 	media-video/mpv
