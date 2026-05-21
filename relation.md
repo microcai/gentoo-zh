@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-05-21 15:40:55 CST)
+(The last generation time: 2026-05-21 15:41:32 CST)
 
 ### Packages
 
@@ -590,6 +590,8 @@
  media-video/tenvideo                                  | 1.0.10             |            | https://v.qq.com/download.html#linux                                                    | Tencent videos
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-video/tsukimi                                   | 0.21.0-r1          |            | https://github.com/tsukinaha/tsukimi                                                    | A simple Emby Client written by GTK4-RS
+-------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ media-video/wiliwili                                  | 1.6.0              |            | https://xfangfang.github.io/wiliwili                                                    | 跨平台第三方B站客户端
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-analyzer/cfspeedtest-bin                          | 2.2.1              |            | https://github.com/code-inflation/cfspeedtest                                           | Unofficial CLI for speed.cloudflare.com
                                                        | 2.2.2              |            |                                                                                         |
