@@ -12,9 +12,15 @@ MY_PN="Shanggu"
 
 SRC_URI="
 	mono? ( https://github.com/GuiWonder/${MY_PN}/releases/download/${PV}/${MY_PN}MonoTTFs.7z -> ${MY_PN}Mono-${PV}.7z )
-	round? ( https://github.com/GuiWonder/${MY_PN}/releases/download/${PV}/${MY_PN}RoundTTFs.7z -> ${MY_PN}Round-${PV}.7z )
+	round? (
+		https://github.com/GuiWonder/${MY_PN}/releases/download/${PV}/${MY_PN}RoundTTFs.7z
+			-> ${MY_PN}Round-${PV}.7z
+	)
 	sans? ( https://github.com/GuiWonder/${MY_PN}/releases/download/${PV}/${MY_PN}SansTTFs.7z -> ${MY_PN}Sans-${PV}.7z )
-	serif? ( https://github.com/GuiWonder/${MY_PN}/releases/download/${PV}/${MY_PN}SerifTTFs.7z -> ${MY_PN}Serif-${PV}.7z )
+	serif? (
+		https://github.com/GuiWonder/${MY_PN}/releases/download/${PV}/${MY_PN}SerifTTFs.7z
+			-> ${MY_PN}Serif-${PV}.7z
+	)
 	variant? (
 			 https://github.com/GuiWonder/${MY_PN}/releases/download/${PV}/${MY_PN}SansVF_TTFs.7z -> ${MY_PN}SansVF-${PV}.7z
 			 https://github.com/GuiWonder/${MY_PN}/releases/download/${PV}/${MY_PN}SerifVF_TTFs.7z -> ${MY_PN}SerifVF-${PV}.7z
@@ -28,7 +34,7 @@ KEYWORDS="~amd64"
 IUSE="round sans +serif mono variant"
 REQUIRED_USE="|| ( round sans serif mono variant )"
 BDEPEND="
-	app-arch/p7zip
+	$(unpacker_src_uri_depends)
 "
 
 FONT_CONF=( "${FILESDIR}/70-shanggu.conf" )
@@ -45,7 +51,7 @@ src_unpack() {
 }
 
 src_install() {
-	FONT_S=( "${S}" )
+	FONT_S=()
 
 	if use serif; then
 		FONT_S+=(
@@ -84,6 +90,10 @@ src_install() {
 			"${S}/${MY_PN}RoundJP"
 			"${S}/${MY_PN}RoundST"
 		)
+	fi
+
+	if use variant; then
+		FONT_S+=( "${S}" )
 	fi
 
 	font_src_install
