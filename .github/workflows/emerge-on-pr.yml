@@ -74,6 +74,7 @@ jobs:
             skel.ChangeLog
             skel.metadata.xml
             .github
+            licenses
             metadata
             profiles
             scripts
