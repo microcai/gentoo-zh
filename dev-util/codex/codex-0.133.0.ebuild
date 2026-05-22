@@ -37,7 +37,7 @@ declare -A GIT_CRATES=(
 RUST_MIN_VER="1.93.0"
 
 # python3 .github/scripts/rusty_v8_bazel.py resolved-v8-crate-version
-RUSTY_V8_TAG="146.4.0"
+RUSTY_V8_TAG="147.4.0"
 
 inherit cargo check-reqs toolchain-funcs
 
