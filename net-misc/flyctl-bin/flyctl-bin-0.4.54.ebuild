@@ -10,13 +10,13 @@ SRC_URI="
 	amd64? ( ${BASE_URI}_Linux_x86_64.tar.gz )
 	arm64? ( ${BASE_URI}_Linux_arm64.tar.gz )
 "
+S="${WORKDIR}"
 
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="~amd64 ~arm64"
 RDEPEND="sys-libs/glibc"
 
-S="${WORKDIR}"
 QA_PREBUILT="/usr/bin/flyctl"
 RESTRICT="strip"
 
