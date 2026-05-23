@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+
+<pkgmetadata>
+  <maintainer type="person">
+    <email>liangyongxiang@hotmail.com</email>
+    <name>Yongxiang Liang</name>
+  </maintainer>
+  <longdescription>
+    Kimi Code CLI is your next CLI agent. An agentic coding tool that lives in your terminal,
+    understands your codebase, and helps you code faster through natural language commands.
+  </longdescription>
+  <upstream>
+    <remote-id type="github">MoonshotAI/kimi-cli</remote-id>
+  </upstream>
+</pkgmetadata>
