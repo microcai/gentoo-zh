@@ -71,6 +71,17 @@ src_install() {
 	# so no soname replacement is needed anymore.
 	patchelf --set-rpath '$ORIGIN' \
 		"${S}"/squashfs-root/bin/bambu-studio || die
+
+	# Ubuntu ships bzip2 with SONAME libbz2.so.1.0; Gentoo uses libbz2.so.1.
+	# Rewrite NEEDED entries so qa-unresolved-soname-deps is satisfied and the
+	# binary stays linkable after Gentoo drops the libbz2.so.1.0 compat symlink.
+	local f
+	while IFS= read -r -d '' f; do
+		[[ -L ${f} ]] && continue
+		patchelf --print-needed "${f}" 2>/dev/null | grep -qxF 'libbz2.so.1.0' || continue
+		patchelf --replace-needed libbz2.so.1.0 libbz2.so.1 "${f}" || die
+	done < <(find "${S}"/squashfs-root -type f -print0)
+
 	insinto /opt/"${PN}"
 	doins -r "${S}"/squashfs-root/*
 	fperms +x "/opt/${PN}/AppRun" "/opt/${PN}/bin/bambu-studio"
