@@ -47,6 +47,7 @@ RDEPEND="
 	dev-qt/qtbase:6[gui,network,widgets]
 	media-video/pipewire
 	net-misc/curl
+	sys-apps/systemd
 "
 DEPEND="${RDEPEND}"
 BDEPEND="
