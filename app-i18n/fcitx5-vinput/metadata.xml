@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+
+<pkgmetadata>
+  <maintainer type="person">
+    <email>liangyongxiang@hotmail.com</email>
+    <name>Yongxiang Liang</name>
+  </maintainer>
+  <longdescription>
+    fcitx5-vinput is a voice input addon for Fcitx5, supporting local
+    and cloud ASR (Automatic Speech Recognition), LLM rewriting,
+    and powered by sherpa-onnx for on-device speech recognition.
+  </longdescription>
+  <upstream>
+    <remote-id type="github">xifan2333/fcitx5-vinput</remote-id>
+  </upstream>
+</pkgmetadata>
