@@ -6,6 +6,6 @@
 		<name>Leo Douglas</name>
 	</maintainer>
 	<upstream>
-		<remote-id type="github">Hmbown/DeepSeek-TUI</remote-id>
+		<remote-id type="github">Hmbown/CodeWhale</remote-id>
 	</upstream>
 </pkgmetadata>
