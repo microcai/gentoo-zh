@@ -9,9 +9,9 @@ inherit cmake cuda rocm linux-info
 
 TINY_LLAMAS_COMMIT="99dd1a73db5a37100bd4ae633f4cfce6560e1567"
 LLAMACPP_WEBUI_ASSETS=(
-	index.html
-	bundle.js
 	bundle.css
+	bundle.js
+	index.html
 	loading.html
 )
 
@@ -23,12 +23,12 @@ if [[ ${PV} == *9999* ]]; then
 	EGIT_REPO_URI="https://github.com/ggml-org/llama.cpp.git"
 else
 	MY_PV="b${PV#0_pre}"
-	SRC_URI="https://github.com/ggml-org/llama.cpp/archive/refs/tags/${MY_PV}.tar.gz -> ${P}.tar.gz"
-	SRC_URI+=" webui? ("
-	for asset in "${LLAMACPP_WEBUI_ASSETS[@]}"; do
-		SRC_URI+=" https://huggingface.co/buckets/ggml-org/llama-ui/resolve/${MY_PV}/${asset} -> ${P}-webui_asset-${asset}"
-	done
-	SRC_URI+=" )"
+	SRC_URI="
+		https://github.com/ggml-org/llama.cpp/archive/refs/tags/${MY_PV}.tar.gz -> ${P}.tar.gz
+		webui? (
+			https://github.com/ggml-org/llama.cpp/releases/download/${MY_PV}/llama-${MY_PV}-ui.tar.gz -> ${P}-ui.tar.gz
+		)
+	"
 	S="${WORKDIR}/llama.cpp-${MY_PV}"
 	KEYWORDS="~amd64 ~riscv"
 fi
@@ -127,18 +127,14 @@ src_unpack() {
 	fi
 
 	if use webui; then
-		mkdir -p "${WORKDIR}/webui-dist"
-		sed -Ei "s:LOCAL_UI_DIR \"[^\"]+\":LOCAL_UI_DIR \"${WORKDIR}/webui-dist\":" "${S}/tools/ui/CMakeLists.txt" || die
-
 		if [[ ${PV} == *9999* ]]; then
+			mkdir -p "${S}/tools/ui/dist"
 			for asset in "${LLAMACPP_WEBUI_ASSETS[@]}"; do
-				wget -O "${WORKDIR}/webui-dist/${asset}" \
+				wget -O "${S}/tools/ui/dist/${asset}" \
 					"https://huggingface.co/buckets/ggml-org/llama-ui/resolve/latest/${asset}" || die
 			done
 		else
-			for asset in "${LLAMACPP_WEBUI_ASSETS[@]}"; do
-				cp -v "${DISTDIR}/${P}-webui_asset-${asset}" "${WORKDIR}/webui-dist/${asset}" || die
-			done
+			ln -s "${WORKDIR}/llama-${MY_PV}" "${S}/tools/ui/dist" || die
 		fi
 	fi
 }
