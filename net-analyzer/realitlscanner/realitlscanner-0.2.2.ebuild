@@ -1,4 +1,4 @@
-# Copyright 1999-2024 Gentoo Authors
+# Copyright 1999-2026 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -17,11 +17,12 @@ S="${WORKDIR}/RealiTLScanner-${PV}"
 LICENSE="MPL-2.0"
 SLOT="0"
 KEYWORDS="~amd64 ~arm64"
+BDEPEND=">=dev-lang/go-1.26.0"
 
 src_compile() {
-	ego build -o ${P}
+	ego build -o ${PN}
 }
 
 src_install() {
-	newbin ${P} ${PN}
+	dobin ${PN}
 }
