@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-05-27 10:24:16 CST)
+(The last generation time: 2026-05-27 10:31:11 CST)
 
 ### Packages
 
@@ -470,6 +470,8 @@
                                                        | 1.21.0             |            |                                                                                         |
    acct-group/vintagestory                             | 0                  | RD         |                                                                                         | User group for Vintage Story Server
    acct-user/vintagestory                              | 0                  | RD         |                                                                                         | User for Vintage Story Server
+-------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ games-strategy/zedonline-bin                          | 0.3.2              |            | https://sourceforge.net/projects/zedonline/                                             | Online multiplayer remake of the 1996 RTS game Z
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  gnome-extra/gnome-shell-extension-clipboard-indicator | 49                 |            | https://github.com/Tudmotu/gnome-shell-extension-clipboard-indicator                    | The most popular clipboard manager for GNOME, with over 1M downloads
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
