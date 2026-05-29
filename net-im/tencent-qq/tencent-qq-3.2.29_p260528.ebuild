@@ -6,7 +6,7 @@ EAPI=8
 inherit unpacker xdg
 
 MY_PV="${PV/_p/_}"
-_QQDownloadURLPrefix="https://dldir1v6.qq.com/qqfile/qq/QQNT/Linux"
+_QQDownloadURLPrefix="https://qqdl.gtimg.cn/qqfile/QQNT/9.9.31/release/00e6a3e7"
 _LiteLoader_PV="1.4.1"
 
 DESCRIPTION="The new version of the official linux-qq"
@@ -33,32 +33,36 @@ IUSE="bwrap system-fdk-aac system-libssh2 system-openh264 system-zlib gnome lite
 RESTRICT="strip mirror"
 
 RDEPEND="
-	x11-libs/gtk+:3
-	x11-libs/libnotify
-	dev-libs/nss
-	x11-libs/libXScrnSaver
-	x11-libs/libXcomposite
-	x11-libs/libXdamage
-	x11-libs/libXtst
-	x11-misc/xdg-utils
 	app-accessibility/at-spi2-core:2
 	app-crypt/libsecret
-	virtual/krb5
-	sys-apps/keyutils
-	media-libs/openslide
+	bwrap? (
+		sys-apps/bubblewrap
+		x11-misc/flatpak-xdg-utils
+		x11-misc/snapd-xdg-open
+	)
+	dev-libs/nss
+	gnome? ( dev-libs/gjs )
+	loong? ( virtual/loong-ow-compat )
 	media-libs/alsa-lib
 	media-libs/libpulse
+	media-libs/mesa
+	media-libs/openslide
+	net-print/cups
+	sys-apps/keyutils
 	system-fdk-aac? ( media-libs/fdk-aac )
 	system-libssh2? ( net-libs/libssh2 )
 	system-openh264? ( media-libs/openh264 )
 	system-zlib? ( virtual/zlib )
-	bwrap? (
-		sys-apps/bubblewrap
-		x11-misc/snapd-xdg-open
-		x11-misc/flatpak-xdg-utils
-	)
-	gnome? ( dev-libs/gjs )
-	loong? ( virtual/loong-ow-compat )
+	virtual/krb5
+	x11-libs/gtk+:3
+	x11-libs/libnotify
+	x11-libs/libXdamage
+	x11-libs/libXcomposite
+	x11-libs/libXft
+	x11-libs/libXScrnSaver
+	x11-libs/libXtst
+	x11-libs/libxkbcommon
+	x11-misc/xdg-utils
 "
 BDEPEND="liteloader? ( app-arch/unzip )"
 
