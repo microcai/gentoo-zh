@@ -107,6 +107,10 @@ XDG_DATA_HOME="${XDG_DATA_HOME:-${REAL_HOME}/.local/share}"
 XDG_STATE_HOME="${XDG_STATE_HOME:-${REAL_HOME}/.local/state}"
 FONTCONFIG_HOME="${XDG_CONFIG_HOME}/fontconfig"
 WECHAT_HOST_HOME="${XDG_DATA_HOME}/wechat/home"
+WECHAT_CONFIG_HOME="${WECHAT_HOST_HOME}/.config"
+WECHAT_CACHE_HOME="${WECHAT_HOST_HOME}/.cache"
+WECHAT_DATA_HOME="${WECHAT_HOST_HOME}/.local/share"
+WECHAT_STATE_HOME="${WECHAT_HOST_HOME}/.local/state"
 WECHAT_FLAGS_FILE="${XDG_CONFIG_HOME}/wechat-flags.conf"
 WECHAT_BWRAP_FLAGS_FILE="${XDG_CONFIG_HOME}/wechat-bwrap-flags.conf"
 WECHAT_DOWNLOAD_DIR="${WECHAT_DOWNLOAD_DIR:-$(resolve_download_dir)}"
@@ -130,10 +134,10 @@ require_path /opt/wechat/wechat
 
 install -d \
     "${WECHAT_HOST_HOME}" \
-    "${WECHAT_HOST_HOME}/.config" \
-    "${WECHAT_HOST_HOME}/.cache" \
-    "${WECHAT_HOST_HOME}/.local/share" \
-    "${WECHAT_HOST_HOME}/.local/state"
+    "${WECHAT_CONFIG_HOME}" \
+    "${WECHAT_CACHE_HOME}" \
+    "${WECHAT_DATA_HOME}" \
+    "${WECHAT_STATE_HOME}"
 
 if [[ -n "${WECHAT_DOWNLOAD_DIR}" ]]; then
     install -d "${WECHAT_DOWNLOAD_DIR}"
@@ -170,17 +174,19 @@ declare -a bwrap_cmd=(
     --ro-bind /opt/wechat/xdg-open.sh /usr/bin/xdg-open
     --ro-bind-try /usr/bin/xdg-open /run/host/usr/bin/xdg-open
     --ro-bind-try "${XAUTHORITY}" "${XAUTHORITY}"
-    --ro-bind-try "${FONTCONFIG_HOME}" "${FONTCONFIG_HOME}"
+    --ro-bind-try "${FONTCONFIG_HOME}" "${WECHAT_CONFIG_HOME}/fontconfig"
+    --ro-bind-try "${XDG_DATA_HOME}/fonts" "${WECHAT_DATA_HOME}/fonts"
+    --ro-bind-try "${REAL_HOME}/.fonts" "${WECHAT_HOST_HOME}/.fonts"
     --ro-bind-try "${REAL_HOME}/.icons" "${REAL_HOME}/.icons"
     --ro-bind-try "${REAL_HOME}/.local/share/.icons" "${REAL_HOME}/.local/share/.icons"
     --ro-bind-try "${XDG_CONFIG_HOME}/gtk-3.0" "${XDG_CONFIG_HOME}/gtk-3.0"
     --ro-bind-try "${XDG_CONFIG_HOME}/dconf" "${XDG_CONFIG_HOME}/dconf"
     --bind-try "${REAL_HOME}/.pki" "${REAL_HOME}/.pki"
     --setenv HOME "${WECHAT_HOST_HOME}"
-    --setenv XDG_CONFIG_HOME "${WECHAT_HOST_HOME}/.config"
-    --setenv XDG_CACHE_HOME "${WECHAT_HOST_HOME}/.cache"
-    --setenv XDG_DATA_HOME "${WECHAT_HOST_HOME}/.local/share"
-    --setenv XDG_STATE_HOME "${WECHAT_HOST_HOME}/.local/state"
+    --setenv XDG_CONFIG_HOME "${WECHAT_CONFIG_HOME}"
+    --setenv XDG_CACHE_HOME "${WECHAT_CACHE_HOME}"
+    --setenv XDG_DATA_HOME "${WECHAT_DATA_HOME}"
+    --setenv XDG_STATE_HOME "${WECHAT_STATE_HOME}"
     --setenv XDG_DOWNLOAD_DIR "${WECHAT_DOWNLOAD_DIR}"
     --setenv QT_AUTO_SCREEN_SCALE_FACTOR 1
     --setenv QT_QPA_PLATFORM "${QT_QPA_PLATFORM:-wayland;xcb}"
