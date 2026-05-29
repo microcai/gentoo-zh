@@ -34,7 +34,7 @@ declare -A GIT_CRATES=(
 	[webrtc-sys]='https://github.com/juberti-oai/rust-sdks;e2d1d1d230c6fc9df171ccb181423f957bb3c1f0;rust-sdks-%commit%/webrtc-sys'
 )
 
-RUST_MIN_VER="1.93.0"
+RUST_MIN_VER="1.95.0"
 
 # python3 .github/scripts/rusty_v8_bazel.py resolved-v8-crate-version
 RUSTY_V8_TAG="147.4.0"
