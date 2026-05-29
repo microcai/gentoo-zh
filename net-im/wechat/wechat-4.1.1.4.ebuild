@@ -18,8 +18,7 @@ LICENSE="all-rights-reserved"
 
 SLOT="0"
 KEYWORDS="-* ~amd64 ~arm64 ~loong"
-IUSE="bwrap fcitx ibus"
-REQUIRED_USE="?? ( fcitx ibus )"
+IUSE="bwrap"
 
 RESTRICT="strip mirror bindist"
 BDEPEND="
@@ -46,8 +45,6 @@ RDEPEND="
 		sys-apps/bubblewrap
 		x11-misc/xdg-utils
 	)
-	fcitx? ( app-i18n/fcitx )
-	ibus? ( app-i18n/ibus )
 	loong? ( virtual/loong-ow-compat )
 "
 QA_PREBUILT="*"
@@ -84,12 +81,6 @@ src_install() {
 	fi
 
 	local exec_envs=( "QT_AUTO_SCREEN_SCALE_FACTOR=1" "\"QT_QPA_PLATFORM=wayland;xcb\"" )
-	if use fcitx; then
-		exec_envs+=( "QT_IM_MODULE=fcitx" )
-	fi
-	if use ibus; then
-		exec_envs+=( "QT_IM_MODULE=ibus" )
-	fi
 
 	sed -i \
 		-e "s|^Icon=.*|Icon=wechat|" \
@@ -107,9 +98,11 @@ pkg_postinst() {
 	xdg_pkg_postinst
 	if use bwrap; then
 		elog "Enabled Bubblewrap support."
-		elog "WeChat can only access its own sandbox home and the download directory by default."
-		elog "Other files should be accessed through the desktop file chooser path."
+		elog "WeChat can only access its own sandbox home and XDG Downloads directory by default."
+		elog "To send files, put them under your XDG Downloads directory first, then drag"
+		elog "them into WeChat or select them from WeChat's file chooser."
+		elog "启用 Bubblewrap 支持后，微信默认只能访问自己的沙盒 HOME 和 XDG 下载目录。"
+		elog "发送文件前请先把文件放到 XDG 下载目录下，然后拖入微信或从微信文件选择器中选择。"
 		elog "Advanced users can extend the sandbox using ~/.config/wechat-bwrap-flags.conf."
 	fi
-	einfo "If you need to input Chinese in WeChat, please enable the corresponding USE flag (fcitx or ibus)."
 }
