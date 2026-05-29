@@ -23,11 +23,13 @@ RDEPEND="
 	x11-apps/xmessage
 	x11-libs/libX11
 	x11-libs/libXmu
+	virtual/jdk
 "
 
 QA_PRESTRIPPED="
 	/opt/FlClash/FlClashCore
 	/opt/FlClash/lib/libapp.so
+	/opt/FlClash/lib/librust_api.so
 "
 
 src_install() {
