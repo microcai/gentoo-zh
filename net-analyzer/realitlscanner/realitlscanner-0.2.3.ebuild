@@ -10,7 +10,6 @@ HOMEPAGE="https://github.com/XTLS/RealiTLScanner"
 SRC_URI="
 	https://github.com/XTLS/RealiTLScanner/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz
 	https://github.com/gentoo-zh-drafts/RealiTLScanner/releases/download/v${PV}/RealiTLScanner-${PV}-vendor.tar.xz
-		-> ${P}-vendor.golang-dist-mirror-action.tar.xz
 "
 
 S="${WORKDIR}/RealiTLScanner-${PV}"
