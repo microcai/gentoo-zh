@@ -17,6 +17,7 @@ KEYWORDS="-* ~amd64"
 RDEPEND="
 	dev-libs/nss
 	media-libs/alsa-lib
+	media-libs/mesa
 	x11-libs/gtk+:3[X,cups]
 	x11-libs/libxkbcommon[X]
 "
