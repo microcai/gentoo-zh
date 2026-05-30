@@ -16,6 +16,7 @@ SLOT="0"
 KEYWORDS="~amd64"
 
 RDEPEND="
+	app-arch/lz4
 	dev-libs/libdbusmenu[gtk3]
 	dev-libs/nspr
 	dev-libs/nss
