@@ -20,7 +20,6 @@ KEYWORDS="-* ~amd64"
 
 DEPEND="
 	app-accessibility/at-spi2-core:2
-	app-arch/bzip2
 	app-arch/lz4
 	app-crypt/mit-krb5
 	dev-libs/glib:2
