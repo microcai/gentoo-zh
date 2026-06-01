@@ -20,6 +20,9 @@ KEYWORDS="-* ~amd64"
 
 DEPEND="
 	app-accessibility/at-spi2-core:2
+	app-arch/bzip2
+	app-arch/lz4
+	app-crypt/mit-krb5
 	dev-libs/glib:2
 	dev-libs/openssl:0/3
 	dev-libs/keybinder:3
@@ -38,7 +41,6 @@ DEPEND="
 	x11-libs/pango
 	x11-misc/xdg-user-dirs[gtk]
 "
-
 RDEPEND="${DEPEND}"
 
 QA_PRESTRIPPED="
