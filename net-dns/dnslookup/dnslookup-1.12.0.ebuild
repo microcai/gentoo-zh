@@ -15,6 +15,7 @@ SRC_URI="
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~arm64"
+BDEPEND=">=dev-lang/go-1.26.3"
 
 src_compile() {
 	ego build -o ${P} -ldflags "-X main.VersionString=${PV}"
