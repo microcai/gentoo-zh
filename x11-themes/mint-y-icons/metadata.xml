@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<upstream>
+		<remote-id type="github">linuxmint/mint-y-icons</remote-id>
+	</upstream>
+	<maintainer type="person">
+		<email>akira7095@riseup.net</email>
+		<name>Akira</name>
+	</maintainer>
+</pkgmetadata>
