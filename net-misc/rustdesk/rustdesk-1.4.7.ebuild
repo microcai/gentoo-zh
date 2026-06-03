@@ -37,7 +37,7 @@ declare -A GIT_CRATES=(
 	[nokhwa]='https://github.com/rustdesk-org/nokhwa;c2f74662b6ce117f7f94301693fdfadc0b1ec91a;nokhwa-%commit%'
 	[pam-sys]='https://github.com/rustdesk-org/pam-sys;3337c9bb9a9c68d7497ec8c93cad2368c26091b7;pam-sys-%commit%'
 	[pam]='https://github.com/rustdesk-org/pam;7bfd25510202cd269292cbdd7c71f3977a6fd762;pam-%commit%'
-	[parity-tokio-ipc]='https://github.com/rustdesk-org/parity-tokio-ipc;c8c8bbcbabf9be1201c53afb0269b92b9b02d291;parity-tokio-ipc-%commit%'
+	[parity-tokio-ipc]='https://github.com/rustdesk-org/parity-tokio-ipc;d0ae39bffe5d5a3e8d82a1b6bcb1ca5a9b2f1c01;parity-tokio-ipc-%commit%'
 	[portable-pty]='https://github.com/rustdesk-org/wezterm;80174f8009f41565f0fa8c66dab90d4f9211ae16;wezterm-%commit%/pty'
 	[rdev]='https://github.com/rustdesk-org/rdev;f9b60b1dd0f3300a1b797d7a74c116683cd232c8;rdev-%commit%'
 	[rust-pulsectl]='https://github.com/rustdesk-org/pulsectl;aa34dde499aa912a3abc5289cc0b547bd07dd6e2;pulsectl-%commit%'
@@ -47,7 +47,7 @@ declare -A GIT_CRATES=(
 	[tao]='https://github.com/rustdesk-org/tao;288c219cb0527e509590c2b2d8e7072aa9feb2d3;tao-%commit%'
 	[tfc]='https://github.com/rustdesk-org/The-Fat-Controller;78bb80a8e596e4c14ae57c8448f5fca75f91f2b0;The-Fat-Controller-%commit%'
 	[tokio-socks]='https://github.com/rustdesk-org/tokio-socks;bdb9aa3de5bac41602d0742b8ef6bbc6bfebd127;tokio-socks-%commit%'
-	[tray-icon]='https://github.com/tauri-apps/tray-icon;d4078696edba67b0ab42cef67e6a421a0332c96f;tray-icon-%commit%'
+	[tray-icon]='https://github.com/tauri-apps/tray-icon;0a5835b0e6828e37a1f781de9c2d671ae7a939e6;tray-icon-%commit%'
 	[wallpaper]='https://github.com/rustdesk-org/wallpaper.rs;ce4a0cd3f58327c7cc44d15a63706fb0c022bacf;wallpaper.rs-%commit%'
 	[webm-sys]='https://github.com/rustdesk-org/rust-webm;d2c4d3ac133c7b0e4c0f656da710b48391981e64;rust-webm-%commit%/src/sys'
 	[webm]='https://github.com/rustdesk-org/rust-webm;d2c4d3ac133c7b0e4c0f656da710b48391981e64;rust-webm-%commit%'
@@ -74,7 +74,7 @@ _VCPKG_TAG="2025.08.27"
 _HWCODEC_EXTERNALS_COMMIT="8903740a1f47884906a6e347ad3d8d56304d9771"
 # fix: libs/hbb_common is a empty directory
 # git ls-tree HEAD libs/hbb_common
-_HBB_COMMON_COMMIT="48c37de3e6c4e399af6f51ca20e8e3e1fd037976"
+_HBB_COMMON_COMMIT="df6badca5bf81b4e9836256cf8e31c993ad70dd1"
 # fix: kcp-sys-*/kcp is a empty directory
 # git clone https://github.com/rustdesk-org/kcp-sys
 # git ls-tree HEAD kcp
