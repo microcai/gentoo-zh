@@ -4,7 +4,7 @@
 EAPI=8
 
 DISTUTILS_USE_PEP517=setuptools
-PYTHON_COMPAT=( python3_{10..15} )
+PYTHON_COMPAT=( python3_{12..15} )
 inherit distutils-r1
 
 DESCRIPTION="The Command Line Interface to work with an Open Build Service"
