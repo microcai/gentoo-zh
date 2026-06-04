@@ -3,7 +3,7 @@
 
 EAPI=8
 
-PYTHON_COMPAT=( python3_{11..14} )
+PYTHON_COMPAT=( python3_{12..14} )
 DISTUTILS_USE_PEP517=standalone
 DISTUTILS_EXT=1
 inherit distutils-r1 pypi
@@ -16,9 +16,6 @@ HOMEPAGE="
 "
 
 SRC_URI="
-	python_targets_python3_11? (
-		https://files.pythonhosted.org/packages/2c/32/4e5921ba8b82ac37cad45f1108ca6effd430f49c7f20577d53f317d166ed/${PN}-${PV}-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl
-	)
 	python_targets_python3_12? (
 		https://files.pythonhosted.org/packages/35/af/ad86cfbfd65d5a86204b3a30893e92c0cf3f1a56280efc5a12e69d81f52d/${PN}-${PV}-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl
 	)
