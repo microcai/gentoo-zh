@@ -3,7 +3,7 @@
 
 EAPI=8
 
-PYTHON_COMPAT=( python3_{8..13} )
+PYTHON_COMPAT=( python3_{8..15} )
 
 inherit cmake python-single-r1
 
@@ -23,7 +23,10 @@ SLOT="0"
 
 IUSE="static perl python ruby tcl rpm pubkey suse comps helix debian mdk arch cudf conda appdata lzma bzip2 zstd zchunk libxml2"
 
-RDEPEND="zchunk? ( app-arch/zchunk )"
+RDEPEND="
+	zchunk? ( app-arch/zchunk )
+	python? ( ${PYTHON_DEPS} )
+"
 DEPEND="
 	perl? ( dev-lang/perl )
 	rpm? ( app-arch/rpm )
