@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-06-04 15:11:48 CST)
+(The last generation time: 2026-06-04 17:26:46 CST)
 
 ### Packages
 
@@ -388,7 +388,7 @@
  dev-util/fvm                                          | 4.1.0              |            | https://github.com/leoafarias/fvm                                                       | Flutter Version Management
    dev-lang/dart                                       | 3.12.0             |  D, RD     | https://dart.dev                                                                        | The Dart SDK
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-util/gemini-cli                                   | 0.44.1             |            | https://github.com/google-gemini/gemini-cli                                             | Gemini CLI - a command-line AI workflow tool by Google
+ dev-util/gemini-cli                                   | 0.45.0             |            | https://github.com/google-gemini/gemini-cli                                             | Gemini CLI - a command-line AI workflow tool by Google
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/gitea-cli                                    | 0.14.1             |            | https://gitea.com/gitea/tea                                                             | Command line tool to interact with Gitea
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -940,6 +940,8 @@
  x11-themes/fcitx-breeze                               | 3.1.0              |            | https://gitlab.com/scratch-er/fcitx5-breeze                                             | Fcitx5 theme to match KDE's Breeze style.
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  x11-themes/kora-icon-theme                            | 2.0.4              |            | https://github.com/bikass/kora                                                          | An SVG icon theme with lots of new icons for GNU/Linux operating systems
+-------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ x11-themes/mint-y-icons                               | 1.9.2              |            | https://github.com/linuxmint/mint-y-icons/                                              | The Mint-Y icon theme, based on Paper and Moka
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  x11-themes/nordic                                     | 2.1.0              |            | https://github.com/EliverLara/Nordic                                                    | Dark Gtk3.20+ theme created using the awesome Nord color pallete
                                                        | 2.2.0-r1           |            |                                                                                         |
