@@ -3,7 +3,7 @@
 
 EAPI=8
 
-PYTHON_COMPAT=( python3_{11..14} )
+PYTHON_COMPAT=( python3_{12..14} )
 DISTUTILS_USE_PEP517=standalone
 DISTUTILS_EXT=1
 inherit distutils-r1 pypi
@@ -15,9 +15,6 @@ HOMEPAGE="
 "
 
 SRC_URI="
-	python_targets_python3_11? (
-		$(pypi_wheel_url ${PN} ${PV} "cp311" "cp311-manylinux2014_x86_64.manylinux_2_17_x86_64")
-	)
 	python_targets_python3_12? (
 		$(pypi_wheel_url ${PN} ${PV} "cp312" "cp312-manylinux2014_x86_64.manylinux_2_17_x86_64")
 	)
