@@ -3,7 +3,7 @@
 
 EAPI=8
 
-PYTHON_COMPAT=( python3_{9..11} )
+PYTHON_COMPAT=( python3_{9..14} )
 inherit python-single-r1 unpacker
 
 DESCRIPTION="Deepin Wine Helper"
