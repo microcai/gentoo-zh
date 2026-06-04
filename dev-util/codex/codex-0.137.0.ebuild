@@ -41,8 +41,7 @@ RUSTY_V8_TAG="147.4.0"
 
 inherit cargo check-reqs toolchain-funcs
 
-CHECKREQS_MEMORY="15G"
-CHECKREQS_DISK_BUILD="20G"
+CHECKREQS_MEMORY="4G"
 
 DESCRIPTION="Codex CLI - OpenAI's AI-powered coding agent"
 HOMEPAGE="https://github.com/openai/codex"
@@ -68,7 +67,7 @@ SRC_URI="
 	${CARGO_CRATE_URIS}
 "
 
-S="${WORKDIR}/${PN}-rust-v${PV}/codex-rs"
+S="${WORKDIR}/${PN}-rust-v${PV}/codex-rs/cli"
 
 LICENSE="Apache-2.0"
 # Dependent crate licenses
@@ -121,11 +120,11 @@ src_prepare() {
 	}' "$(gen_git_crate_dir tokio-tungstenite)/Cargo.toml" || die
 
 	# Remove the [patch.crates-io] section and add path-based patches
-	sed -i '/^\[patch\.crates-io\]/,/^$/d' "${S}/Cargo.toml" || die
-	sed -i '/^\[patch\."ssh:\/\/git@github\.com/,/^$/d' "${S}/Cargo.toml" || die
+	sed -i '/^\[patch\.crates-io\]/,/^$/d' "${S}/../Cargo.toml" || die
+	sed -i '/^\[patch\."ssh:\/\/git@github\.com/,/^$/d' "${S}/../Cargo.toml" || die
 
 	# Add new patch section with local paths
-	cat >> "${S}/Cargo.toml" <<-EOF || die
+	cat >> "${S}/../Cargo.toml" <<-EOF || die
 
 	[patch.crates-io]
 	crossterm = { path = "$(gen_git_crate_dir crossterm)" }
@@ -143,12 +142,13 @@ src_compile() {
 	# codex-core trait resolution overflows rustc's default 8MiB stack
 	export RUST_MIN_STACK=16777216
 
-	RUSTY_V8_ARCHIVE="${DISTDIR}/rusty_v8_${RUSTY_V8_TAG}_librusty_v8_release_${rusty_v8_triple}.a.gz" \
-	RUSTY_V8_SRC_BINDING_PATH="${DISTDIR}/rusty_v8_${RUSTY_V8_TAG}_src_binding_release_${rusty_v8_triple}.rs" \
-		cargo_src_compile --package codex-cli
+	export RUSTY_V8_ARCHIVE="${DISTDIR}/rusty_v8_${RUSTY_V8_TAG}_librusty_v8_release_${rusty_v8_triple}.a.gz"
+	export RUSTY_V8_SRC_BINDING_PATH="${DISTDIR}/rusty_v8_${RUSTY_V8_TAG}_src_binding_release_${rusty_v8_triple}.rs"
+
+	cargo_src_compile
 }
 
 src_install() {
-	dobin "$(cargo_target_dir)/codex"
+	dobin ../$(cargo_target_dir)/codex
 	einstalldocs
 }
