@@ -4,18 +4,19 @@
 EAPI=8
 
 DISTUTILS_USE_PEP517=setuptools
-PYTHON_COMPAT=( python3_{9..13} )
+PYTHON_COMPAT=( python3_{9..15} )
+EPYTEST_PLUGINS=()
+
 inherit distutils-r1
 
 DESCRIPTION="A simple immutable dictionary for Python"
 HOMEPAGE="https://github.com/Marco-Sulla/python-frozendict"
 SRC_URI="https://github.com/Marco-Sulla/python-frozendict/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
+S="${WORKDIR}/python-${PN}-${PV}"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64"
-
-S="${WORKDIR}/python-${PN}-${PV}"
 
 BDEPEND="
 	$(python_gen_cond_dep 'dev-python/setuptools-scm[${PYTHON_USEDEP}]')
