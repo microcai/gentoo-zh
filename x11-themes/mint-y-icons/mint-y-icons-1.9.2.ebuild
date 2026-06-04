@@ -13,10 +13,6 @@ LICENSE="CC-BY-4.0 GPL-3+"
 SLOT="0"
 KEYWORDS="~amd64"
 
-RDEPEND="
-	dev-util/gtk-update-icon-cache
-"
-
 src_install() {
 	insinto /usr/share/icons
 	doins -r usr/share/icons/.
