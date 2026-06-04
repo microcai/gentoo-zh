@@ -4,7 +4,8 @@
 EAPI=8
 
 DISTUTILS_USE_PEP517=setuptools
-PYTHON_COMPAT=( python3_{9..13} )
+PYTHON_COMPAT=( python3_{9..15} )
+EPYTEST_PLUGINS=()
 inherit distutils-r1
 
 DESCRIPTION="Cross platform menu item installation"
