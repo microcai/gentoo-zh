@@ -41,7 +41,7 @@ DEPEND="
 	net-libs/webkit-gtk:4.1[X?,wayland]
 	x11-libs/cairo
 	x11-libs/gdk-pixbuf:2
-	x11-libs/gtk+:3[wayland]
+	x11-libs/gtk+:3[X?,wayland]
 "
 RDEPEND="
 	!app-misc/cc-switch-bin
