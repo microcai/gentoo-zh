@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-06-06 18:28:39 CST)
+(The last generation time: 2026-06-08 17:02:27 CST)
 
 ### Packages
 
@@ -388,7 +388,7 @@
  dev-util/fvm                                          | 4.1.0              |            | https://github.com/leoafarias/fvm                                                       | Flutter Version Management
    dev-lang/dart                                       | 3.12.0             |  D, RD     | https://dart.dev                                                                        | The Dart SDK
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-util/gemini-cli                                   | 0.45.0             |            | https://github.com/google-gemini/gemini-cli                                             | Gemini CLI - a command-line AI workflow tool by Google
+ dev-util/gemini-cli                                   | 0.45.2             |            | https://github.com/google-gemini/gemini-cli                                             | Gemini CLI - a command-line AI workflow tool by Google
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/gitea-cli                                    | 0.14.1             |            | https://gitea.com/gitea/tea                                                             | Command line tool to interact with Gitea
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
