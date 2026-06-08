@@ -38,7 +38,7 @@ DEPEND="
 	dev-libs/libayatana-appindicator
 	dev-libs/openssl:=
 	net-libs/libsoup:3.0
-	net-libs/webkit-gtk:4.1[X?,wayland?]
+	net-libs/webkit-gtk:4.1[X?,wayland]
 	x11-libs/cairo
 	x11-libs/gdk-pixbuf:2
 	x11-libs/gtk+:3[wayland]
