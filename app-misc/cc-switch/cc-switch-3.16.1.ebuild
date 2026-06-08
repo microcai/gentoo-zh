@@ -28,7 +28,7 @@ LICENSE+="
 "
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE="+X wayland"
+IUSE="+X"
 RESTRICT="test"
 
 # The tray integration loads libayatana-appindicator at runtime.
