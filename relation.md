@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-06-08 20:39:36 CST)
+(The last generation time: 2026-06-09 08:09:46 CST)
 
 ### Packages
 
@@ -161,6 +161,7 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-misc/cc-switch                                    | 3.14.1             |            | https://github.com/farion1231/cc-switch                                                 | All-in-One Assistant for Claude Code, Codex & Gemini CLI
                                                        | 3.15.0             |            |                                                                                         |
+                                                       | 3.16.1             |            |                                                                                         |
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-misc/cc-switch-bin                                | 3.14.1             |            | https://github.com/farion1231/cc-switch                                                 | All-in-one manager for Claude Code, Codex, Gemini CLI, OpenCode, and OpenClaw
                                                        | 3.16.1             |            |                                                                                         |
