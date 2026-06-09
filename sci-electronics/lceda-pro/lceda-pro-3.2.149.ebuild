@@ -3,7 +3,7 @@
 
 EAPI=8
 
-inherit desktop xdg
+inherit desktop unpacker xdg
 
 DESCRIPTION="LCEDA Pro (binary package)"
 HOMEPAGE="https://lceda.cn/"
@@ -63,11 +63,6 @@ QA_PREBUILT="
 	/opt/lceda-pro/libGLESv2.so
 	/opt/lceda-pro/libvulkan.so.1
 "
-
-src_unpack(){
-	export LANG=C.UTF-8
-	unpack ${A}
-}
 
 src_install(){
 	insinto /opt/lceda-pro
