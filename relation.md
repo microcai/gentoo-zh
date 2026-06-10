@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-06-10 06:47:33 CST)
+(The last generation time: 2026-06-10 17:35:00 CST)
 
 ### Packages
 
@@ -389,7 +389,7 @@
  dev-util/fvm                                          | 4.1.0              |            | https://github.com/leoafarias/fvm                                                       | Flutter Version Management
    dev-lang/dart                                       | 3.12.0             |  D, RD     | https://dart.dev                                                                        | The Dart SDK
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-util/gemini-cli                                   | 0.45.2             |            | https://github.com/google-gemini/gemini-cli                                             | Gemini CLI - a command-line AI workflow tool by Google
+ dev-util/gemini-cli                                   | 0.45.3             |            | https://github.com/google-gemini/gemini-cli                                             | Gemini CLI - a command-line AI workflow tool by Google
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/gitea-cli                                    | 0.14.1             |            | https://gitea.com/gitea/tea                                                             | Command line tool to interact with Gitea
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -712,7 +712,7 @@
                                                        | 1.2.0              |            |                                                                                         |
                                                        | 1.2.2              |            |                                                                                         |
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-misc/reframe                                      | 1.15.2             |            | https://reframe.alynx.one/                                                              | DRM/KMS based remote desktop for Linux
+ net-misc/reframe                                      | 1.16.0             |            | https://reframe.alynx.one/                                                              | DRM/KMS based remote desktop for Linux
    acct-group/reframe                                  | 0                  |  D, RD     |                                                                                         | group for reframe
    acct-user/reframe                                   | 0                  |  D, RD     |                                                                                         | user for reframe
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
