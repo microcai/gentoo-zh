@@ -32,6 +32,8 @@ RDEPEND="
 	x11-misc/xdg-utils
 	wayland? ( dev-libs/wayland )
 	x11-libs/libvdpau
+	net-print/cups
+	x11-libs/libXtst
 "
 
 QA_PREBUILT="*"
