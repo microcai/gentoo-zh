@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-06-19 10:59:12 CST)
+(The last generation time: 2026-06-19 13:58:09 CST)
 
 ### Packages
 
@@ -378,10 +378,8 @@
                                                        | 31                 |            |                                                                                         |
      sys-apps/pacman                                   | 7.0.0              |  D         | https://archlinux.org/pacman/                                                           | Archlinux's binary package manager
                                                        | 7.1.0              |            |                                                                                         |
-       app-crypt/archlinux-keyring                     | 20231113           |  D, RD     | https://gitlab.archlinux.org/archlinux/archlinux-keyring                                | GnuPG keyring of Archlinux developer keys
-                                                       | 20231222           |            |                                                                                         |
-                                                       | 20240208-r1        |            |                                                                                         |
-                                                       | 20251116           |            |                                                                                         |
+       app-crypt/archlinux-keyring                     | 20251116           |  D, RD     | https://gitlab.archlinux.org/archlinux/archlinux-keyring                                | GnuPG keyring of Archlinux developer keys
+                                                       | 20260612           |            |                                                                                         |
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/asdf-vm                                      | 0.15.0             |            | https://github.com/asdf-vm/asdf                                                         | Manage all your runtime versions with one tool
                                                        | 0.18.1             |            |                                                                                         |
@@ -857,8 +855,8 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  sys-apps/mdp                                          | 9999               |            | https://github.com/visit1985/mdp                                                        | A command-line based markdown presentation tool
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- sys-apps/pacman-mirrorlist                            | 20210509           |            | https://archlinux.org/mirrorlist/                                                       | Repository list for Archlinux's binary package manager
-                                                       | 20251021           |            |                                                                                         |
+ sys-apps/pacman-mirrorlist                            | 20251021           |            | https://archlinux.org/mirrorlist/                                                       | Repository list for Archlinux's binary package manager
+                                                       | 20260610           |            |                                                                                         |
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  sys-apps/wait-online                                  | 9999               |            | https://github.com/lilydjwg/wait-online                                                 | Wait until we're connected to the Internet
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
