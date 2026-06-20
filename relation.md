@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-06-20 14:28:41 CST)
+(The last generation time: 2026-06-20 20:27:56 CST)
 
 ### Packages
 
@@ -178,7 +178,7 @@
  app-misc/crush                                        | 0.35.0             |            | https://github.com/charmbracelet/crush                                                  | The glamourous AI coding agent for your favourite terminal 💘
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-misc/go-yq-bin                                    | 4.52.5             |            | https://github.com/mikefarah/yq                                                         | yq is a portable command-line YAML, JSON and XML processor
-                                                       | 4.53.2             |            |                                                                                         |
+                                                       | 4.53.3             |            |                                                                                         |
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-misc/gpick                                        | 0.4                |            | https://github.com/thezbyg/gpick                                                        | Advanced color picker written in C++ using GTK+ toolkit
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -368,7 +368,7 @@
                                                        | 10.7.4             |            |                                                                                         |
    dev-python/mwparserfromhell                         | 0.7.2              | RD         | https://github.com/earwig/mwparserfromhell                                              | A Python parser for MediaWiki wikicode
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-python/uv-bin                                     | 0.11.3             |            | https://github.com/astral-sh/uv                                                         | An extremely fast Python package and project manager, written in Rust.
+ dev-python/uv-bin                                     | 0.11.21            |            | https://github.com/astral-sh/uv                                                         | An extremely fast Python package and project manager, written in Rust.
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-ruby/filelock                                     | 1.1.1              |            | https://github.com/sheerun/filelock                                                     | Heavily tested, but simple filelocking solution using flock command
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -766,7 +766,7 @@
  net-proxy/daed                                        | 1.21.1             |            | https://github.com/daeuniverse/daed                                                     | A Modern Dashboard For dae
                                                        | 1.27.0-r1          |            |                                                                                         |
                                                        | 9999               |            |                                                                                         |
-   sys-apps/pnpm                                       | 10.33.0            | BD         | https://pnpm.io                                                                         | Fast, disk space efficient package manager
+   sys-apps/pnpm                                       | 11.7.0             | BD         | https://pnpm.io                                                                         | Fast, disk space efficient package manager
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/flclash-bin                                 | 0.8.93             |            | https://github.com/chen08209/FlClash                                                    | A multi-platform proxy client based on ClashMeta
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -902,7 +902,7 @@
    dev-libs/v2ray-geoip                                | 202603050223       | RD         | https://github.com/v2fly/geoip                                                          | GeoIP for V2Ray.
    dev-libs/v2ray-geoip-bin                            | 202603050223       | RD         | https://github.com/v2fly/geoip                                                          | GeoIP for V2Ray.
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- www-apps/cherry-studio-bin                            | 1.8.4              |            | https://github.com/CherryHQ/cherry-studio                                               | Cherry Studio is a desktop client that supports for multiple LLM providers.
+ www-apps/cherry-studio-bin                            | 1.9.11             |            | https://github.com/CherryHQ/cherry-studio                                               | Cherry Studio is a desktop client that supports for multiple LLM providers.
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  www-apps/dufs                                         | 0.45.0             |            | https://github.com/sigoden/dufs                                                         | A distinctive utility file server
                                                        | 0.46.0             |            |                                                                                         |
@@ -918,7 +918,7 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  www-servers/miniserve                                 | 0.35.0             |            | https://github.com/svenstaro/miniserve                                                  | a CLI tool to serve files and dirs over HTTP
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- www-servers/s-ui-bin                                  | 1.4.1              |            | https://github.com/alireza0/s-ui                                                        | An advanced Web Panel • Built for SagerNet/Sing-Box
+ www-servers/s-ui-bin                                  | 1.4.2              |            | https://github.com/alireza0/s-ui                                                        | An advanced Web Panel • Built for SagerNet/Sing-Box
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  www-servers/woof                                      | 9999               |            | http://www.home.unix-ag.org/simon/woof.html                                             | an ad-hoc single file webserver
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
