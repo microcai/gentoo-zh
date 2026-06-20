@@ -15,14 +15,17 @@ declare -A GIT_CRATES=(
 	[dhcproto-macros]='https://github.com/bluecatengineering/dhcproto;eece41c9a13b0e4912fb9a8f08401ab01b4123d4;dhcproto-%commit%/dhcproto-macros'
 	[dhcproto]='https://github.com/bluecatengineering/dhcproto;eece41c9a13b0e4912fb9a8f08401ab01b4123d4;dhcproto-%commit%'
 	[netstack-lwip]='https://github.com/eycorsican/netstack-lwip;f434fefd6c227c9dfbec84c364452ba6c1532779;netstack-lwip-%commit%'
+	[quinn-congestions]='https://github.com/proxy-rs/quinn-congestions;2bdc356f57a7fc3ae1a49ab963a221f42d61012f;quinn-congestions-%commit%'
 	[quinn-proto]='https://github.com/Tipuch/quinn;ce60e5b5c115db2a6053f4e0ca7fc52103cb76b9;quinn-%commit%/quinn-proto'
 	[quinn-udp]='https://github.com/Tipuch/quinn;ce60e5b5c115db2a6053f4e0ca7fc52103cb76b9;quinn-%commit%/quinn-udp'
 	[quinn]='https://github.com/Tipuch/quinn;ce60e5b5c115db2a6053f4e0ca7fc52103cb76b9;quinn-%commit%/quinn'
+	[rustls-acme]='https://github.com/rust-proxy/rustls-acme;cc306ff72acd5f4b47cda426137ae80d10a425ce;rustls-acme-%commit%'
 	[rustls]='https://github.com/Watfaq/rustls;e6e8e7e1a0d65f2f273eb7b5b6179896536ac174;rustls-%commit%/rustls'
 	[shadowsocks]='https://github.com/shadowsocks/shadowsocks-rust;c4d8d18527289d12470cad1ce718754c908a75fe;shadowsocks-rust-%commit%/crates/shadowsocks'
 	[sock2proc]='https://github.com/Watfaq/sock2proc;9f9e6304d62285115b2e4fa632527ae563bf0fcc;sock2proc-%commit%'
 	[tokio-rustls]='https://github.com/Watfaq/tokio-rustls;b26e3e2b7a0161d505fd12d6e545b16463f1a45f;tokio-rustls-%commit%'
-	[tuic-core]='https://github.com/Itsusinn/tuic;cc583dc3372783e8ec09ba3707b7c1b9680a8a2e;tuic-%commit%/tuic-core'
+	[tuic-core]='https://github.com/Itsusinn/tuic;e4ae97bca5d5386ae964f09631e72c3bd392ca6b;tuic-%commit%/tuic-core'
+	[tuic-server]='https://github.com/Itsusinn/tuic;e4ae97bca5d5386ae964f09631e72c3bd392ca6b;tuic-%commit%/tuic-server'
 	[unix-udp-sock]='https://github.com/Watfaq/unix-udp-sock;847c80b519f0fd8cff5c887ae708429897d08671;unix-udp-sock-%commit%'
 )
 
