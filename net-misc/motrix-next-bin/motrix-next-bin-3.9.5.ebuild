@@ -3,21 +3,16 @@
 
 EAPI=8
 
-inherit desktop unpacker xdg
+inherit desktop xdg
 
 MY_PN="${PN%-bin}"
 
 DESCRIPTION="A full-featured download manager"
 HOMEPAGE="https://motrix-next.pages.dev https://github.com/AnInsomniacy/motrix-next"
+URL_PREFIX="https://github.com/AnInsomniacy/motrix-next/releases/download/v${PV}/MotrixNext_${PV}"
 SRC_URI="
-	amd64? (
-		https://github.com/AnInsomniacy/motrix-next/releases/download/v${PV}/MotrixNext_${PV}_amd64.deb
-			-> ${P}_amd64.deb
-	)
-	arm64? (
-		https://github.com/AnInsomniacy/motrix-next/releases/download/v${PV}/MotrixNext_${PV}_arm64.deb
-			-> ${P}_arm64.deb
-	)
+	amd64? ( ${URL_PREFIX}_amd64.AppImage -> ${P}_amd64.AppImage )
+	arm64? ( ${URL_PREFIX}_aarch64.AppImage -> ${P}_arm64.AppImage )
 "
 
 S="${WORKDIR}"
@@ -25,35 +20,29 @@ S="${WORKDIR}"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~arm64"
-IUSE="+X wayland"
-
-RDEPEND="
-	dev-libs/glib:2
-	dev-libs/libayatana-appindicator
-	dev-libs/openssl:0/3
-	net-libs/libsoup:3.0
-	net-libs/webkit-gtk:4.1[X?,wayland?]
-	x11-libs/cairo
-	x11-libs/gdk-pixbuf:2
-	x11-libs/gtk+:3[X?,wayland?]
-"
+RDEPEND="sys-fs/fuse:0"
 
 RESTRICT="strip"
-QA_PREBUILT="
-	usr/bin/${MY_PN}
-	usr/bin/${MY_PN}-engine
-"
+QA_PREBUILT="usr/bin/${MY_PN}"
+
+src_unpack() {
+	if use amd64; then
+		cp "${DISTDIR}/${P}_amd64.AppImage" "${MY_PN}" || die
+	elif use arm64; then
+		cp "${DISTDIR}/${P}_arm64.AppImage" "${MY_PN}" || die
+	fi
+
+	chmod +x "${MY_PN}" || die
+	./"${MY_PN}" --appimage-extract >/dev/null || die
+}
 
 src_install() {
-	dobin usr/bin/${MY_PN} usr/bin/${MY_PN}-engine
+	dobin "${MY_PN}"
 
-	insinto /usr/lib/MotrixNext
-	doins -r usr/lib/MotrixNext/.
-
-	domenu usr/share/applications/MotrixNext.desktop
+	domenu squashfs-root/MotrixNext.desktop
 
 	for size in 32 128; do
-		doicon -s ${size} usr/share/icons/hicolor/${size}x${size}/apps/${MY_PN}.png
+		doicon -s ${size} squashfs-root/usr/share/icons/hicolor/${size}x${size}/apps/${MY_PN}.png
 	done
-	doicon -s 256 usr/share/icons/hicolor/256x256@2/apps/${MY_PN}.png
+	doicon -s 256 squashfs-root/usr/share/icons/hicolor/256x256@2/apps/${MY_PN}.png
 }
