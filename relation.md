@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-06-19 13:58:09 CST)
+(The last generation time: 2026-06-20 14:28:41 CST)
 
 ### Packages
 
@@ -946,6 +946,8 @@
  x11-themes/fcitx-breeze                               | 3.1.0              |            | https://gitlab.com/scratch-er/fcitx5-breeze                                             | Fcitx5 theme to match KDE's Breeze style.
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  x11-themes/kora-icon-theme                            | 2.0.4              |            | https://github.com/bikass/kora                                                          | An SVG icon theme with lots of new icons for GNU/Linux operating systems
+-------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ x11-themes/kvantum-black                              | 0.2.0              |            | https://github.com/vitaly-zdanevich/kvantum-black                                       | Black Catppuccin themes for Kvantum
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  x11-themes/mint-y-icons                               | 1.9.2              |            | https://github.com/linuxmint/mint-y-icons/                                              | The Mint-Y icon theme, based on Paper and Moka
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
