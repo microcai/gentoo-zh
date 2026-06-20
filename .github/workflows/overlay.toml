@@ -836,11 +836,6 @@ source = "github"
 github = "git-learning-game/oh-my-git"
 use_latest_tag = true
 
-["games-util/winegame-client-bin"]
-source = "regex"
-url = "https://winegame.net/downloads/"
-regex = "net.winegame.client_([\\d.]+)_amd64.deb"
-
 ["gui-apps/crystal-dock"]
 source = "github"
 github = "dangvd/crystal-dock"
