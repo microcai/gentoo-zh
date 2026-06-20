@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-06-21 00:22:22 CST)
+(The last generation time: 2026-06-21 00:52:37 CST)
 
 ### Packages
 
@@ -704,6 +704,8 @@
  net-misc/immich-go                                    | 0.31.0             |            | https://github.com/simulot/immich-go/                                                   | A immich-CLI alternative
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-misc/localsend-bin                                | 1.17.0             |            | https://localsend.org                                                                   | An open-source cross-platform alternative to AirDrop
+-------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ net-misc/motrix-next-bin                              | 3.9.5              |            | https://motrix-next.pages.dev                                                           | A full-featured download manager
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-misc/ntpd-rs                                      | 1.9.0              |            | https://github.com/pendulum-project/ntpd-rs                                             | Full-featured implementation of NTP with NTS support
    acct-group/ntpd-rs                                  | 0                  | RD         |                                                                                         | Full-featured implementation of NTP with NTS support
