@@ -25,16 +25,17 @@ S="${WORKDIR}"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~arm64"
+IUSE="+X wayland"
 
 RDEPEND="
 	dev-libs/glib:2
 	dev-libs/libayatana-appindicator
 	dev-libs/openssl:0/3
 	net-libs/libsoup:3.0
-	net-libs/webkit-gtk:4.1
+	net-libs/webkit-gtk:4.1[X?,wayland?]
 	x11-libs/cairo
 	x11-libs/gdk-pixbuf:2
-	x11-libs/gtk+:3
+	x11-libs/gtk+:3[X?,wayland?]
 "
 
 RESTRICT="strip"
