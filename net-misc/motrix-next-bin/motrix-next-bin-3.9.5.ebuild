@@ -39,7 +39,7 @@ src_unpack() {
 src_install() {
 	dobin "${MY_PN}"
 
-	domenu squashfs-root/MotrixNext.desktop
+	domenu squashfs-root/usr/share/applications/MotrixNext.desktop
 
 	for size in 32 128; do
 		doicon -s ${size} squashfs-root/usr/share/icons/hicolor/${size}x${size}/apps/${MY_PN}.png
