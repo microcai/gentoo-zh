@@ -8,7 +8,7 @@ inherit desktop xdg
 MY_PN="AppFlowy"
 
 DESCRIPTION="AppFlowy is an open-source alternative to Notion"
-HOMEPAGE="https://www.appflowy.io/"
+HOMEPAGE="https://appflowy.com/"
 SRC_URI="
 	https://github.com/AppFlowy-IO/AppFlowy/releases/download/${PV}/AppFlowy-${PV}-linux-x86_64.tar.gz
 "
