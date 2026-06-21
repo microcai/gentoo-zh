@@ -16,7 +16,7 @@ SRC_URI="amd64? (
 
 S="${WORKDIR}"
 
-LICENSE="MIT"
+LICENSE="GPL-3+ MIT"
 SLOT="0"
 KEYWORDS="-* ~amd64"
 IUSE="+X wayland"
@@ -31,19 +31,21 @@ RDEPEND="
 	dev-libs/wayland
 	net-libs/libsoup:3.0
 	net-libs/webkit-gtk:4.1[X?,wayland?]
-	net-proxy/sing-box[clash-api]
 	x11-libs/cairo
 	x11-libs/gdk-pixbuf:2
 	x11-libs/gtk+:3[X?,wayland?]
 "
 
-QA_PREBUILT="usr/bin/${MY_PN}"
+QA_PREBUILT="
+	usr/bin/${MY_PN}
+	usr/lib/${MY_PN}/kernel/linux/amd64/sing-box
+"
 
 src_install() {
 	dobin "usr/bin/${MY_PN}"
 
-	dodir "/usr/lib/${MY_PN}/kernel/linux/amd64"
-	dosym -r /usr/bin/sing-box "/usr/lib/${MY_PN}/kernel/linux/amd64/sing-box"
+	exeinto "/usr/lib/${MY_PN}/kernel/linux/amd64"
+	doexe "usr/lib/${MY_PN}/kernel/linux/amd64/sing-box"
 
 	sed \
 		-e 's|^Categories=.*|Categories=Network;|' \
