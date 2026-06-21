@@ -21,6 +21,12 @@ RDEPEND="
 	dev-libs/nspr
 	dev-libs/nss
 	media-libs/alsa-lib
+	media-libs/mesa[gbm(+)]
+	x11-libs/gtk+:3[X,cups]
+	x11-libs/libX11
+	x11-libs/libXext
+	x11-libs/libxcb
+	x11-libs/libxkbcommon
 "
 
 src_prepare() {
