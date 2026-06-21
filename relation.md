@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-06-21 22:12:52 CST)
+(The last generation time: 2026-06-21 23:57:15 CST)
 
 ### Packages
 
@@ -917,8 +917,8 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  www-client/brave-bin                                  | 1.91.175           |            | https://brave.com/                                                                      | Web browser that blocks ads and trackers by default
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- www-client/zen-browser-bin                            | 1.17.15_beta       |            | https://zen-browser.app/                                                                | Experience tranquillity while browsing the web without people tracking you!
-                                                       | 1.18.4_beta        |            |                                                                                         |
+ www-client/zen-browser-bin                            | 1.18.4_beta        |            | https://zen-browser.app/                                                                | Experience tranquillity while browsing the web without people tracking you!
+                                                       | 1.21.3_beta        |            |                                                                                         |
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  www-servers/darkhttpd                                 | 1.17               |            | http://unix4lyfe.org/darkhttpd/                                                         | A small, static webserver
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
