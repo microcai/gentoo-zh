@@ -813,6 +813,12 @@ use_max_tag = true
 prefix = "v"
 github_account = "peeweep"
 
+["dev-vcs/rebased-bin"]
+source = "github"
+github = "DetachHead/rebased"
+use_latest_release = true
+github_account = "gouwazi"
+
 ["dev-vcs/sourcegit-bin"]
 source = "github"
 github = "sourcegit-scm/sourcegit"
