@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-06-21 14:53:24 CST)
+(The last generation time: 2026-06-21 16:10:48 CST)
 
 ### Packages
 
@@ -438,6 +438,8 @@
  dev-vcs/gitoxide                                      | 0.54.0             |            | https://github.com/GitoxideLabs/gitoxide                                                | A command-line application for interacting with git repositories
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-vcs/git-remote-mediawiki                          | 9999               |            | https://github.com/Git-Mediawiki/Git-Mediawiki                                          | Gate between Git and Mediawiki: pull and push Wikipedia articles
+-------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ dev-vcs/rebased-bin                                   | 1.1.3              |            | https://github.com/DetachHead/rebased                                                   | Git client based on the IntelliJ platform
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-vcs/sourcegit-bin                                 | 2026.07            |            | https://github.com/sourcegit-scm/sourcegit                                              | Opensource Git GUI client.
                                                        | 2026.09            |            |                                                                                         |
