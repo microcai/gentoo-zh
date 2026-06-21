@@ -17,10 +17,13 @@ KEYWORDS="-* ~amd64"
 RESTRICT="mirror strip"
 
 DEPEND="
-	x11-libs/gtk+:3
-	media-libs/alsa-lib
-	x11-libs/libxkbfile
 	dev-libs/nss
+	media-libs/alsa-lib
+	media-libs/mesa[gbm(+)]
+	net-print/cups
+	x11-libs/gtk+:3
+	x11-libs/libxkbcommon
+	x11-libs/libxkbfile
 "
 RDEPEND="${DEPEND}"
 
@@ -34,6 +37,10 @@ src_install() {
 	done
 	insinto /usr/share/mime/packages
 	doins usr/share/mime/packages/xmind.xml
+	sed -i \
+		-e '/^\[Desktop Action StartupNotify\]/,$d' \
+		-e '/^Terminal=/a StartupNotify=true' \
+		usr/share/applications/xmind.desktop || die
 	domenu usr/share/applications/xmind.desktop
 	gzip -d usr/share/doc/xmind-vana/changelog.gz || die
 	dodoc usr/share/doc/xmind-vana/changelog
