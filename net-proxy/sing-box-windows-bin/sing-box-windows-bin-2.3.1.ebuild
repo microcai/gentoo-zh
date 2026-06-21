@@ -3,7 +3,7 @@
 
 EAPI=8
 
-inherit desktop wrapper xdg
+inherit desktop xdg
 
 MY_PN="${PN%-bin}"
 
@@ -23,40 +23,19 @@ KEYWORDS="-* ~amd64"
 RESTRICT="strip"
 
 RDEPEND="
-	app-shells/bash
-	dev-libs/expat
-	dev-libs/fribidi
-	dev-libs/gmp
-	dev-libs/libgpg-error
-	media-libs/fontconfig
-	media-libs/freetype
-	media-libs/harfbuzz
-	media-libs/libglvnd[X]
-	media-libs/mesa[gbm(+)]
-	sys-fs/e2fsprogs
-	virtual/zlib
-	x11-libs/libdrm
-	x11-libs/libX11
-	x11-libs/libxcb
+	sys-fs/fuse:0
 "
 
-QA_PREBUILT="*"
+QA_PREBUILT="usr/bin/${MY_PN}"
 
 src_unpack() {
-	cp "${DISTDIR}/${P}_amd64.AppImage" "${MY_PN}.AppImage" || die
-	chmod +x "${MY_PN}.AppImage" || die
-	./"${MY_PN}.AppImage" --appimage-extract >/dev/null || die
+	cp "${DISTDIR}/${P}_amd64.AppImage" "${MY_PN}" || die
+	chmod +x "${MY_PN}" || die
+	./"${MY_PN}" --appimage-extract >/dev/null || die
 }
 
 src_install() {
-	insinto "/opt/${PN}"
-	doins -r squashfs-root/*
-	fperms +x \
-		"/opt/${PN}/AppRun" \
-		"/opt/${PN}/AppRun.wrapped" \
-		"/opt/${PN}/usr/bin/${MY_PN}" \
-		"/opt/${PN}/usr/lib/${MY_PN}/kernel/linux/amd64/sing-box"
-	make_wrapper "${MY_PN}" "/opt/${PN}/AppRun"
+	dobin "${MY_PN}"
 
 	sed \
 		-e 's|^Categories=.*|Categories=Network;|' \
