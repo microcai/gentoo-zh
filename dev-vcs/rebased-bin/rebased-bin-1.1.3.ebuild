@@ -27,7 +27,7 @@ RDEPEND="
 	media-libs/alsa-lib
 	media-libs/fontconfig
 	media-libs/freetype
-	media-libs/libglvnd
+	media-libs/libglvnd[X]
 	virtual/zlib:=
 	x11-libs/libX11
 	x11-libs/libXext
