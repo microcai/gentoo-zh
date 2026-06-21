@@ -57,10 +57,11 @@ RDEPEND="
 QA_PREBUILT="opt/${PN}/*"
 
 pkg_setup() {
-	CONFIG_CHECK="~SECCOMP"
-	WARNING_SECCOMP="CONFIG_SECCOMP not set! This system will be unable to play DRM-protected content."
-
-	linux-info_pkg_setup
+	use kernel_linux || return
+	get_running_version || return
+	linux_config_exists || return
+	linux_chkconfig_present SECCOMP || \
+		ewarn "CONFIG_SECCOMP not set! This system will be unable to play DRM-protected content."
 }
 
 src_install() {
