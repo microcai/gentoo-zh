@@ -2,8 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer type="person">
-		<name>gouwazi</name>
-		<email>izawuog@protonmail.com</email>
+		<name>Xianggang Wang</name>
+		<email>dev@wangxianggang.com</email>
 	</maintainer>
 	<upstream>
 		<remote-id type="github">isd-project/isd</remote-id>

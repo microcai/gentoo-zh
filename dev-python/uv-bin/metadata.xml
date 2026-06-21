@@ -2,8 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer type="person">
-		<email>izawuog@gmail.com</email>
-		<name>gouwazi</name>
+		<email>dev@wangxianggang.com</email>
+		<name>Xianggang Wang</name>
 	</maintainer>
 	<upstream>
 		<remote-id type="github">astral-sh/uv</remote-id>
