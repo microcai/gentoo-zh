@@ -25,6 +25,7 @@ DEPEND="
 	app-arch/lz4
 	app-crypt/mit-krb5
 	dev-libs/glib:2
+	dev-libs/wayland
 	dev-libs/openssl:0/3
 	dev-libs/keybinder:3
 	media-video/mpv:0[libmpv]
@@ -38,12 +39,15 @@ DEPEND="
 	x11-libs/cairo
 	x11-libs/gdk-pixbuf:2
 	x11-libs/gtk+:3
+	x11-libs/libXinerama
 	x11-libs/libnotify
+	x11-libs/libxkbcommon
 	x11-libs/libvdpau
 	x11-libs/pango
 	x11-misc/xdg-user-dirs[gtk]
 "
 RDEPEND="${DEPEND}"
+BDEPEND="dev-util/patchelf"
 
 QA_PRESTRIPPED="
 	/opt/${PN}/lib/libapp.so
@@ -52,6 +56,13 @@ QA_PRESTRIPPED="
 QA_PREBUILT="*"
 
 src_install() {
+	local f
+	while IFS= read -r -d '' f; do
+		[[ -L ${f} ]] && continue
+		patchelf --print-needed "${f}" 2>/dev/null | grep -qxF 'libbz2.so.1.0' || continue
+		patchelf --replace-needed libbz2.so.1.0 libbz2.so.1 "${f}" || die
+	done < <(find "${S}" -type f -print0)
+
 	dosym -r /usr/lib64/libmpv.so.2 /usr/lib64/libmpv.so.1
 
 	insinto "/opt/${PN}"
