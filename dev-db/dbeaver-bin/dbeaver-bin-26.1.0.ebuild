@@ -7,7 +7,7 @@ inherit desktop wrapper xdg
 DESCRIPTION="Free universal database tool (community edition)."
 HOMEPAGE="https://dbeaver.io/"
 MY_PN="${PN%-bin*}"
-SRC_URI="https://dbeaver.io/files/${PV}/${MY_PN}-ce-${PV}-linux.gtk.x86_64-nojdk.tar.gz -> ${P}-amd64.tar.gz"
+SRC_URI="https://dbeaver.io/files/${PV}/${MY_PN}-ce-${PV}-linux-x86_64.tar.gz -> ${P}-amd64.tar.gz"
 S="${WORKDIR}/${MY_PN}"
 
 LICENSE="Apache-2.0 EPL-1.0 BSD"
@@ -19,6 +19,7 @@ DEPEND="${RDEPEND}"
 
 src_prepare() {
 	local jna_dir
+	rm -r jre || die
 	for jna_dir in plugins/com.sun.jna_*; do
 		if [[ -d "${jna_dir}/com/sun/jna" ]]; then
 			find "${jna_dir}/com/sun/jna" -type f -name 'libjnidispatch.so' \
