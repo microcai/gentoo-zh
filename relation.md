@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-06-22 00:19:14 CST)
+(The last generation time: 2026-06-22 07:58:59 CST)
 
 ### Packages
 
@@ -166,7 +166,7 @@
                                                        | 3.16.1             |            |                                                                                         |
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-misc/cc-switch-bin                                | 3.14.1             |            | https://github.com/farion1231/cc-switch                                                 | All-in-one manager for Claude Code, Codex, Gemini CLI, OpenCode, and OpenClaw
-                                                       | 3.16.1             |            |                                                                                         |
+                                                       | 3.16.3             |            |                                                                                         |
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-misc/cc-switch-cli                                | 5.4.0              |            | https://github.com/SaladDay/cc-switch-cli                                               | All-in-One Assistant for Claude Code, Codex, Gemini, OpenCode & OpenClaw
                                                        | 5.5.0              |            |                                                                                         |
@@ -275,7 +275,7 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-cpp/tgbot-cpp                                     | 1.9.1              |            | https://github.com/reo7sp/tgbot-cpp                                                     | C++ library for Telegram bot API
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-db/dbeaver-bin                                    | 25.3.0             |            | https://dbeaver.io/                                                                     | Free universal database tool (community edition).
+ dev-db/dbeaver-bin                                    | 26.1.0             |            | https://dbeaver.io/                                                                     | Free universal database tool (community edition).
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-debug/lldb-mi                                     | 0.0.1              |            | https://github.com/lldb-tools/lldb-mi                                                   | LLDB Machine Interface Driver
                                                        | 9999               |            |                                                                                         |
