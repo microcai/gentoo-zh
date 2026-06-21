@@ -1,14 +1,14 @@
-# Copyright 2023-2024 Gentoo Authors
+# Copyright 2023-2026 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
 
 inherit desktop unpacker xdg
 
-DATE_VER="202507210802"
+DATE_VER="202606142122"
 DESCRIPTION="Brainstorming and Mind Mapping Software"
-HOMEPAGE="https://www.xmind.net"
-SRC_URI="https://dl3.xmind.net/Xmind-for-Linux-amd64bit-${PV}-${DATE_VER}.deb"
+HOMEPAGE="https://xmind.com"
+SRC_URI="https://dl3.xmind.app/Xmind-for-Linux-amd64bit-${PV}-${DATE_VER}.deb"
 
 S=${WORKDIR}
 LICENSE="all-rights-reserved"
