@@ -1487,6 +1487,13 @@ use_latest_release = true
 prefix = "v"
 github_account = "Puqns67"
 
+["net-proxy/sing-box-windows-bin"]
+source = "github"
+github = "xinggaoya/sing-box-windows"
+use_latest_release = true
+prefix = "v"
+github_account = "gouwazi"
+
 ["net-proxy/smartproxy"]
 source = "github"
 github = "microcai/smartproxy"
