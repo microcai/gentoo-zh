@@ -17,9 +17,11 @@ S="${WORKDIR}/${MY_PN}"
 LICENSE="AGPL-3"
 SLOT="0"
 KEYWORDS="-* ~amd64"
+IUSE="llvm-libunwind"
 
 DEPEND="
 	app-accessibility/at-spi2-core:2
+	app-arch/bzip2
 	app-arch/lz4
 	app-crypt/mit-krb5
 	dev-libs/glib:2
@@ -31,7 +33,8 @@ DEPEND="
 	media-libs/libepoxy
 	media-libs/libpulse
 	media-libs/libva
-	sys-libs/libunwind
+	llvm-libunwind? ( llvm-runtimes/libunwind:= )
+	!llvm-libunwind? ( sys-libs/libunwind:= )
 	x11-libs/cairo
 	x11-libs/gdk-pixbuf:2
 	x11-libs/gtk+:3
