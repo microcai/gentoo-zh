@@ -63,10 +63,13 @@ src_install() {
 		patchelf --replace-needed libbz2.so.1.0 libbz2.so.1 "${f}" || die
 	done < <(find "${S}" -type f -print0)
 
-	dosym -r /usr/lib64/libmpv.so.2 /usr/lib64/libmpv.so.1
+	rm lib/libmpv.so.{1,2} || die
 
 	insinto "/opt/${PN}"
 	doins -r data/ lib/ AppFlowy
+	dosym -r /usr/lib64/libmpv.so.2 "/opt/${PN}/lib/libmpv.so"
+	dosym -r /usr/lib64/libmpv.so.2 "/opt/${PN}/lib/libmpv.so.1"
+	dosym -r /usr/lib64/libmpv.so.2 "/opt/${PN}/lib/libmpv.so.2"
 
 	fperms +x /opt/${PN}/AppFlowy
 
