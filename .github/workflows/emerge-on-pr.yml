@@ -21,7 +21,7 @@ jobs:
       packages: ${{ steps.packages.outputs.packages }}
 
     steps:
-    - uses: actions/checkout@v6
+    - uses: actions/checkout@v7
 
     - name: scan changed ebuilds
       env:
@@ -113,7 +113,7 @@ jobs:
       run: emerge-webrsync
 
     - name: fetch repo
-      uses: actions/checkout@v6
+      uses: actions/checkout@v7
       with:
         repository: ${{ github.event.pull_request.head.repo.full_name }}
         ref: ${{ github.event.pull_request.head.sha }}
