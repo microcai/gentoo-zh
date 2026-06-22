@@ -23,17 +23,27 @@ RDEPEND="
 	dev-libs/nss
 	dev-libs/wayland
 	dev-libs/libthai
+	dev-libs/libinput
 	media-libs/tiff-compat:4
 	media-libs/libpulse
 	media-video/rtmpdump
 	net-misc/curl
 	net-nds/openldap
+	net-print/cups
 	virtual/libc
 	virtual/zlib
+	sys-libs/mtdev
 	sys-process/procps
 	x11-libs/gtk+:2
 	x11-libs/gtk+:3[X]
+	x11-libs/libdrm
+	x11-libs/libXinerama
 	x11-libs/libXScrnSaver
+	x11-libs/libxkbcommon[X]
+	x11-libs/xcb-util-image
+	x11-libs/xcb-util-keysyms
+	x11-libs/xcb-util-renderutil
+	x11-libs/xcb-util-wm
 	virtual/libcrypt
 "
 
