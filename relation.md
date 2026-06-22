@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-06-22 11:54:45 CST)
+(The last generation time: 2026-06-22 15:56:27 CST)
 
 ### Packages
 
@@ -214,6 +214,7 @@
                                                        | 7.66.10            |            |                                                                                         |
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-office/evernote-repack                            | 11.20.2_p7         |            | https://github.com/vitaly-zdanevich/evernote-linux-repackage                            | Unofficial repackaging of the Evernote Electron desktop client, with black theme
+                                                       | 11.21.5_p1         |            |                                                                                         |
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-office/freeoffice                                 | 1062               |            | https://www.freeoffice.com                                                              | A complete, free Microsoft Office-compatible alternative office suite.
                                                        | 1064               |            |                                                                                         |
