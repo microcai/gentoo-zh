@@ -8,12 +8,6 @@ ROCM_VERSION="6.3"
 inherit cmake cuda rocm linux-info
 
 TINY_LLAMAS_COMMIT="99dd1a73db5a37100bd4ae633f4cfce6560e1567"
-LLAMACPP_WEBUI_ASSETS=(
-	bundle.css
-	bundle.js
-	index.html
-	loading.html
-)
 
 DESCRIPTION="LLM inference in C/C++"
 HOMEPAGE="https://github.com/ggml-org/llama.cpp"
@@ -129,10 +123,9 @@ src_unpack() {
 	if use webui; then
 		if [[ ${PV} == *9999* ]]; then
 			mkdir -p "${S}/tools/ui/dist"
-			for asset in "${LLAMACPP_WEBUI_ASSETS[@]}"; do
-				wget -O "${S}/tools/ui/dist/${asset}" \
-					"https://huggingface.co/buckets/ggml-org/llama-ui/resolve/latest/${asset}" || die
-			done
+			einfo Downloading webui dist from huggingface bucket...
+			wget -qO - "https://huggingface.co/buckets/ggml-org/llama-ui/resolve/latest/dist.tar.gz" \
+				| tar -xzC "${S}/tools/ui/dist"
 		else
 			ln -s "${WORKDIR}/llama-${MY_PV}" "${S}/tools/ui/dist" || die
 		fi
