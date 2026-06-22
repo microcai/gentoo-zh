@@ -51,7 +51,7 @@ jobs:
         emaint sync -r gentoo
 
     - name: checkout
-      uses: actions/checkout@v6
+      uses: actions/checkout@v7
 
     - name: eix
       id: eix
@@ -86,7 +86,7 @@ jobs:
       nvcmp: ${{ steps.nvchecker.outputs.nvcmp }}
     steps:
     - name: checkout
-      uses: actions/checkout@v6
+      uses: actions/checkout@v7
 
     - name: install depends
       run: |
@@ -120,12 +120,12 @@ jobs:
         include: ${{ fromJson(needs.nvchecker.outputs.nvcmp) }}
     steps:
     - name: Checkout bumpbot
-      uses: actions/checkout@v6
+      uses: actions/checkout@v7
       with:
         repository: 'gentoo-zh-drafts/bumpbot'
 
     - name: Checkout gentoo-zh
-      uses: actions/checkout@v6
+      uses: actions/checkout@v7
       with:
         path: 'gentoo-zh'
 
