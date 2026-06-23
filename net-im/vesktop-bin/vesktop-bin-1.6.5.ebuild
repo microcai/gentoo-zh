@@ -9,7 +9,7 @@ CHROMIUM_LANGS="
 	sw ta te th tr uk ur vi zh-CN zh-TW
 "
 
-inherit chromium-2 desktop linux-info optfeature unpacker xdg
+inherit chromium-2 desktop optfeature unpacker xdg
 
 DESCRIPTION="Discord Desktop with Vencord preinstalled"
 HOMEPAGE="https://github.com/Vencord/Vesktop"
@@ -59,13 +59,6 @@ RDEPEND="
 DESTDIR="/opt/vesktop"
 
 QA_PREBUILT="*"
-
-CONFIG_CHECK="~USER_NS"
-
-src_configure() {
-	default
-	chromium_suid_sandbox_check_kernel_config
-}
 
 src_prepare() {
 	default
