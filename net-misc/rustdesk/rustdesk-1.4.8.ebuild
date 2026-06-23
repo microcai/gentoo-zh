@@ -10,11 +10,11 @@ CRATES="
 
 declare -A GIT_CRATES=(
 	[android-wakelock]='https://github.com/rustdesk-org/android-wakelock;d0292e5a367e627c4fa6f1ca6bdfad005dca7d90;android-wakelock-%commit%'
-	[arboard]='https://github.com/rustdesk-org/arboard;85be1218668ff218a7b170c9d424fde73e069914;arboard-%commit%'
+	[arboard]='https://github.com/rustdesk-org/arboard;c7d5781f563176df9efd8df6287e823fb1b9bed5;arboard-%commit%'
 	[cacao]='https://github.com/clslaid/cacao;05e1536b0b43aaae308ec72c0eed703e875b7b95;cacao-%commit%'
 	[cidre-macros]='https://github.com/yury/cidre;f05c4288f9870c9fab53272ddafd6ec01c7b2dbf;cidre-%commit%/cidre-macros'
 	[cidre]='https://github.com/yury/cidre;f05c4288f9870c9fab53272ddafd6ec01c7b2dbf;cidre-%commit%/cidre'
-	[clipboard-master]='https://github.com/rustdesk-org/clipboard-master;ddc39f00a6211959489ae683aa6ae6eedf03a809;clipboard-master-%commit%'
+	[clipboard-master]='https://github.com/rustdesk-org/clipboard-master;7762d74e38db37cfeb6ded88c964b9cdbddfb6db;clipboard-master-%commit%'
 	[confy]='https://github.com/rustdesk-org/confy;83db9ec19a2f97e9718aef69e4fc5611bb382479;confy-%commit%'
 	[core-foundation-sys]='https://github.com/madsmtm/core-foundation-rs;7d593d016175755e492a92ef89edca68ac3bd5cd;core-foundation-rs-%commit%/core-foundation-sys'
 	[core-foundation]='https://github.com/madsmtm/core-foundation-rs;7d593d016175755e492a92ef89edca68ac3bd5cd;core-foundation-rs-%commit%/core-foundation'
@@ -24,12 +24,12 @@ declare -A GIT_CRATES=(
 	[default_net]='https://github.com/rustdesk-org/default_net;78f8f70cd85151a3a2c4a3230d80d5272703c02e;default_net-%commit%'
 	[evdev]='https://github.com/rustdesk-org/evdev;cec616e37790293d2cd2aa54a96601ed6b1b35a9;evdev-%commit%'
 	[filedescriptor]='https://github.com/rustdesk-org/wezterm;80174f8009f41565f0fa8c66dab90d4f9211ae16;wezterm-%commit%/filedescriptor'
-	[hwcodec]='https://github.com/rustdesk-org/hwcodec;398e5a8938dd8768ade0fcdc27ea80e8b4b38738;hwcodec-%commit%'
+	[hwcodec]='https://github.com/rustdesk-org/hwcodec;778df1f99597722473b29443bac22ae6c23946fe;hwcodec-%commit%'
 	[impersonate_system]='https://github.com/rustdesk-org/impersonate-system;2f429010a5a10b1fe5eceb553c6672fd53d20167;impersonate-system-%commit%'
 	[kcp-sys]='https://github.com/rustdesk-org/kcp-sys;32a6c09fc6223f54aea83981a6aa8995931d29be;kcp-sys-%commit%'
 	[keepawake]='https://github.com/rustdesk-org/keepawake-rs;64d568586dd16551d02120e19668d2b0fec8e3c9;keepawake-rs-%commit%'
 	[machine-uid]='https://github.com/rustdesk-org/machine-uid;381ff579c1dc3a6c54db9dfec47c44bcb0246542;machine-uid-%commit%'
-	[magnum-opus]='https://github.com/rustdesk-org/magnum-opus;5cd2bf989c148662fa3a2d9d539a71d71fd1d256;magnum-opus-%commit%'
+	[magnum-opus]='https://github.com/rustdesk-org/magnum-opus;588c6e1f9ed50c3a01fa64f3bd3e7cdb0378a114;magnum-opus-%commit%'
 	[nokhwa-bindings-linux]='https://github.com/rustdesk-org/nokhwa;c2f74662b6ce117f7f94301693fdfadc0b1ec91a;nokhwa-%commit%/nokhwa-bindings-linux'
 	[nokhwa-bindings-macos]='https://github.com/rustdesk-org/nokhwa;c2f74662b6ce117f7f94301693fdfadc0b1ec91a;nokhwa-%commit%/nokhwa-bindings-macos'
 	[nokhwa-bindings-windows]='https://github.com/rustdesk-org/nokhwa;c2f74662b6ce117f7f94301693fdfadc0b1ec91a;nokhwa-%commit%/nokhwa-bindings-windows'
@@ -39,7 +39,7 @@ declare -A GIT_CRATES=(
 	[pam]='https://github.com/rustdesk-org/pam;7bfd25510202cd269292cbdd7c71f3977a6fd762;pam-%commit%'
 	[parity-tokio-ipc]='https://github.com/rustdesk-org/parity-tokio-ipc;d0ae39bffe5d5a3e8d82a1b6bcb1ca5a9b2f1c01;parity-tokio-ipc-%commit%'
 	[portable-pty]='https://github.com/rustdesk-org/wezterm;80174f8009f41565f0fa8c66dab90d4f9211ae16;wezterm-%commit%/pty'
-	[rdev]='https://github.com/rustdesk-org/rdev;f9b60b1dd0f3300a1b797d7a74c116683cd232c8;rdev-%commit%'
+	[rdev]='https://github.com/rustdesk-org/rdev;871bf1c856d6a30af2f56ab8848396a025140855;rdev-%commit%'
 	[rust-pulsectl]='https://github.com/rustdesk-org/pulsectl;aa34dde499aa912a3abc5289cc0b547bd07dd6e2;pulsectl-%commit%'
 	[sciter-rs]='https://github.com/rustdesk-org/rust-sciter;5322f3a755a0e6bf999fbc60d1efc35246c0f821;rust-sciter-%commit%'
 	[sysinfo]='https://github.com/rustdesk-org/sysinfo;90b1705d909a4902dbbbdea37ee64db17841077d;sysinfo-%commit%'
@@ -55,7 +55,11 @@ declare -A GIT_CRATES=(
 	[x11]='https://github.com/bjornsnoen/x11-rs;c2e9bfaa7b196938f8700245564d8ac5d447786a;x11-rs-%commit%/x11'
 )
 
-LLVM_COMPAT=( 18 19 20 21 )
+LLVM_COMPAT=( 18 19 20 21 22 )
+# have no idea why CI use rust-bin-9999, rustix broken on it
+# https://github.com/bytecodealliance/rustix/issues/1620
+# set RUST_MAX_VER to a max version now
+RUST_MAX_VER="1.96.0"
 RUST_MIN_VER="1.81.0"
 RUST_NEEDS_LLVM=1
 inherit cargo desktop llvm-r1 systemd xdg
@@ -74,7 +78,7 @@ _VCPKG_TAG="2025.08.27"
 _HWCODEC_EXTERNALS_COMMIT="8903740a1f47884906a6e347ad3d8d56304d9771"
 # fix: libs/hbb_common is a empty directory
 # git ls-tree HEAD libs/hbb_common
-_HBB_COMMON_COMMIT="df6badca5bf81b4e9836256cf8e31c993ad70dd1"
+_HBB_COMMON_COMMIT="387603f47cbb15c0d3dc3d67ae3396d3eb707daf"
 # fix: kcp-sys-*/kcp is a empty directory
 # git clone https://github.com/rustdesk-org/kcp-sys
 # git ls-tree HEAD kcp
