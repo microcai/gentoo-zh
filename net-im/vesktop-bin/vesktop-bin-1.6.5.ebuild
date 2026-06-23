@@ -60,6 +60,11 @@ DESTDIR="/opt/vesktop"
 
 QA_PREBUILT="*"
 
+pkg_setup() {
+	# chromium-2 inherits linux-info, but this binary package does not need kernel probing.
+	:
+}
+
 src_prepare() {
 	default
 
