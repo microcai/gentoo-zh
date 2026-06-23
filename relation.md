@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-06-23 18:14:26 CST)
+(The last generation time: 2026-06-23 23:10:42 CST)
 
 ### Packages
 
@@ -388,7 +388,7 @@
  dev-util/asdf-vm                                      | 0.15.0             |            | https://github.com/asdf-vm/asdf                                                         | Manage all your runtime versions with one tool
                                                        | 0.18.1             |            |                                                                                         |
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-util/binsider                                     | 0.3.0              |            | https://binsider.dev                                                                    | Analyze ELF binaries like a boss
+ dev-util/binsider                                     | 0.3.2              |            | https://binsider.dev                                                                    | Analyze ELF binaries like a boss
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/codewhale-bin                                | 9999               |            | https://github.com/Hmbown/CodeWhale                                                     | Coding agent with terminal TUI
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
