@@ -53,6 +53,7 @@ RDEPEND="
 	x11-libs/libxshmfence
 	x11-libs/pango
 	sys-libs/glibc
+	virtual/libudev:=
 "
 
 DESTDIR="/opt/vesktop"
