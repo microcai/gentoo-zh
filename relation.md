@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-06-23 15:19:11 CST)
+(The last generation time: 2026-06-23 15:45:13 CST)
 
 ### Packages
 
@@ -639,7 +639,7 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-dns/q                                             | 0.19.12            |            | https://github.com/natesales/q                                                          | A tiny command line DNS client with support for UDP, TCP, DoT, DoH, DoQ and ODoH
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-im/dingtalk                                       | 8.1.0.6021101      |            | https://www.dingtalk.com                                                                | Communication platform that supports video and audio conferencing
+ net-im/dingtalk                                       | 8.1.0.6021101-r1   |            | https://www.dingtalk.com                                                                | Communication platform that supports video and audio conferencing
    dev-libs/libthai                                    | 0.1.30             |  D, RD     | https://github.com/tlwg/libthai                                                         | A a set of Thai language support routines
      dev-libs/libdatrie                                | 0.2.14             |  D, RD     | https://github.com/tlwg/libdatrie                                                       | Double-Array Trie Library
    dev-util/execstack                                  | 0_pre20130503      | BD         | https://people.redhat.com/jakub/prelink                                                 | set the executable stack flag of ELF binaries and libraries
