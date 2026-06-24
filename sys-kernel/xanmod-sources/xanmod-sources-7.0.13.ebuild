@@ -3,20 +3,15 @@
 
 EAPI="8"
 ETYPE="sources"
-K_WANT_GENPATCHES="base extras"
-# Note: to bump xanmod, check K_GENPATCHES_VER in sys-kernel/gentoo-sources
-K_GENPATCHES_VER="7"
+K_WANT_GENPATCHES=""
+# Note: to bump xanmod, check PATCHSET in sys-kernel/gentoo-kernel
+PATCHSET=linux-gentoo-patches-${PV}
 
 inherit check-reqs kernel-2
 detect_version
 detect_arch
 
 MY_P=linux-${PV%.*}
-GENPATCHES_P="genpatches-${PV%.*}-${K_GENPATCHES_VER}"
-GENPATCHES_URI="
-	https://distfiles.gentoo.org/pub/proj/kernel/genpatches/${GENPATCHES_P}.base.tar.xz
-	https://distfiles.gentoo.org/pub/proj/kernel/genpatches/${GENPATCHES_P}.extras.tar.xz
-"
 DESCRIPTION="Full XanMod source, including the Gentoo patchset and other patch options."
 HOMEPAGE="https://xanmod.org"
 
@@ -25,7 +20,7 @@ XANMOD_URI="https://downloads.sourceforge.net/project/xanmod/releases/main"
 OKV="${OKV}-xanmod"
 SRC_URI="
 	${KERNEL_BASE_URI}/linux-${KV_MAJOR}.${KV_MINOR}.tar.xz
-	${GENPATCHES_URI}
+	https://distfiles.gentoo.org/pub/proj/dist-kernel/patchsets/$(ver_cut 1-2)/${PATCHSET}.tar.xz
 	${XANMOD_URI}/${PV}-xanmod${XANMOD_VERSION}/patch-${PV}-xanmod${XANMOD_VERSION}.xz
 "
 S="${WORKDIR}/linux-${OKV}${XANMOD_VERSION}"
@@ -46,15 +41,12 @@ src_unpack() {
 src_prepare() {
 	kernel-2_src_prepare
 	rm "${S}/tools/testing/selftests/tc-testing/action-ebpf"
-	# delete linux version patches
-	rm "${WORKDIR}"/*${MY_P}*.patch
 
 	local PATCHES=(
 		# xanmod patches
 		"${WORKDIR}"/patch-${PV}-xanmod${XANMOD_VERSION}
-		"${FILESDIR}"/xanmod-7.0.6-x86-l1-cache-shift-fallback.patch
 		# genpatches
-		"${WORKDIR}"/*.patch
+		"${WORKDIR}/${PATCHSET}"/*.patch
 	)
 	default
 }
