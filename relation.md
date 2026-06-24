@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-06-24 15:30:04 CST)
+(The last generation time: 2026-06-24 16:59:51 CST)
 
 ### Packages
 
@@ -698,7 +698,7 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-misc/biliup-rs                                    | 0.2.4              |            | https://github.com/biliup/biliup-rs                                                     | Upload video to bilibili
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-misc/bruno-bin                                    | 3.4.2              |            | https://www.usebruno.com/                                                               | Opensource IDE For Exploring and Testing Api's
+ net-misc/bruno-bin                                    | 3.5.0              |            | https://www.usebruno.com/                                                               | Opensource IDE For Exploring and Testing Api's
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-misc/flyctl-bin                                   | 0.4.54             |            | https://github.com/superfly/flyctl                                                      | Command line tools for fly.io services
                                                        | 0.4.59             |            |                                                                                         |
