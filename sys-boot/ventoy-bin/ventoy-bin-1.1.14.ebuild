@@ -6,7 +6,7 @@ EAPI=8
 inherit desktop xdg
 
 DESCRIPTION="A new multiboot USB solution"
-HOMEPAGE="http://www.ventoy.net"
+HOMEPAGE="https://www.ventoy.net/"
 SRC_URI="https://github.com/ventoy/Ventoy/releases/download/v${PV}/ventoy-${PV}-linux.tar.gz"
 
 S=${WORKDIR}/ventoy-${PV}
@@ -46,7 +46,7 @@ src_prepare() {
 	popd || die
 
 	# Apply sanitize patch
-	eapply -p1 "${FILESDIR}/sanitize.patch"
+	eapply -p1 "${FILESDIR}/sanitize-1.1.12.patch"
 
 	# Log location
 	sed -i 's|log\.txt|/var/log/ventoy.log|g' WebUI/static/js/languages.js tool/languages.json || die
