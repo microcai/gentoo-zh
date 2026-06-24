@@ -24,9 +24,12 @@ IUSE="wayland"
 RESTRICT="strip"
 
 RDEPEND="
+	dev-libs/libinput
 	dev-libs/nss
 	media-libs/alsa-lib
+	media-libs/mesa[gbm(+)]
 	x11-libs/gtk+:*
+	x11-libs/libdrm
 	x11-libs/libxkbcommon
 	x11-libs/libX11
 	x11-libs/libXext
