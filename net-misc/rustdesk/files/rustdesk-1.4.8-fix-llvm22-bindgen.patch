@@ -1,0 +1,104 @@
+commit a864a19c2135830d22a7837bfbe9291d0ca642b7
+Author: jinqiang zhang <peeweep@0x0.ee>
+Date:   Wed Jun 24 13:44:55 2026 +0800
+
+    fix llvm 22 build
+
+diff --git a/Cargo.lock b/Cargo.lock
+index 8ec2d4a53..1dcf488d0 100644
+--- a/Cargo.lock
++++ b/Cargo.lock
+@@ -771,6 +771,26 @@ dependencies = [
+  "syn 2.0.98",
+ ]
+ 
++[[package]]
++name = "bindgen"
++version = "0.72.1"
++source = "registry+https://github.com/rust-lang/crates.io-index"
++checksum = "993776b509cfb49c750f11b8f07a46fa23e0a1386ffc01fb1e7d343efc387895"
++dependencies = [
++ "bitflags 2.9.1",
++ "cexpr",
++ "clang-sys",
++ "itertools 0.12.1",
++ "log",
++ "prettyplease",
++ "proc-macro2 1.0.93",
++ "quote 1.0.36",
++ "regex",
++ "rustc-hash 2.1.1",
++ "shlex",
++ "syn 2.0.98",
++]
++
+ [[package]]
+ name = "bit_field"
+ version = "0.10.2"
+@@ -2329,7 +2349,7 @@ version = "0.5.2"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+ checksum = "330c60081dcc4c72131f8eb70510f1ac07223e5d4163db481a04a0befcffa412"
+ dependencies = [
+- "libloading 0.7.4",
++ "libloading 0.8.4",
+ ]
+ 
+ [[package]]
+@@ -2694,7 +2714,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
+ checksum = "39cab71617ae0d63f51a36d69f866391735b51691dbda63cf6f96d042b63efeb"
+ dependencies = [
+  "libc",
+- "windows-sys 0.60.2",
++ "windows-sys 0.61.2",
+ ]
+ 
+ [[package]]
+@@ -4494,7 +4514,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
+ checksum = "e310b3a6b5907f99202fcdb4960ff45b93735d7c7d96b760fcff8db2dc0e103d"
+ dependencies = [
+  "cfg-if 1.0.0",
+- "windows-targets 0.48.5",
++ "windows-targets 0.52.6",
+ ]
+ 
+ [[package]]
+@@ -7457,7 +7477,7 @@ dependencies = [
+  "errno",
+  "libc",
+  "linux-raw-sys 0.11.0",
+- "windows-sys 0.60.2",
++ "windows-sys 0.61.2",
+ ]
+ 
+ [[package]]
+@@ -7514,7 +7534,7 @@ dependencies = [
+  "security-framework 3.5.1",
+  "security-framework-sys",
+  "webpki-root-certs",
+- "windows-sys 0.60.2",
++ "windows-sys 0.61.2",
+ ]
+ 
+ [[package]]
+@@ -7601,7 +7621,7 @@ name = "scrap"
+ version = "0.5.0"
+ dependencies = [
+  "android_logger",
+- "bindgen 0.65.1",
++ "bindgen 0.72.1",
+  "block",
+  "cfg-if 1.0.0",
+  "dbus",
+diff --git a/libs/scrap/Cargo.toml b/libs/scrap/Cargo.toml
+index 505eca2de..0af7dfe0f 100644
+--- a/libs/scrap/Cargo.toml
++++ b/libs/scrap/Cargo.toml
+@@ -48,7 +48,7 @@ quest = "0.3"
+ 
+ [build-dependencies]
+ target_build_utils = "0.3"
+-bindgen = "0.65"
++bindgen = "0.72.1"
+ pkg-config = { version = "0.3.27", optional = true }
+ 
+ [target.'cfg(target_os = "linux")'.dependencies]

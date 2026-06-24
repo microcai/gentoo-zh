@@ -144,6 +144,10 @@ QA_PRESTRIPPED="
 	/usr/share/${PN}/libsciter-gtk.so
 "
 
+PATCHES=(
+	"${FILESDIR}"/${P}-fix-llvm22-bindgen.patch
+)
+
 pkg_setup() {
 	llvm-r1_pkg_setup
 	rust_pkg_setup
