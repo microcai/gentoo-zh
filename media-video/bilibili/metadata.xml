@@ -5,6 +5,6 @@
 		<name>Boiao Ch</name>
 	</maintainer>
 	<upstream>
-		<remote-id type="github">mosjocs/bilibili-linux</remote-id>
+		<remote-id type="github">msojocs/bilibili-linux</remote-id>
 	</upstream>
 </pkgmetadata>
