@@ -21,6 +21,8 @@ KEYWORDS="-* ~amd64 ~arm64"
 
 IUSE="wayland"
 
+RESTRICT="strip"
+
 RDEPEND="
 	dev-libs/nss
 	media-libs/alsa-lib
@@ -39,6 +41,15 @@ RDEPEND="
 QA_PREBUILT="*"
 
 src_install() {
+	local app_dir="opt/apps/${FPN}/files/bin/app"
+
+	# Drop non-Linux native modules; scanelf cannot handle their .lib archives.
+	rm -rf \
+		"${app_dir}/app/node_modules/@nut-tree/libnut-darwin" \
+		"${app_dir}/app/node_modules/@nut-tree/libnut-win32" \
+		"${app_dir}/app.asar.unpacked/node_modules/@nut-tree/libnut-win32" \
+		|| die
+
 	insinto "/"
 	doins -r "opt"
 	doicon -s "scalable" "usr/share/icons/hicolor/scalable/apps/${FPN}.svg"
