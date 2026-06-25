@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-06-25 15:49:44 CST)
+(The last generation time: 2026-06-25 16:11:27 CST)
 
 ### Packages
 
@@ -66,7 +66,7 @@
  app-editors/neovim-bin                                | 9999               |            | https://neovim.io                                                                       | Vim-fork focused on extensibility and agility
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-editors/typora                                    | 0.11.18            |            | https://typora.io                                                                       | Typora will give you a seamless experience as both a reader and a writer.
-                                                       | 1.12.4             |            |                                                                                         |
+                                                       | 1.13.6             |            |                                                                                         |
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-editors/void-editor                               | 1.2.1.25105        |            | https://voideditor.com                                                                  | Void Editor - AI Code Editor
                                                        | 1.99.30034         |            |                                                                                         |
@@ -407,7 +407,7 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/maixvision                                   | 1.2.2-r1           |            | https://www.sipeed.com/maixvision                                                       | MaixVision - AIoT development platform
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-util/opencode-bin                                 | 1.17.9             |            | https://opencode.ai                                                                     | The open source AI coding agent
+ dev-util/opencode-bin                                 | 1.17.10            |            | https://opencode.ai                                                                     | The open source AI coding agent
                                                        | 9999               |            |                                                                                         |
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/osc                                          | 1.27.1             |            | https://github.com/openSUSE/osc                                                         | The Command Line Interface to work with an Open Build Service
