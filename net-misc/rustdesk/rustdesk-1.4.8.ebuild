@@ -146,6 +146,7 @@ QA_PRESTRIPPED="
 
 PATCHES=(
 	"${FILESDIR}"/${P}-fix-llvm22-bindgen.patch
+	"${FILESDIR}"/${P}-disable-check-x11.patch
 )
 
 pkg_setup() {
@@ -157,7 +158,6 @@ src_prepare() {
 	default
 	cd "${S}"/.. || die
 	eapply "${FILESDIR}"/rust-sciter.patch
-	eapply "${FILESDIR}"/${P}-tfc-no-loginctl.patch
 
 	rm -rf "${S}"/libs/hbb_common || die
 	ln -s "${WORKDIR}/hbb_common-${_HBB_COMMON_COMMIT}" "${S}"/libs/hbb_common || die
