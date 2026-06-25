@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-06-25 00:32:57 CST)
+(The last generation time: 2026-06-25 08:33:40 CST)
 
 ### Packages
 
@@ -726,12 +726,12 @@
                                                        | 1.2.0              |            |                                                                                         |
                                                        | 1.2.2              |            |                                                                                         |
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-misc/reframe                                      | 1.16.0             |            | https://reframe.alynx.one/                                                              | DRM/KMS based remote desktop for Linux
+ net-misc/reframe                                      | 1.18.0             |            | https://reframe.alynx.one/                                                              | DRM/KMS based remote desktop for Linux
    acct-group/reframe                                  | 0                  |  D, RD     |                                                                                         | group for reframe
    acct-user/reframe                                   | 0                  |  D, RD     |                                                                                         | user for reframe
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-misc/remmina-plugin-rustdesk                      | 1.0.0.0-r1         |            | http://www.muflone.com/remmina-plugin-rustdesk/                                         | A protocol plugin for Remmina to launch a Rustdesk connection.
-   net-misc/rustdesk                                   | 1.4.7              |  D, RD     | https://rustdesk.com/                                                                   | An open-source remote desktop, and alternative to TeamViewer
+   net-misc/rustdesk                                   | 1.4.8              |  D, RD     | https://rustdesk.com/                                                                   | An open-source remote desktop, and alternative to TeamViewer
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-misc/reqable                                      | 3.1.3              |            | https://reqable.com/                                                                    | Reqable = Fiddler + Charles + Postman, 让API调试更快 🚀 更简单 👌
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
