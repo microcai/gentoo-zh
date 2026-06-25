@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-06-25 12:09:02 CST)
+(The last generation time: 2026-06-25 13:45:32 CST)
 
 ### Packages
 
@@ -392,7 +392,7 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/codewhale-bin                                | 9999               |            | https://github.com/Hmbown/CodeWhale                                                     | Coding agent with terminal TUI
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-util/codex                                        | 0.142.0            |            | https://github.com/openai/codex                                                         | Codex CLI - OpenAI's AI-powered coding agent
+ dev-util/codex                                        | 0.142.1            |            | https://github.com/openai/codex                                                         | Codex CLI - OpenAI's AI-powered coding agent
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/fvm                                          | 4.1.0              |            | https://github.com/leoafarias/fvm                                                       | Flutter Version Management
    dev-lang/dart                                       | 3.12.0             |  D, RD     | https://dart.dev                                                                        | The Dart SDK
@@ -890,19 +890,16 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  sys-power/tlpui                                       | 1.10.1             |            | https://github.com/d4nj1/TLPUI                                                          | A GTK user interface for TLP written in Python
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- virtual/dist-kernel                                   | 7.0.4-r100         |            |                                                                                         | Virtual to depend on any Distribution Kernel
-                                                       | 7.0.6-r100         |            |                                                                                         |
+ virtual/dist-kernel                                   | 7.0.13-r100        |            |                                                                                         | Virtual to depend on any Distribution Kernel
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  virtual/linux-sources                                 | 3-r12              |            |                                                                                         | Virtual for Linux kernel sources
    sys-kernel/cachyos-sources                          | 6.18.6             | RD         | https://cachyos.org                                                                     | Full Cachyos sources including the Gentoo patchset for the . kernel tree
    sys-kernel/liquorix-sources                         | 6.4.12             | RD         | https://liquorix.net/                                                                   | Liquorix kernel is best one for desktop, multimedia and gaming workloads
                                                        | 6.6.8              |            |                                                                                         |
-   sys-kernel/xanmod-kernel                            | 7.0.4              | RD         | https://www.kernel.org/                                                                 | XanMod kernel built with Gentoo patches and cjktty
-                                                       | 7.0.6              |            |                                                                                         |
+   sys-kernel/xanmod-kernel                            | 7.0.13             | RD         | https://www.kernel.org/                                                                 | XanMod kernel built with Gentoo patches and cjktty
    sys-kernel/xanmod-rt                                | 6.0.11             | RD         | https://xanmod.org                                                                      | XanMod RT sources and CJKTTY options.
                                                        | 6.12.31            |            |                                                                                         |
-   sys-kernel/xanmod-sources                           | 7.0.4              | RD         | https://xanmod.org                                                                      | Full XanMod source, including the Gentoo patchset and other patch options.
-                                                       | 7.0.6              |            |                                                                                         |
+   sys-kernel/xanmod-sources                           | 7.0.13             | RD         | https://xanmod.org                                                                      | Full XanMod source, including the Gentoo patchset and other patch options.
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  virtual/v2ray-domain-list-community                   | 0                  |            |                                                                                         | Virtual for v2ray-domain-list-community
    dev-libs/v2ray-domain-list-community                | 20260311134628     | RD         | https://github.com/v2fly/domain-list-community                                          | Community managed domain list for V2Ray.
