@@ -79,6 +79,12 @@ src_install() {
 	local entry file new_rpath rpath
 	local -a rpath_entries
 
+	# Component launchers otherwise try to re-exec /et, /wpp, or /pdf and exit.
+	for file in "${S}"/usr/bin/{et,wpp,wpspdf}; do
+		sed -i -e 's|\[ 1 -eq \${gIsFushion} \] && \[ "$1" != "/prometheus" \]|[ "$1" != "/prometheus" ]|' \
+			"${file}" || die
+	done
+
 	exeinto /usr/bin
 	exeopts -m0755
 	doexe "${S}"/usr/bin/*
