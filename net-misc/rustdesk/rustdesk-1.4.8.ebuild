@@ -59,7 +59,7 @@ LLVM_COMPAT=( 18 19 20 21 22 )
 # have no idea why CI use rust-bin-9999, rustix broken on it
 # https://github.com/bytecodealliance/rustix/issues/1620
 # set RUST_MAX_VER to a max version now
-RUST_MAX_VER="1.96.0"
+RUST_MAX_VER="1.95.0"
 RUST_MIN_VER="1.81.0"
 RUST_NEEDS_LLVM=1
 inherit cargo desktop llvm-r1 systemd xdg
@@ -157,6 +157,7 @@ src_prepare() {
 	default
 	cd "${S}"/.. || die
 	eapply "${FILESDIR}"/rust-sciter.patch
+	eapply "${FILESDIR}"/${P}-tfc-no-loginctl.patch
 
 	rm -rf "${S}"/libs/hbb_common || die
 	ln -s "${WORKDIR}/hbb_common-${_HBB_COMMON_COMMIT}" "${S}"/libs/hbb_common || die
