@@ -10,7 +10,7 @@ _PV="${_PV/alpha/alpha.}"
 _PV="${_PV/beta/beta.}"
 _PV="${_PV/rc/rc.}"
 
-DESCRIPTION="The universal proxy platform."
+DESCRIPTION="The universal proxy platform"
 HOMEPAGE="https://sing-box.sagernet.org/ https://github.com/SagerNet/sing-box"
 SRC_URI="
 	https://github.com/SagerNet/sing-box/archive/refs/tags/v${_PV}.tar.gz -> ${P}.tar.gz
