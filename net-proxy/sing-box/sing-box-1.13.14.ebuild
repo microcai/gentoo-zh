@@ -12,7 +12,7 @@ _PV="${_PV/rc/rc.}"
 
 VENDOR_PREFIX="https://github.com/gentoo-zh-drafts/sing-box/releases/download/v${_PV}"
 
-DESCRIPTION="The universal proxy platform."
+DESCRIPTION="The universal proxy platform"
 HOMEPAGE="https://sing-box.sagernet.org/ https://github.com/SagerNet/sing-box"
 SRC_URI="
 	https://github.com/SagerNet/sing-box/archive/refs/tags/v${_PV}.tar.gz -> ${P}.tar.gz
