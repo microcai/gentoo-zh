@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-06-25 23:59:49 CST)
+(The last generation time: 2026-06-26 09:09:57 CST)
 
 ### Packages
 
@@ -61,7 +61,7 @@
  app-editors/flowblade                                 | 2.24.2             |            | https://github.com/jliljebl/flowblade                                                   | Multitrack non-linear video editor
                                                        | 9999               |            |                                                                                         |
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- app-editors/marktext-bin                              | 0.17.1-r1          |            | https://marktext.app/                                                                   | A simple and elegant markdown editor, available for Linux, macOS and Windows.
+ app-editors/marktext-bin                              | 0.19.1             |            | https://github.com/marktext/marktext                                                    | A simple and elegant markdown editor, available for Linux, macOS and Windows.
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-editors/neovim-bin                                | 9999               |            | https://neovim.io                                                                       | Vim-fork focused on extensibility and agility
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
