@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>xiangzhedev@gmail.com</email>
+		<name>xz-dev</name>
+	</maintainer>
+	<upstream>
+		<remote-id type="github">eval-exec/neomacs</remote-id>
+		<bugs-to>https://github.com/eval-exec/neomacs/issues</bugs-to>
+	</upstream>
+	<longdescription>
+		NEO Emacs is a GPU powered Emacs written in Rust with a modern display
+		engine. Aiming for modern design &amp; multi-threaded Elisp, 10x
+		performance, zero-pause concurrent GC and 100% Emacs compatibility.
+	</longdescription>
+	<use>
+		<flag name="jit">Enable just-in-time compilation support</flag>
+		<flag name="terminal">Enable the embedded terminal emulator feature</flag>
+		<flag name="video">Enable GStreamer-backed inline video support</flag>
+	</use>
+</pkgmetadata>
