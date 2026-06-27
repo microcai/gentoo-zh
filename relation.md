@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-06-27 20:30:05 CST)
+(The last generation time: 2026-06-27 22:50:07 CST)
 
 ### Packages
 
@@ -945,7 +945,7 @@
  x11-terms/blackbox-terminal                           | 0.14.0             |            | https://gitlab.gnome.org/raggesilver/blackbox                                           | A beautiful GTK 4 terminal
    dev-libs/libpqmarble                                | 2.0.0_p20250109    |  D, RD     | https://gitlab.gnome.org/raggesilver/marble                                             | Utility library for GNOME apps
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- x11-terms/termius                                     | 9.38.2             |            | https://termius.com/download/linux                                                      | Desktop SSH Client
+ x11-terms/termius                                     | 9.40.1             |            | https://termius.com/download/linux                                                      | Desktop SSH Client
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  x11-terms/wezterm-bin                                 | 20240203           |            | https://wezfurlong.org/wezterm                                                          | A terminal emulator and multiplexer implemented in Rust
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
