@@ -51,6 +51,12 @@ RDEPEND="
 QA_PREBUILT="*"
 
 src_install() {
+	local target_path=opt/Termius/resources/app.asar.unpacked/node_modules/@termius/minidump-parser/target
+	# Remove non-AMD64 native modules (only keep amd64)
+	rm "${WORKDIR}/${target_path}"/*arm64*  || die
+	rm "${WORKDIR}/${target_path}"/*win32*  || die
+	rm "${WORKDIR}/${target_path}"/*darwin* || die
+
 	insinto /opt/termius
 	doins -r opt/Termius/*
 
