@@ -754,6 +754,13 @@ use_latest_release = true
 prefix = "rust-v"
 github_account = "vowstar"
 
+["dev-util/herdr-bin"]
+source = "github"
+github = "ogulcancelik/herdr"
+use_latest_release = true
+prefix = "v"
+github_account = "gouwazi"
+
 # TODO:
 # https://data.services.jetbrains.com/products/releases?code=TBA&latest=true&type=release
 ["dev-util/jetbrains-toolbox"]
