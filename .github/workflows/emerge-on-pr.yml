@@ -98,8 +98,6 @@ jobs:
       matrix:
         package: ${{ fromJSON(needs.scan.outputs.packages) }}
         profile:
-          - amd64-systemd
-          - amd64-llvm-systemd
           - amd64-desktop-openrc
           - amd64-desktop-systemd
 
