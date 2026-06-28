@@ -9,11 +9,11 @@ MY_PN="Folo"
 
 DESCRIPTION="Next generation information browser"
 HOMEPAGE="
-	https://follow.is/
-	https://github.com/RSSNext/Follow
+	https://folo.is/
+	https://github.com/RSSNext/Folo
 "
 SRC_URI="
-	https://github.com/RSSNext/Follow/releases/download/desktop/v${PV}/${MY_PN}-${PV}-linux-x64.AppImage -> ${P}.AppImage
+	https://github.com/RSSNext/Folo/releases/download/desktop/v${PV}/${MY_PN}-${PV}-linux-x64.AppImage -> ${P}.AppImage
 "
 
 S="${WORKDIR}"
@@ -24,12 +24,14 @@ KEYWORDS="~amd64"
 RDEPEND="
 	dev-libs/nss
 	media-libs/alsa-lib
-	media-libs/mesa
+	media-libs/mesa[gbm(+)]
+	sys-apps/dbus
+	virtual/libudev:=
 	x11-libs/gtk+:3[X,cups]
 	x11-libs/libxkbcommon
 "
 
-QA_PREBUILT="/opt/follow-bin/*"
+QA_PREBUILT="/opt/folo-bin/*"
 
 src_unpack() {
 	mkdir -p "${S}" || die

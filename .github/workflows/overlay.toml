@@ -1751,10 +1751,13 @@ use_latest_release = true
 prefix = "v"
 github_account = "Puqns67"
 
-["www-apps/follow-bin"]
-source = "aur"
-aur = "folo-appimage"
-strip_release = true
+["www-apps/folo-bin"]
+source = "github"
+github = "RSSNext/Folo"
+use_max_release = true
+include_regex = "desktop/v.*"
+prefix = "desktop/v"
+github_account = "gouwazi"
 
 ["www-client/brave-bin"]
 source = "aur"
