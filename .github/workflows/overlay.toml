@@ -30,7 +30,7 @@ mirror = "https://apt.enpass.io"
 suite = "stable"
 repo = "main"
 pkg = "enpass"
-github_account = "aieu"
+github_account = ["aieu", "gouwazi"]
 
 ["app-admin/rbw"]
 source = "github"
@@ -49,7 +49,7 @@ github_account = "liangyongxiang"
 source = "github"
 github = "openzim/libzim"
 use_latest_release = true
-github_account = "liangyongxiang"
+github_account = ["liangyongxiang", "gouwazi"]
 
 ["app-backup/restic-rest-server"]
 source = "github"
@@ -93,7 +93,7 @@ github_account = "zakkaus"
 source = "github"
 github = "AppFlowy-IO/AppFlowy"
 use_latest_release = true
-github_account = "Linerre"
+github_account = ["Linerre", "gouwazi"]
 
 # Neomacs is alpha-stage, so gentoo-zh carries only a live ebuild for now.
 ["app-editors/neomacs"]
@@ -127,13 +127,13 @@ source = "github"
 github = "marktext/marktext"
 use_latest_release = true
 prefix = "v"
-github_account = "Schroedingersdoraemon"
+github_account = ["Schroedingersdoraemon", "gouwazi"]
 
 ["app-editors/typora"]
 source = "regex"
 url = "https://typora.io/#linu://typora.io/releases/stable.html"
 regex = "typora_([\\d.]+)_amd64.deb"
-github_account = "CHN-beta"
+github_account = ["CHN-beta", "gouwazi"]
 
 # TODO:
 #["app-emulation/deepin-udis86"]
@@ -189,7 +189,7 @@ source = "github"
 github = "fcitx/fcitx5-cskk"
 use_latest_release = true
 prefix = "v"
-github_account = "yamader"
+github_account = ["yamader", "gouwazi"]
 
 ["app-i18n/fcitx-skin-material"]
 source = "github"
@@ -242,7 +242,7 @@ source = "debianpkg"
 debianpkg = "lunar"
 from_pattern = "^(\\d+\\.\\d+)-(\\d+)$"
 to_pattern = "\\1_p\\2"
-github_account = "liangyongxiang"
+github_account = ["liangyongxiang", "gouwazi"]
 
 ["app-i18n/zh-autoconvert"]
 source = "debianpkg"
@@ -275,7 +275,7 @@ source = "github"
 github = "farion1231/cc-switch"
 use_latest_release = true
 prefix = "v"
-github_account = "liangyongxiang"
+github_account = ["liangyongxiang", "gouwazi"]
 
 ["app-misc/codex-auth"]
 source = "github"
@@ -310,7 +310,7 @@ source = "github"
 github = "thezbyg/gpick"
 use_latest_tag = true
 prefix = "v"
-github_account = "ArchFeh"
+github_account = ["ArchFeh", "gouwazi"]
 
 ["app-misc/joshuto"]
 source = "github"
@@ -349,6 +349,7 @@ prefix = "v"
 source = "httpheader"
 url = "https://www.xmind.app/zen/download/linux_deb/"
 regex = 'Xmind-for-Linux-amd64bit-(.+)-.*.deb'
+github_account = "gouwazi"
 
 ["app-misc/yazi"]
 source = "github"
@@ -363,7 +364,7 @@ github = "anyproto/anytype-ts"
 prefix = "v"
 use_max_tag = true
 exclude_regex = ".*-(alpha|beta)"
-github_account = "xz-dev"
+github_account = ["xz-dev", "gouwazi"]
 
 # curl https://www.feishu.cn/api/downloads | jq --raw-output '.versions.Linux_deb_x64.download_link'
 # curl https://www.feishu.cn/api/downloads | jq --raw-output '.versions.Linux_deb_x64.version_number'
@@ -377,13 +378,13 @@ prefix = "Linux-x64-deb@V"
 source = "regex"
 url = "https://www.freeoffice.com/de/download/programme"
 regex = "softmaker-freeoffice-[\\d.]{4}-([\\d.]+)-amd64.tgz"
-github_account = "zozx"
+github_account = ["zozx", "gouwazi"]
 
 ["app-office/wps-office"]
 source = "regex"
 url = "https://linux.wps.cn/wpslinuxlog"
 regex = "wps-office_([\\d.]+)_amd64.deb"
-github_account = "Universebenzene"
+github_account = ["Universebenzene", "gouwazi"]
 
 # live package only
 #["app-pda/ipadcharge"]
@@ -398,7 +399,7 @@ source = "github"
 github = "romkatv/gitstatus"
 use_latest_release = true
 prefix = "v"
-github_account = "OriPoin"
+github_account = ["OriPoin", "gouwazi"]
 
 # live package only
 #["app-shells/oh-my-bash"]
@@ -408,7 +409,7 @@ source = "github"
 github = "romkatv/powerlevel10k"
 use_latest_release = true
 prefix = "v"
-github_account = "OriPoin"
+github_account = ["OriPoin", "gouwazi"]
 
 # cajviewer.cnki.net only work on China mainland
 # Got 418 status code under GitHub's network
@@ -424,7 +425,7 @@ github = "xiaoyifang/goldendict-ng"
 use_latest_release = true
 from_pattern = "v(.*)-.*"
 to_pattern = "\\1"
-github_account = "liangyongxiang"
+github_account = ["liangyongxiang", "gouwazi"]
 
 ["app-text/imewlconverter"]
 source = "github"
@@ -487,7 +488,7 @@ source = "github"
 github = "reo7sp/tgbot-cpp"
 use_latest_release = true
 prefix = "v"
-github_account = "CHN-beta"
+github_account = ["CHN-beta", "gouwazi"]
 
 ["dev-db/dbeaver-bin"]
 source = "github"
@@ -508,7 +509,7 @@ source = "github"
 github = "google/google-java-format"
 use_latest_release = true
 prefix = "v"
-github_account = "oatiz"
+github_account = ["oatiz", "gouwazi"]
 
 # TODO: multiple slot
 #["dev-java/oraclejdk-bin"]
@@ -593,7 +594,7 @@ github_account = "OriPoin"
 source = "github"
 github = "conda/conda-libmamba-solver"
 use_latest_release = true
-github_account = "OriPoin"
+github_account = ["OriPoin", "gouwazi"]
 
 ["dev-python/conda-package-handling"]
 source = "github"
@@ -613,6 +614,7 @@ source = "github"
 github = "paulfitz/daff"
 use_latest_release = true
 prefix = "v"
+github_account = "gouwazi"
 
 ["dev-python/edalize"]
 source = "pypi"
@@ -767,6 +769,7 @@ github_account = "gouwazi"
 source = "aur"
 aur = "jetbrains-toolbox"
 strip_release = true
+github_account = "gouwazi"
 
 # TODO: need filter mamba- prefix
 #["dev-util/mamba"]
@@ -991,7 +994,7 @@ source = "github"
 github = "bambulab/BambuStudio"
 use_latest_release = true
 prefix = "v"
-github_account = "vowstar"
+github_account = ["vowstar", "gouwazi"]
 
 # TODO: very old package
 #["media-gfx/scangearmp"]
@@ -1009,6 +1012,7 @@ prefix = "v"
 source = "aur"
 aur = "unityhub"
 strip_release = true
+github_account = "gouwazi"
 
 # TODO: can't check
 #["media-gfx/zw3d"]
@@ -1050,7 +1054,7 @@ source = "github"
 github = "anhoder/go-musicfox"
 use_latest_release = true
 prefix = "v"
-github_account = "st0nie"
+github_account = ["st0nie", "gouwazi"]
 
 ["media-sound/listen1_desktop-bin"]
 source = "github"
@@ -1063,12 +1067,13 @@ source = "github"
 github = "lyswhut/lx-music-desktop"
 use_latest_tag = true
 prefix = "v"
+github_account = "gouwazi"
 
 ["media-sound/netease-cloud-music-gtk"]
 source = "github"
 github = "gmg137/netease-cloud-music-gtk"
 use_latest_release = true
-github_account = "liuyujielol"
+github_account = ["liuyujielol", "gouwazi"]
 
 ["media-sound/qqmusic"]
 source = "regex"
@@ -1081,7 +1086,7 @@ source = "github"
 github = "KRTirtho/spotube"
 use_latest_release = true
 prefix = "v"
-github_account = "AmberisMyShiba"
+github_account = ["AmberisMyShiba", "gouwazi"]
 
 ["media-sound/termusic"]
 source = "github"
@@ -1102,7 +1107,7 @@ source = "github"
 github = "ytmdesktop/ytmdesktop"
 use_latest_release = true
 prefix = "v"
-github_account = "oatiz"
+github_account = ["oatiz", "gouwazi"]
 
 # TODO:
 #["media-video/amdgpu-pro-amf"]
@@ -1118,6 +1123,7 @@ use_latest_release = true
 prefix = "v"
 from_pattern = "(.*)-(.*)"
 to_pattern = '\1_p\2'
+github_account = "gouwazi"
 
 ["media-video/implay"]
 source = "github"
@@ -1136,7 +1142,7 @@ source = "github"
 github = "akiirui/mpv-handler"
 use_latest_release = true
 prefix = "v"
-github_account = "st0nie"
+github_account = ["st0nie", "gouwazi"]
 
 ["media-video/piliplus-bin"]
 source = "aur"
@@ -1200,6 +1206,7 @@ source = "httpheader"
 url = "https://www.dingtalk.com/win/d/qd=linux_amd64"
 method = "GET"
 regex = 'com.alibabainc.dingtalk_(.*)_amd64.deb'
+github_account = "gouwazi"
 
 ["net-im/tencent-qq"]
 source = "regex"
@@ -1207,19 +1214,20 @@ url = "https://cdn-go.cn/qq-web/im.qq.com_new/latest/rainbow/linuxConfig.js"
 regex = 'QQ_([\d\.\_]+)_.*.deb'
 from_pattern = '(.*)_(.*)'
 to_pattern = '\1_p\2'
-github_account = "Puqns67"
+github_account = ["Puqns67", "gouwazi"]
 
 ["net-im/vesktop-bin"]
 source = "github"
 github = "Vencord/Vesktop"
 use_latest_release = true
 prefix = "v"
-github_account = "zakkaus"
+github_account = ["zakkaus", "gouwazi"]
 
 ["net-im/wechat"]
 source = "regex"
 url = "https://github.com/peeweep/wechat-linux-watcher/raw/refs/heads/master/wechat-linux-version.txt"
 regex = '(.*)'
+github_account = "gouwazi"
 
 #["net-im/wechat-universal-bwrap"]
 
@@ -1227,6 +1235,7 @@ regex = '(.*)'
 source = "aur"
 aur = "wemeet-bin"
 strip_release = true
+github_account = "gouwazi"
 
 # live package only
 #["net-libs/jzmq"]
@@ -1236,7 +1245,7 @@ source = "github"
 github = "messense/aliyundrive-webdav"
 use_latest_release = true
 prefix = "v"
-github_account = "123485k"
+github_account = ["123485k", "gouwazi"]
 
 ["net-misc/aliyunpan"]
 source = "github"
@@ -1279,6 +1288,7 @@ source = "github"
 github = "nilaoda/BBDown"
 use_latest_release = true
 prefix = "v"
+github_account = "gouwazi"
 
 ["net-misc/biliup-app-bin"]
 source = "github"
@@ -1292,7 +1302,7 @@ source = "github"
 github = "ForgQi/biliup-rs"
 use_latest_release = true
 prefix = "v"
-github_account = "123485k"
+github_account = ["123485k", "gouwazi"]
 
 ["net-misc/bruno-bin"]
 source = "github"
@@ -1321,7 +1331,7 @@ source = "github"
 github = "localsend/localsend"
 use_latest_release = true
 prefix = "v"
-github_account = "Nuralii1i"
+github_account = ["Nuralii1i", "gouwazi"]
 
 ["net-misc/ntpd-rs"]
 source = "github"
@@ -1357,12 +1367,13 @@ github_account = "gouwazi"
 source = "github"
 github = "rustdesk/rustdesk"
 use_latest_release = true
+github_account = "gouwazi"
 
 ["net-misc/todesk"]
 source = "regex"
 url = "https://www.todesk.com/linux.html"
 regex = "todesk-v(.*)-amd64.deb"
-github_account = "microcai"
+github_account = ["microcai", "gouwazi"]
 
 # live package only
 #["net-p2p/amule-dlp"]
@@ -1381,6 +1392,7 @@ source = "github"
 github = "c0re100/qBittorrent-Enhanced-Edition"
 use_latest_release = true
 prefix = "release-"
+github_account = "gouwazi"
 
 # TODO: upstream no tags
 #["net-print/epson-inkjet-printer_201207w"]
@@ -1410,6 +1422,7 @@ source = "github"
 github = "clash-verge-rev/clash-verge-rev"
 use_latest_release = true
 prefix = "v"
+github_account = "gouwazi"
 
 ["net-proxy/dae"]
 source = "github"
@@ -1469,7 +1482,7 @@ use_latest_release = true
 prefix = "v"
 from_pattern = '(.*)-(.*)'
 to_pattern = '\1_p\2'
-github_account = "blackteahamburger"
+github_account = ["blackteahamburger", "gouwazi"]
 
 # TODO: missing KEYWORDS
 #["net-proxy/proxy-server"]
@@ -1594,13 +1607,13 @@ github_account = "123485k"
 source = "regex"
 url = "https://lceda.cn/page/download?src=index"
 regex = "lceda-linux-x64-([\\d.]+).zip"
-github_account = "123485k"
+github_account = ["123485k", "gouwazi"]
 
 ["sci-electronics/lceda-pro"]
 source = "regex"
 url = "https://lceda.cn/page/download?src=index"
 regex = "lceda-pro-linux-x64-([\\d.]+).zip"
-github_account = "123485k"
+github_account = ["123485k", "gouwazi"]
 
 ["sci-electronics/openfpgaloader"]
 source = "github"
@@ -1672,6 +1685,7 @@ source = "github"
 github = "dubeyko/ssdfs-tools"
 use_latest_tag = true
 prefix = "v"
+github_account = "gouwazi"
 
 # live package only
 #["sys-fs/systemd-zpool-scrub"]
@@ -1682,7 +1696,7 @@ github = "zen-kernel/zen-kernel"
 use_latest_release = true
 from_pattern = "v(.*)-lqx(.*)"
 to_pattern = "\\1"
-github_account = "zozx"
+github_account = ["zozx", "gouwazi"]
 
 ["sys-kernel/mkinitcpio"]
 source = "gitlab"
@@ -1747,7 +1761,7 @@ source = "aur"
 aur = "brave-bin"
 strip_release = true
 prefix = "1:"
-github_account = ["irort", "Zakkaus"]
+github_account = ["irort", "Zakkaus", "gouwazi"]
 
 ["www-client/zen-browser-bin"]
 source = "github"
@@ -1755,7 +1769,7 @@ github = "zen-browser/desktop"
 use_latest_release = true
 from_pattern = "(.*)b"
 to_pattern = "\\1_beta"
-github_account = "zakkaus"
+github_account = ["zakkaus", "gouwazi"]
 
 ["www-servers/darkhttpd"]
 source = "github"
@@ -1840,14 +1854,14 @@ github = "wez/wezterm"
 use_latest_release = true
 from_pattern = "(.*)-(.*)-(.*)"
 to_pattern = "\\1"
-github_account = "oatiz"
+github_account = ["oatiz", "gouwazi"]
 
 ["x11-themes/bibata-cursor"]
 source = "github"
 github = "ful1e5/Bibata_Cursor"
 use_latest_release = true
 prefix = "v"
-github_account = "Nuralii1i"
+github_account = ["Nuralii1i", "gouwazi"]
 
 ["x11-themes/fcitx-breeze"]
 source = "gitlab"
@@ -1861,14 +1875,14 @@ source = "github"
 github = "bikass/kora"
 use_latest_release = true
 prefix = "v"
-github_account = "Nuralii1i"
+github_account = ["Nuralii1i", "gouwazi"]
 
 ["x11-themes/nordic"]
 source = "github"
 github = "EliverLara/Nordic"
 use_latest_release = true
 prefix = "v"
-github_account = "hertz-hwang"
+github_account = ["hertz-hwang", "gouwazi"]
 
 ["x11-themes/nordzy-cursors"]
 source = "github"
@@ -1881,7 +1895,7 @@ github_account = "hertz-hwang"
 source = "github"
 github = "alvatip/Nordzy-icon"
 use_latest_release = true
-github_account = "hertz-hwang"
+github_account = ["hertz-hwang", "gouwazi"]
 
 # live package only
 #["x11-wm/chamferwm"]
@@ -1890,7 +1904,7 @@ github_account = "hertz-hwang"
 source = "github"
 github = "hyprwm/Hypr"
 use_latest_release = true
-github_account = "Goldsrc233"
+github_account = ["Goldsrc233", "gouwazi"]
 
 ["dev-util/opencode-bin"]
 source = "github"
