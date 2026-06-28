@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-06-28 17:49:36 CST)
+(The last generation time: 2026-06-28 21:54:37 CST)
 
 ### Packages
 
@@ -602,7 +602,7 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-sound/yesplaymusic-bin                          | 0.4.10             |            | https://github.com/qier222/YesPlayMusic                                                 | A third party music player for Netease Music
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- media-sound/ytmdesktop-bin                            | 2.0.10             |            | https://github.com/ytmdesktop/ytmdesktop                                                | A Desktop App for YouTube Music
+ media-sound/ytmdesktop-bin                            | 2.0.11             |            | https://github.com/ytmdesktop/ytmdesktop                                                | A Desktop App for YouTube Music
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-video/amdgpu-pro-amf                            | 1.4.29.1538781     |            | https://www.amd.com/en/support                                                          | AMD's closed source Advanced Media Framework (AMF) driver
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
