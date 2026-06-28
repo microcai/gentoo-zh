@@ -37,9 +37,9 @@ src_unpack() {
 }
 
 src_install() {
-	insinto /opt/"${PN}"
-
-	doins -r .
+	dodir /opt/"${PN}"
+	cp -PR --preserve=mode,timestamps . "${ED}/opt/${PN}" || die
+	rm -f "${ED}/opt/${PN}"/._* || die
 
 	fperms +x "/opt/${PN}/${PN}"
 
