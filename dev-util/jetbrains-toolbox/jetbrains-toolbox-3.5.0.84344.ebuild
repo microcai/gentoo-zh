@@ -19,6 +19,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~arm64"
 
 RDEPEND="
+	media-libs/alsa-lib
 	sys-fs/fuse:0
 "
 
