@@ -34,14 +34,15 @@ QA_PREBUILT="*"
 src_install() {
 	insinto /opt
 	doins -r opt/"${PN}"
-  find "${D}" -type d -name "node_gyp_bins" -exec rm -rf {} + 2>/dev/null
-  find "${D}" -type d -empty -delete 2>/dev/null
+	find "${D}" -type d -name "node_gyp_bins" -exec rm -rf {} + 2>/dev/null
+	find "${D}" -type d -empty -delete 2>/dev/null
 
 	fperms +x /opt/"${PN}"/"${PN}"
-  fperms +x /opt/"${PN}"/baidunetdiskhost
-  fperms +x /opt/"${PN}"/netdisk_service
-  fperms +x /opt/"${PN}"/chrome-sandbox
-  fperms +x /opt/"${PN}"/chrome_crashpad_handler
+	fperms +x /opt/"${PN}"/baidunetdiskhost
+	fperms +x /opt/"${PN}"/netdisk_service
+	fperms +x /opt/"${PN}"/chrome-sandbox
+	fperms +x /opt/"${PN}"/chrome_crashpad_handler
+
 	dosym -r /opt/{"${PN}"/"${PN}",bin/"${PN}"}
 
 	gzip -d usr/share/doc/"${PN}"/*.gz || die
