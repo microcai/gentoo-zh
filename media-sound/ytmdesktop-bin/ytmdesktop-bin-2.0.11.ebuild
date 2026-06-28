@@ -22,17 +22,22 @@ SLOT="0"
 KEYWORDS="~amd64"
 
 RDEPEND="
-		app-accessibility/at-spi2-core:2
+		>=app-accessibility/at-spi2-core-2.46.0:2
 		app-crypt/libsecret
 		dev-libs/nss
 		media-libs/alsa-lib
-		x11-misc/xdg-utils
-		x11-libs/gtk+:3
+		media-libs/mesa[gbm(+)]
+		net-print/cups
+		virtual/libudev:=
+		x11-libs/gtk+:3[X]
 		x11-libs/libnotify
+		x11-libs/libxcb
+		x11-libs/libxkbcommon
 		x11-libs/libXtst
+		x11-misc/xdg-utils
 "
 
-RESTRICT="mirror"
+RESTRICT="mirror strip"
 
 QA_PREBUILT="
 	/opt/${MY_PN}/chrome-sandbox
