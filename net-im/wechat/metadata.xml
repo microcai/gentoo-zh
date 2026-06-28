@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<!-- maintainer-needed -->
+	<maintainer type="person">
+		<email>dev@wangxianggang.com</email>
+		<name>Xianggang Wang</name>
+	</maintainer>
 	<use>
 		<flag name="bwrap">Use <pkg>sys-apps/bubblewrap</pkg> to reduce filesystem exposure and limit privacy leakage.</flag>
 	</use>
