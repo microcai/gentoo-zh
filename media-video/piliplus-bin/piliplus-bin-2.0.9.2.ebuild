@@ -23,7 +23,10 @@ DEPEND="
 "
 RDEPEND="
 	${DEPEND}
-	virtual/jre:*
+	|| (
+		dev-java/openjdk-jre-bin:*
+		virtual/jre:*
+	)
 "
 
 src_install() {
