@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-06-29 22:24:21 CST)
+(The last generation time: 2026-06-30 00:16:42 CST)
 
 ### Packages
 
@@ -961,6 +961,8 @@
  x11-themes/kora-icon-theme                            | 2.0.4              |            | https://github.com/bikass/kora                                                          | An SVG icon theme with lots of new icons for GNU/Linux operating systems
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  x11-themes/kvantum-black                              | 0.2.0              |            | https://github.com/vitaly-zdanevich/kvantum-black                                       | Black Catppuccin themes for Kvantum
+-------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ x11-themes/mint-themes                                | 2.4.0              |            | https://github.com/linuxmint/mint-themes                                                | A collection of Linux Mint themes
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  x11-themes/mint-y-icons                               | 1.9.2              |            | https://github.com/linuxmint/mint-y-icons/                                              | The Mint-Y icon theme, based on Paper and Moka
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
