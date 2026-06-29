@@ -424,7 +424,8 @@ github_account = ["OriPoin", "gouwazi"]
 source = "github"
 github = "xiaoyifang/goldendict-ng"
 use_latest_release = true
-from_pattern = "v(.*)-.*"
+# Tags can be either v26.6.1 or older v26.5.2-Release.<hash>.
+from_pattern = "^v?([^-]+)(?:-.*)?$"
 to_pattern = "\\1"
 github_account = ["liangyongxiang", "gouwazi"]
 
