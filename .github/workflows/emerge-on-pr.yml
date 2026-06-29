@@ -125,13 +125,17 @@ jobs:
         priority = 0
         EOF
 
-    - name: setup portage make.conf
+    - name: setup portage config
       run: |
         cat >> /etc/portage/make.conf << EOF
         FEATURES="\${FEATURES} getbinpkg"
         MAKEOPTS="\${MAKEOPTS} -j$(nproc)"
         PORTAGE_ELOG_CLASSES="qa warn error"
         PORTAGE_ELOG_SYSTEM="save"
+        EOF
+        mkdir -p /etc/portage/package.use
+        cat >> /etc/portage/package.use/ci-binhost << EOF
+        dev-qt/qtwebengine bindist
         EOF
         cat /etc/portage/make.conf
 
