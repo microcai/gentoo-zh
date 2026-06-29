@@ -5,7 +5,7 @@ EAPI=8
 
 DISTUTILS_USE_PEP517=hatchling
 DISTUTILS_SINGLE_IMPL=1
-PYTHON_COMPAT=( python3_{11..13} )
+PYTHON_COMPAT=( python3_{9..14} )
 inherit distutils-r1
 
 DESCRIPTION="The libmamba based solver for conda"
@@ -24,6 +24,7 @@ BDEPEND="
 
 RDEPEND="
 	$(python_gen_cond_dep 'dev-python/boltons[${PYTHON_USEDEP}]')
+	sys-libs/libsolv:=[conda,python_single_target_python3_13(-)]
 	dev-util/mamba:=[python,${PYTHON_SINGLE_USEDEP}]
 "
 
