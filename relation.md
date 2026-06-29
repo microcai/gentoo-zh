@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-06-29 17:09:32 CST)
+(The last generation time: 2026-06-29 17:44:09 CST)
 
 ### Packages
 
@@ -396,7 +396,7 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/codewhale-bin                                | 9999               |            | https://github.com/Hmbown/CodeWhale                                                     | Coding agent with terminal TUI
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-util/codex                                        | 0.142.2            |            | https://github.com/openai/codex                                                         | Codex CLI - OpenAI's AI-powered coding agent
+ dev-util/codex                                        | 0.142.4            |            | https://github.com/openai/codex                                                         | Codex CLI - OpenAI's AI-powered coding agent
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/fvm                                          | 4.1.0              |            | https://github.com/leoafarias/fvm                                                       | Flutter Version Management
    dev-lang/dart                                       | 3.12.0             |  D, RD     | https://dart.dev                                                                        | The Dart SDK
