@@ -35,12 +35,6 @@ BDEPEND="
 	sys-devel/gettext
 "
 
-# GCC 14 compatibility: Replace return*_if_fail macros
-# https://gitlab.gnome.org/raggesilver/blackbox/-/commit/e50457a52aafcdfe0e230a3e6ec97eddc66eb989
-PATCHES=(
-	"${FILESDIR}/${PN}-0.14.0-gcc-14.patch"
-)
-
 src_prepare() {
 	default
 	vala_setup
