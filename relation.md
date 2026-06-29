@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-06-29 17:44:09 CST)
+(The last generation time: 2026-06-29 20:30:13 CST)
 
 ### Packages
 
@@ -146,7 +146,7 @@
    dev-python/funasr-onnx                              | 0.4.1-r1           | RD         | https://github.com/modelscope/FunASR                                                    | FunASR ONNX Runtime inference for speech recognition
      dev-python/kaldi-native-fbank                     | 1.22.3             | RD         | https://github.com/csukuangfj/kaldi-native-fbank                                        | Kaldi-compatible online fbank feature extractor
      dev-python/librosa                                | 0.11.0-r1          | RD         | https://github.com/librosa/librosa                                                      | Python library for audio and music analysis
-       dev-python/numba                                | 0.64.0             | RD         | https://github.com/numba/numba                                                          | NumPy-aware optimizing compiler for Python using LLVM
+       dev-python/numba                                | 0.64.0-r1          | RD         | https://github.com/numba/numba                                                          | NumPy-aware optimizing compiler for Python using LLVM
          dev-python/llvmlite                           | 0.46.0             | RD         | https://github.com/numba/llvmlite                                                       | Lightweight LLVM Python binding for writing JIT compilers
        dev-python/soxr                                 | 1.0.0              | RD         | https://github.com/dofuuz/python-soxr                                                   | High quality, one-dimensional sample-rate conversion library for Python
      dev-python/onnxruntime                            | 1.24.2             | RD         | https://onnxruntime.ai                                                                  | Cross-platform, high performance ML inferencing and training accelerator
