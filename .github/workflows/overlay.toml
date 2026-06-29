@@ -1844,7 +1844,7 @@ host = "gitlab.gnome.org"
 use_max_tag = true
 prefix = "v"
 exclude_regex = ".*alpha.*|.*beta.*|.*rc.*"
-github_account = "zakkaus"
+github_account = ["zakkaus", "gouwazi"]
 
 ["x11-terms/termius"]
 source = "jq"
