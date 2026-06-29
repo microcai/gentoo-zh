@@ -11,7 +11,7 @@ PLOCALE_BACKUP="en"
 
 inherit cmake flag-o-matic plocale xdg
 
-MY_PV="26.5.3-Release.08646d1a"
+MY_PV="26.6.0"
 
 DESCRIPTION="Feature-rich dictionary lookup program (qtwebengine fork)"
 HOMEPAGE="https://xiaoyifang.github.io/goldendict-ng/"
