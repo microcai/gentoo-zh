@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-06-29 11:43:45 CST)
+(The last generation time: 2026-06-29 11:45:53 CST)
 
 ### Packages
 
@@ -452,7 +452,7 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-vcs/sourcegit-bin                                 | 2026.07            |            | https://github.com/sourcegit-scm/sourcegit                                              | Opensource Git GUI client.
                                                        | 2026.09            |            |                                                                                         |
-                                                       | 2026.13            |            |                                                                                         |
+                                                       | 2026.14            |            |                                                                                         |
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  games-action/vintagestory                             | 1.19.8             |            | https://www.vintagestory.at/                                                            | Uncompromising wilderness survival sandbox game (requires paid account)
                                                        | 1.20.12            |            |                                                                                         |
