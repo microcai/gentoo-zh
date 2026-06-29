@@ -262,6 +262,7 @@ github_account = "peeweep"
 source = "regex"
 url = "https://www.scootersoftware.com/kb/linux_install"
 regex = "bcompare-([\\d.]+).x86_64.tar.gz"
+github_account = "gouwazi"
 
 ["app-misc/cc-switch"]
 source = "github"
