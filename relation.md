@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-06-29 11:04:05 CST)
+(The last generation time: 2026-06-29 11:14:14 CST)
 
 ### Packages
 
@@ -23,7 +23,7 @@
  app-admin/chezmoi-bin                                 | 2.70.0             |            | https://www.chezmoi.io                                                                  | Manage your dotfiles across multiple diverse machines, securely.
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-admin/enpass                                      | 6.10.1.1661        |            | https://www.enpass.io                                                                   | A cross-platform, complete password management solution.
-                                                       | 6.11.12.1953       |            |                                                                                         |
+                                                       | 6.11.13.1957       |            |                                                                                         |
                                                        | 6.11.6.1833        |            |                                                                                         |
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-admin/proton-authenticator-bin                    | 1.0.0              |            | https://proton.me/authenticator                                                         | Official open-source two-factor authentication app by Proton
@@ -557,7 +557,7 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-gfx/tifig-bin                                   | 0.2.2              |            | https://github.com/monostream/tifig                                                     | Converts iOS 11 HEIC images to practical formats - Static binary
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- media-gfx/unityhub                                    | 3.14.1-r1          |            | https://unity.com/                                                                      | The official unity tool for manager Unity Engines and projects
+ media-gfx/unityhub                                    | 3.18.0             |            | https://unity.com/                                                                      | The official unity tool for manager Unity Engines and projects
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-gfx/zw3d                                        | 2026.0.1.1         |            | https://www.zwsoft.cn/product/zw3d/linux                                                | CAD/CAM software for 3D design and processing
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
