@@ -1803,7 +1803,7 @@ source = "github"
 github = "cginternals/glbinding"
 use_latest_release = true
 prefix = "v"
-github_account = "microcai"
+github_account = ["microcai", "gouwazi"]
 
 ["x11-misc/9menu"]
 source = "debianpkg"
