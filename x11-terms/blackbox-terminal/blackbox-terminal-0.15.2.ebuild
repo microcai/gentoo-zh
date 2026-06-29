@@ -40,10 +40,6 @@ src_prepare() {
 	vala_setup
 }
 
-src_configure() {
-	meson_src_configure -Dblackbox_is_flatpak=false
-}
-
 src_install() {
 	meson_src_install
 }
