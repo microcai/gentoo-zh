@@ -29,6 +29,7 @@ src_install() {
 	insinto /usr/share/reqable
 	doins -r "${S}"/usr/share/reqable/*
 	fperms 755 /usr/share/reqable/reqable
+	fperms 755 /usr/share/reqable/mcp-server
 	domenu "${S}"/usr/share/applications/reqable.desktop
 	doicon -s 1024 "${S}"/usr/share/pixmaps/reqable.png
 }
