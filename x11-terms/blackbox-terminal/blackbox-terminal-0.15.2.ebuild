@@ -3,7 +3,7 @@
 
 EAPI=8
 
-inherit meson gnome2-utils xdg vala
+inherit flag-o-matic meson gnome2-utils xdg vala
 
 DESCRIPTION="A beautiful GTK 4 terminal"
 HOMEPAGE="https://gitlab.gnome.org/raggesilver/blackbox"
@@ -38,6 +38,12 @@ BDEPEND="
 src_prepare() {
 	default
 	vala_setup
+}
+
+src_configure() {
+	# Vala-generated C code emits many pointer-type warnings with newer GTK headers.
+	append-cflags -Wno-incompatible-pointer-types
+	meson_src_configure
 }
 
 src_install() {
