@@ -14,13 +14,17 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
 QA_PREBUILT="*"
+QA_DT_NEEDED="opt/${PN}/lib/libdartjni.so"
 DEPEND="
 	net-libs/webkit-gtk:4.1
 	dev-libs/libayatana-appindicator
 	media-video/mpv
 	x11-misc/xdg-user-dirs
 "
-RDEPEND="${DEPEND}"
+RDEPEND="
+	${DEPEND}
+	virtual/jre:*
+"
 
 src_install() {
 	local instdir="/opt/${PN}"
