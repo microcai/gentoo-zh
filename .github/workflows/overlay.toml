@@ -1149,7 +1149,7 @@ github_account = ["st0nie", "gouwazi"]
 source = "aur"
 aur = "piliplus-bin"
 strip_release = true
-github_account = "xysgh"
+github_account = ["xysgh", "gouwazi"]
 
 # TODO: upstream removed linux support
 #["media-video/tenvideo"]
