@@ -11,14 +11,12 @@ PLOCALE_BACKUP="en"
 
 inherit cmake flag-o-matic plocale xdg
 
-MY_PV="26.6.0"
-
 DESCRIPTION="Feature-rich dictionary lookup program (qtwebengine fork)"
 HOMEPAGE="https://xiaoyifang.github.io/goldendict-ng/"
 SRC_URI="
-	https://github.com/xiaoyifang/goldendict-ng/archive/v${MY_PV}.tar.gz -> ${PN}-ng-${MY_PV}.tar.gz
+	https://github.com/xiaoyifang/goldendict-ng/archive/v${PV}.tar.gz -> ${PN}-ng-${PV}.tar.gz
 "
-S="${WORKDIR}/goldendict-ng-${MY_PV}"
+S="${WORKDIR}/goldendict-ng-${PV}"
 
 LICENSE="GPL-3"
 SLOT="0"
