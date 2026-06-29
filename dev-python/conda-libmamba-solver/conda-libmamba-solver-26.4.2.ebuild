@@ -24,9 +24,11 @@ BDEPEND="
 
 RDEPEND="
 	$(python_gen_cond_dep 'dev-python/boltons[${PYTHON_USEDEP}]')
+	sys-libs/libsolv:=[conda,python_single_target_python3_13(-)]
 	dev-util/mamba:=[python,${PYTHON_SINGLE_USEDEP}]
 "
 
 export SETUPTOOLS_SCM_PRETEND_VERSION=${PV}
 
+EPYTEST_PLUGINS=()
 distutils_enable_tests pytest
