@@ -35,6 +35,7 @@ KEYWORDS="~amd64"
 RDEPEND="
 	>=dev-python/llvmlite-0.46.0[${PYTHON_USEDEP}]
 	>=dev-python/numpy-1.22[${PYTHON_USEDEP}]
+	<dev-python/numpy-2.5[${PYTHON_USEDEP}]
 "
 
 RESTRICT="bindist mirror strip test"
