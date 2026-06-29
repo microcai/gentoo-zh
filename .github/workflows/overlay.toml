@@ -439,7 +439,7 @@ github_account = "blackteahamburger"
 source = "github"
 github = "eclipse-lemminx/lemminx"
 use_latest_tag = true
-github_account = "blackteahamburger"
+github_account = ["blackteahamburger", "gouwazi"]
 
 ["app-text/readest-bin"]
 source = "github"
