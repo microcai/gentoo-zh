@@ -41,8 +41,8 @@ src_prepare() {
 }
 
 src_configure() {
-	# Vala-generated C code emits many pointer-type warnings with newer GTK headers.
-	append-cflags -Wno-incompatible-pointer-types
+	# Prevent valac-generated C from re-enabling this warning via GCC pragmas.
+	append-cflags -DVALA_STRICT_C -Wno-incompatible-pointer-types
 	meson_src_configure
 }
 
