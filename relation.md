@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-06-29 21:50:38 CST)
+(The last generation time: 2026-06-29 22:24:21 CST)
 
 ### Packages
 
@@ -250,7 +250,7 @@
  app-text/goldendict                                   | 25.02.0            |            | https://xiaoyifang.github.io/goldendict-ng/                                             | Feature-rich dictionary lookup program (qtwebengine fork)
                                                        | 26.3.0             |            |                                                                                         |
                                                        | 26.5.2             |            |                                                                                         |
-                                                       | 26.6.0             |            |                                                                                         |
+                                                       | 26.6.1             |            |                                                                                         |
    app-arch/libzim                                     | 9.5.1              |  D, RD     | https://wiki.openzim.org/wiki/OpenZIM                                                   | ZIM file format: an offline storage solution for content coming from the Web
                                                        | 9.8.0              |            |                                                                                         |
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
