@@ -557,7 +557,7 @@ source = "github"
 github = "yetist/lunar-date"
 use_latest_release = true
 prefix = "v"
-github_account = "microcai"
+github_account = ["microcai", "gouwazi"]
 
 # high update frequency
 #["dev-libs/v2ray-domain-list-community"]
