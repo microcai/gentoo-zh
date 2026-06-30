@@ -6,7 +6,7 @@ EAPI=8
 inherit unpacker desktop xdg
 
 DESCRIPTION="one for all free music in China"
-HOMEPAGE="http://listen1.github.io/listen1
+HOMEPAGE="https://listen1.github.io/listen1/
 	https://github.com/listen1/listen1_desktop
 "
 SRC_URI="https://github.com/listen1/listen1_desktop/releases/download/v${PV}/listen1_${PV}_linux_amd64.deb -> ${P}.deb"
@@ -42,6 +42,7 @@ RDEPEND="
 "
 
 QA_PREBUILT="
+	opt/Listen1/chrome_crashpad_handler
 	opt/Listen1/chrome-sandbox
 	opt/Listen1/libEGL.so
 	opt/Listen1/libffmpeg.so
@@ -49,8 +50,6 @@ QA_PREBUILT="
 	opt/Listen1/libvk_swiftshader.so
 	opt/Listen1/libvulkan.so.1
 	opt/Listen1/listen1
-	opt/Listen1/swiftshader/libEGL.so
-	opt/Listen1/swiftshader/libGLESv2.so
 "
 
 src_prepare(){
