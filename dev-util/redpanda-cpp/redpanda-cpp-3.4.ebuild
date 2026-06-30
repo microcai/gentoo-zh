@@ -16,7 +16,10 @@ DEPEND="
 	dev-qt/qtsvg:6
 "
 RDEPEND="${DEPEND}"
-BDEPEND="dev-qt/qttools:6[linguist]"
+BDEPEND="
+	dev-qt/qttools:6[linguist]
+	dev-vcs/git
+"
 
 PATCHES=( "${FILESDIR}/${P}-fix-linux-utf8.patch" )
 
