@@ -1,3 +1,19 @@
+# Huang Rui <vowstar@gmail.com> (2026-06-30)
+# No active maintainer in gentoo-zh. These packages were maintained as part of
+# the vocotype stack, but vocotype upstream is no longer maintained.
+# Removal on 2026-07-30 unless a new maintainer steps up.
+app-i18n/vocotype
+dev-python/autopxd2
+dev-python/funasr-onnx
+dev-python/jieba
+dev-python/kaldi-native-fbank
+dev-python/librosa
+dev-python/llvmlite
+dev-python/numba
+dev-python/onnxruntime
+dev-python/sounddevice
+dev-python/soxr
+
 # jinqiang zhang <peeweep@0x0.ee> (2026-05-16)
 # Xray provided official tun inbound since v26.4.13.
 # I packaged tun2socks as Xray's tun inbound solution,
