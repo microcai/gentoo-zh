@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>3117086599@qq.com</email>
+		<name>huaji2369</name>
+	</maintainer>
+    <upstream>
+        <remote-id type="github">replydev/cotp</remote-id>
+    </upstream>
+</pkgmetadata>

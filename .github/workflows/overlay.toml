@@ -71,6 +71,12 @@ gitlab = "archlinux/archlinux-keyring"
 use_max_tag = true
 github_account = "HougeLangley"
 
+["app-crypt/cotp"]
+source = "github"
+github = "replydev/cotp"
+use_latest_release = true
+github_account = "huaji2369"
+
 ["app-dicts/fcitx-pinyin-moegirl"]
 source = "github"
 github = "outloudvi/mw2fcitx"
