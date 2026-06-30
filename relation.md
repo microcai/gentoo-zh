@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-06-30 10:44:16 CST)
+(The last generation time: 2026-06-30 11:59:14 CST)
 
 ### Packages
 
@@ -306,7 +306,7 @@
  dev-libs/libratbag                                    | 0.18               |            | https://github.com/libratbag/libratbag                                                  | Library to configure gaming mice
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-libs/lunar-calendar                               | 3.0.1              |            | https://github.com/yetist/lunar-calendar                                                | a gtk+ calendar widget for chinese lunar library
-   dev-libs/lunar-date                                 | 3.0.1              |  D         | https://github.com/yetist/lunar-date                                                    | Chinese Lunar Library
+   dev-libs/lunar-date                                 | 3.2.0              |  D         | https://github.com/yetist/lunar-date                                                    | Chinese Lunar Library
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-libs/v2ray-rules-dat-bin                          | 202603102222       |            | https://github.com/Loyalsoldier/v2ray-rules-dat                                         | Enhanced edition of V2Ray rules dat files.
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -582,7 +582,7 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-sound/harmonoid                                 | 0.3.22             |            | https://harmonoid.com/                                                                  | Plays & manages your music library
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- media-sound/listen1_desktop-bin                       | 2.32.0             |            | http://listen1.github.io/listen1                                                        | one for all free music in China
+ media-sound/listen1_desktop-bin                       | 2.33.0             |            | https://listen1.github.io/listen1/                                                      | one for all free music in China
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  media-sound/lx-music-desktop-bin                      | 2.10.0             |            | https://github.com/lyswhut/lx-music-desktop                                             | 一个基于 electron 的音乐软件
                                                        | 2.12.2             |            |                                                                                         |
