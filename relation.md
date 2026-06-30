@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-07-01 05:26:21 CST)
+(The last generation time: 2026-07-01 05:54:46 CST)
 
 ### Packages
 
@@ -438,7 +438,7 @@
    dev-util/cmakerc                                    | 2.0.1              | BD         | https://github.com/vector-of-bool/cmrc                                                  | A Resource Compiler in a Single CMake Script
                                                        | 2.0.1_p20230725    |            |                                                                                         |
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-util/vfox                                         | 1.0.7              |            | https://vfox.dev                                                                        | A cross-platform version manager, extendable via plugins
+ dev-util/vfox                                         | 1.0.11             |            | https://vfox.dev                                                                        | A cross-platform version manager, extendable via plugins
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/vfox-bin                                     | 1.0.7              |            | https://vfox.dev/                                                                       | A cross-platform version manager, extendable via plugins
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
