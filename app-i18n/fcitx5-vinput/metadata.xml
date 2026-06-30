@@ -6,6 +6,10 @@
     <email>liangyongxiang@hotmail.com</email>
     <name>Yongxiang Liang</name>
   </maintainer>
+  <maintainer type="person">
+    <email>vowstar@gmail.com</email>
+    <name>Huang Rui</name>
+  </maintainer>
   <longdescription>
     fcitx5-vinput is a voice input addon for Fcitx5, supporting local
     and cloud ASR (Automatic Speech Recognition), LLM rewriting,
