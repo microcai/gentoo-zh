@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-06-30 11:59:14 CST)
+(The last generation time: 2026-06-30 12:00:02 CST)
 
 ### Packages
 
@@ -90,7 +90,7 @@
  app-emulation/liblol-libxcrypt                        | 0.1.10             |            | https://github.com/besser82/libxcrypt                                                   | libxcrypt for liblol
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-emulation/looking-glass                           | 0_beta7_rc1-r2     |            | https://looking-glass.io                                                                | A low latency KVMFR application for guests with VGA PCI Passthrough
-   gui-libs/libdecor                                   | 0.1.1              |  D, RD     | https://gitlab.freedesktop.org/libdecor/libdecor                                        | A client-side decorations library for Wayland clients
+   gui-libs/libdecor                                   | 0.2.5              |  D, RD     | https://gitlab.freedesktop.org/libdecor/libdecor                                        | A client-side decorations library for Wayland clients
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  app-emulation/winboat-bin                             | 0.9.0              |            | https://www.winboat.app/                                                                | Run Windows apps on Linux with seamless integration
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
