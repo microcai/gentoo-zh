@@ -750,6 +750,7 @@ source = "github"
 github = "asdf-vm/asdf"
 use_latest_tag = true
 prefix = "v"
+github_account = "gouwazi"
 
 ["dev-util/binsider"]
 source = "github"
