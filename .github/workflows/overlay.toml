@@ -797,7 +797,7 @@ source = "github"
 github = "royqh1979/RedPanda-CPP"
 use_latest_release = true
 prefix = "v"
-github_account = "Dawn-Xu-helloworld"
+github_account = ["Dawn-Xu-helloworld", "gouwazi"]
 
 ["dev-util/tailspin"]
 source = "github"
