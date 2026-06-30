@@ -23,7 +23,10 @@ RDEPEND="
 	>=kde-plasma/kdeplasma-addons-6.7:=
 "
 DEPEND="${RDEPEND}"
-BDEPEND="kde-frameworks/extra-cmake-modules"
+BDEPEND="
+	sys-devel/gettext
+	kde-frameworks/extra-cmake-modules
+"
 
 PATCHES=( "${FILESDIR}/${PN}-0.1.0-package-version.patch" )
 
