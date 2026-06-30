@@ -6,6 +6,6 @@
 		<email>dev@wangxianggang.com</email>
 	</maintainer>
 	<upstream>
-		<remote-id type="github">hoppscotch/release</remote-id>
+		<remote-id type="github">hoppscotch/releases</remote-id>
 	</upstream>
 </pkgmetadata>
