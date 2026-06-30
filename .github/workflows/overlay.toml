@@ -384,7 +384,7 @@ prefix = "Linux-x64-deb@V"
 
 ["app-office/freeoffice"]
 source = "regex"
-url = "https://www.freeoffice.com/de/download/programme"
+url = "https://www.freeoffice.com/de/support/installation/linux"
 regex = "softmaker-freeoffice-[\\d.]{4}-([\\d.]+)-amd64.tgz"
 github_account = ["zozx", "gouwazi"]
 
