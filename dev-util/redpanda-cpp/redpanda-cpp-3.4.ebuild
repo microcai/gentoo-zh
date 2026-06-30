@@ -18,11 +18,15 @@ DEPEND="
 RDEPEND="${DEPEND}"
 BDEPEND="dev-qt/qttools:6[linguist]"
 
+PATCHES=( "${FILESDIR}/${P}-fix-linux-utf8.patch" )
+
 src_configure(){
-	OPTIONS="PREFIX=/usr LIBEXECDIR=/usr/libexec XDG_ADAPTIVE_ICON=ON"
+	OPTIONS="PREFIX=/usr LIBEXECDIR=libexec XDG_ADAPTIVE_ICON=ON"
 	eqmake6 ${OPTIONS} Red_Panda_CPP.pro
 }
 
 src_install(){
 	emake INSTALL_ROOT="${ED}" install
+	rm -r "${ED}/usr/share/doc/RedPandaCPP" || die
+	dodoc README.md NEWS.md
 }
