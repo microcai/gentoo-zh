@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-06-30 12:00:02 CST)
+(The last generation time: 2026-06-30 12:37:50 CST)
 
 ### Packages
 
@@ -424,8 +424,7 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/pi-coding-agent-bin                          | 0.50.7             |            | https://github.com/badlogic/pi-mono                                                     | A terminal-based coding agent with multi-model support
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-util/redpanda-cpp                                 | 3.1                |            | http://royqh.net/redpandacpp                                                            | A lightweight yet powerful C/C++/GNU Assembly IDE.
-                                                       | 3.3                |            |                                                                                         |
+ dev-util/redpanda-cpp                                 | 3.4                |            | http://royqh.net/redpandacpp/                                                           | A lightweight yet powerful C/C++/GNU Assembly IDE.
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/tailspin                                     | 5.5.0              |            | https://github.com/bensadeh/tailspin                                                    | A log file highlighter
                                                        | 6.1.0              |            |                                                                                         |
