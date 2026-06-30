@@ -1933,4 +1933,4 @@ source = "github"
 github = "anomalyco/opencode"
 use_latest_release = true
 prefix = "v"
-github_account = "xz-dev"
+github_account = ["xz-dev", "gouwazi"]
