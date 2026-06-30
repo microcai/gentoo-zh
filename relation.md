@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-07-01 05:54:46 CST)
+(The last generation time: 2026-07-01 05:56:07 CST)
 
 ### Packages
 
@@ -440,7 +440,7 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/vfox                                         | 1.0.11             |            | https://vfox.dev                                                                        | A cross-platform version manager, extendable via plugins
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-util/vfox-bin                                     | 1.0.7              |            | https://vfox.dev/                                                                       | A cross-platform version manager, extendable via plugins
+ dev-util/vfox-bin                                     | 1.0.11             |            | https://vfox.dev/                                                                       | A cross-platform version manager, extendable via plugins
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-util/waza-bin                                     | 0.31.0             |            | https://github.com/microsoft/waza                                                       | CLI and framework for AI agent skills
                                                        | 0.33.0             |            |                                                                                         |
