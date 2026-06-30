@@ -6,7 +6,7 @@ EAPI=8
 inherit desktop pax-utils xdg
 
 DESCRIPTION="A complete, free Microsoft Office-compatible alternative office suite."
-HOMEPAGE="https://www.freeoffice.com"
+HOMEPAGE="https://www.freeoffice.com/de/"
 BASE_URI="https://www.softmaker.net/down/softmaker-freeoffice-2024-${PV}"
 SRC_URI="${BASE_URI}-amd64.tgz"
 
@@ -22,17 +22,23 @@ done
 
 RESTRICT="mirror strip"
 
-DEPEND="
+BDEPEND="
 	app-admin/chrpath
 	app-arch/xz-utils"
 RDEPEND="
-	${DEPEND}
-	media-libs/mesa
-	net-misc/curl
-	x11-libs/libXrandr
+	dev-libs/glib:2
 	dev-util/desktop-file-utils
 	dev-util/gtk-update-icon-cache
+	media-libs/gst-plugins-base:1.0
+	media-libs/gstreamer:1.0
 	media-libs/libglvnd
+	media-libs/mesa
+	net-misc/curl
+	x11-libs/libX11
+	x11-libs/libXext
+	x11-libs/libXmu
+	x11-libs/libXrandr
+	x11-libs/libXrender
 	x11-misc/xdg-utils"
 
 QA_PRESTRIPPED="*"
@@ -44,14 +50,15 @@ font_clean(){
 		use l10n_${lang%:*} && continue
 		declare suf
 		case ${lang%:*} in
-			zh-CN)
+			zh)
 				suf="sc";;
 			ko)
 				suf="kr";;
 			ja)
 				suf="jp";;
 		esac
-		rm fonts/NotoSansCJK${suf}-Regular.otf
+		[[ ${suf} ]] || continue
+		rm -f fonts/NotoSansCJK${suf}-Regular.otf
 	done
 }
 
@@ -63,7 +70,8 @@ free_clean(){
 			de)
 				fix="de";;
 		esac
-		rm *free_${fix}.pdf
+		[[ ${fix} ]] || continue
+		rm -f *free_${fix}.pdf
 	done
 }
 
