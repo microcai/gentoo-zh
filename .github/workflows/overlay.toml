@@ -873,6 +873,7 @@ source = "gitlab"
 host = "gitlab.freedesktop.org"
 gitlab = "libdecor/libdecor"
 use_max_tag = true
+github_account = "gouwazi"
 
 ["kde-misc/plasma-applet-netspeed-widget"]
 source = "github"
