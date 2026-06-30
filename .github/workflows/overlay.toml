@@ -817,6 +817,7 @@ source = "github"
 github = "version-fox/vfox"
 use_latest_tag = true
 prefix = "v"
+github_account = "gouwazi"
 
 # FIXME: github graphql api seems to be some confusion between vfox and
 # vfox-bin, so we disable one of them
