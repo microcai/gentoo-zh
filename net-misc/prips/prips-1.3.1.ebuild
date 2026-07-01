@@ -11,7 +11,11 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
+src_compile() {
+	emake -C c
+}
+
 src_install() {
-	dobin prips
+	dobin c/prips
 	doman prips.1
 }
