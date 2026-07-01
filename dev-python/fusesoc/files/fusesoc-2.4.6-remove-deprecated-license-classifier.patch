@@ -1,6 +1,6 @@
 --- a/pyproject.toml
 +++ b/pyproject.toml
-@@ -19,10 +19,11 @@
+@@ -19,9 +19,10 @@
    "Development Status :: 5 - Production/Stable",
    "Topic :: Utilities",
    "Topic :: Software Development :: Build Tools",

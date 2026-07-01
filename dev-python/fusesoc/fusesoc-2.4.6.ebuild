@@ -25,12 +25,12 @@ SLOT="0"
 KEYWORDS="~amd64"
 
 RDEPEND="
-	>=dev-python/edalize-0.4.1
-	>=dev-python/pyparsing-2.3.1
-	>=dev-python/pyyaml-6.0
-	>=dev-python/simplesat-0.9.1
-	dev-python/fastjsonschema
-	dev-python/argcomplete
+	>=dev-python/edalize-0.4.1[${PYTHON_USEDEP}]
+	>=dev-python/pyparsing-2.3.1[${PYTHON_USEDEP}]
+	>=dev-python/pyyaml-6.0[${PYTHON_USEDEP}]
+	>=dev-python/simplesat-0.9.1[${PYTHON_USEDEP}]
+	dev-python/fastjsonschema[${PYTHON_USEDEP}]
+	dev-python/argcomplete[${PYTHON_USEDEP}]
 "
 
 # prohibit network environment
