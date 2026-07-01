@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-07-02 01:53:55 CST)
+(The last generation time: 2026-07-02 02:02:01 CST)
 
 ### Packages
 
@@ -371,7 +371,7 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-python/pypinyin                                   | 0.55.0             |            | https://github.com/mozillazg/python-pinyin                                              | Tool for converting Chinese characters to pinyin
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-python/pyqt6-charts                               | 6.10.0             |            | https://www.riverbankcomputing.com/software/pyqtchart/                                  | Python bindings for QtChart
+ dev-python/pyqt6-charts                               | 6.11.0             |            | https://www.riverbankcomputing.com/software/pyqtchart/                                  | Python bindings for QtChart
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-python/pytube                                     | 15.0.0             |            | https://github.com/pytube/pytube                                                        | Python tools for downloading YouTube Videos
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
