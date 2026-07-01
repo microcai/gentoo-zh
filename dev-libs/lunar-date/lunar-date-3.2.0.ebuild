@@ -14,6 +14,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="+dbus doc introspection test"
 
+REQUIRED_USE="doc? ( introspection )"
+
 RESTRICT="!test? ( test )"
 
 RDEPEND=">=dev-python/pygobject-2.11.5"
@@ -23,7 +25,10 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext
 	virtual/pkgconfig
 	>=dev-util/intltool-0.35
-	doc? ( dev-util/gtk-doc )
+	doc? (
+		dev-util/gi-docgen
+		dev-util/gtk-doc
+	)
 	introspection? ( dev-libs/gobject-introspection )"
 
 DOCS="AUTHORS COPYING NEWS README.md"
@@ -36,4 +41,13 @@ src_configure(){
 		$(meson_use test tests)
 	)
 	meson_src_configure
+}
+
+src_install() {
+	meson_src_install
+
+	if use doc; then
+		mkdir -p "${ED}"/usr/share/gtk-doc/html/ || die
+		mv "${ED}"/usr/share/doc/${PN} "${ED}"/usr/share/gtk-doc/html/ || die
+	fi
 }
