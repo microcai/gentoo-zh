@@ -40,8 +40,8 @@ src_install() {
 	doman man/aptly.1
 	dobashcomp completion.d/aptly
 	dozshcomp completion.d/_aptly
-	systemd_dounit aptly-api.service
-	systemd_dounit aptly.service
+	systemd_dounit "${FILESDIR}"/aptly-api.service
+	systemd_dounit "${FILESDIR}"/aptly.service
 	newinitd "${FILESDIR}"/aptly.initd aptly
 	newconfd "${FILESDIR}"/aptly.confd aptly
 	newinitd "${FILESDIR}"/aptly-api.initd aptly-api
