@@ -737,7 +737,7 @@ source = "github"
 github = "itay-grudev/SingleApplication"
 use_latest_tag = true
 prefix = "v"
-github_account = "blackteahamburger"
+github_account = ["blackteahamburger", "gouwazi"]
 
 ["dev-util/arch-install-scripts"]
 source = "gitlab"
