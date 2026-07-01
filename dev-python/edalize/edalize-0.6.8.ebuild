@@ -20,4 +20,8 @@ LICENSE="BSD-2"
 SLOT="0"
 KEYWORDS="~amd64"
 
+RDEPEND="
+	>=dev-python/jinja2-3[${PYTHON_USEDEP}]
+"
+
 distutils_enable_tests pytest

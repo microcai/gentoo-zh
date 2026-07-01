@@ -635,7 +635,7 @@ github_account = "gouwazi"
 ["dev-python/edalize"]
 source = "pypi"
 pypi = "edalize"
-github_account = "f3rmata"
+github_account = ["f3rmata", "gouwazi"]
 
 ["dev-python/feeluown-bilibili"]
 source = "pypi"
