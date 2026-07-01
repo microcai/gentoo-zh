@@ -1,0 +1,68 @@
+name: New packages RSS
+
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: true
+
+env:
+  GENERATOR_VERSION: v0.1.7
+  GENERATOR_BINARY: gentoo-overlay-new-packages-to-rss-linux-x86_64
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-24.04
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Checkout overlay
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Download RSS generator
+        run: |
+          base="https://github.com/vitaly-zdanevich/gentoo-overlay-new-packages-to-rss/releases/download/${GENERATOR_VERSION}"
+          curl -fsSLO "${base}/${GENERATOR_BINARY}"
+          curl -fsSLO "${base}/${GENERATOR_BINARY}.sha256"
+          sha256sum -c "${GENERATOR_BINARY}.sha256"
+          chmod +x "${GENERATOR_BINARY}"
+
+      - name: Generate RSS
+        run: |
+          ./${GENERATOR_BINARY} \
+            --repo . \
+            --repo-url "https://github.com/${{ github.repository }}" \
+            --self-url "https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/gentoo-zh.rss" \
+            --output "public/gentoo-zh.rss"
+          printf '%s\n' \
+            '<!doctype html>' \
+            '<meta charset="utf-8">' \
+            '<title>gentoo-zh new packages RSS</title>' \
+            '<a href="./gentoo-zh.rss">gentoo-zh.rss</a>' \
+            > public/index.html
+          touch public/.nojekyll
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: public
+
+      - name: Deploy Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

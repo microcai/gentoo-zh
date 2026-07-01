@@ -21,6 +21,18 @@ follow rule no.1 and no.2
 
 https://github.com/microcai/gentoo-zh/blob/deps-table/relation.md
 
+# new packages RSS
+
+Newly added packages are published as RSS:
+
+https://microcai.github.io/gentoo-zh/gentoo-zh.rss
+
+For reading RSS from the terminal, try [Newsboat](https://packages.gentoo.org/packages/net-news/newsboat), a CLI RSS/Atom reader:
+
+```
+emerge --ask net-news/newsboat
+```
+
 # commit message
 
 It is recommended to run `pkgdev commit` to quickly generate commit messages.
