@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-07-01 18:57:16 CST)
+(The last generation time: 2026-07-01 20:26:05 CST)
 
 ### Packages
 
@@ -740,7 +740,7 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-misc/prips                                        | 1.0.0              |            | http://devel.ringlet.net/sysutils/prips/                                                | print the IP addresses in a range
                                                        | 1.2.0              |            |                                                                                         |
-                                                       | 1.2.2              |            |                                                                                         |
+                                                       | 1.3.1              |            |                                                                                         |
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-misc/reframe                                      | 1.18.0             |            | https://reframe.alynx.one/                                                              | DRM/KMS based remote desktop for Linux
    acct-group/reframe                                  | 0                  |  D, RD     |                                                                                         | group for reframe
