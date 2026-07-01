@@ -8,8 +8,8 @@ DESCRIPTION="
 飞书整合即时消息、日历、音视频会议、云文档、工作台等功能于一体，成就团队和个人，更高效、更愉悦。 "
 HOMEPAGE="https://www.feishu.cn/download"
 SRC_URI="
-	amd64? ( https://sf3-cn.feishucdn.com/obj/ee-appcenter/f63223d9/Feishu-linux_x64-${PV}.deb )
-	arm64? ( https://sf3-cn.feishucdn.com/obj/ee-appcenter/d95df105/Feishu-linux_arm64-${PV}.deb )
+	amd64? ( https://sf3-cn.feishucdn.com/obj/ee-appcenter/6e3610b5/Feishu-linux_x64-${PV}.deb )
+	arm64? ( https://sf3-cn.feishucdn.com/obj/ee-appcenter/36c6e858/Feishu-linux_arm64-${PV}.deb )
 "
 
 S="${WORKDIR}"
@@ -22,11 +22,14 @@ RESTRICT="strip mirror bindist"
 DEPEND="
 	app-misc/ca-certificates
 	dev-libs/nss
+	media-libs/mesa
 	media-libs/alsa-lib
 	media-libs/libpulse
-	x11-libs/libX11
+	x11-libs/gtk+:3[cups,X]
+	x11-libs/libdrm
 	x11-libs/libxcb
 	x11-libs/libXext
+	x11-libs/libxkbcommon
 	x11-misc/xdg-utils
 "
 BDEPEND="
@@ -42,7 +45,7 @@ src_prepare() {
 
 src_install() {
 	# fix scanelf rpath error: https://github.com/microcai/gentoo-zh/issues/7666
-	for f in libbv-screen-capture.so libbyteview-bytertc.so libbyteview-record.so libuss.so; do
+	for f in libbv-screen-capture.so libbyteview-bytertc.so libbyteview-record.so; do
 		patchelf --set-rpath '$ORIGIN' "${S}/opt/bytedance/feishu/${f}" || die "patchelf failed on ${f}"
 	done
 	insinto "/"
