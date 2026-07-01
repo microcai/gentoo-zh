@@ -38,6 +38,11 @@ RDEPEND="${DEPEND}"
 
 QA_PREBUILT="*"
 
+pkg_setup() {
+	# chromium-2 inherits linux-info, but this binary package does not need kernel probing.
+	:
+}
+
 src_unpack() {
 	default
 	if use amd64; then
@@ -45,11 +50,6 @@ src_unpack() {
 	elif use arm64; then
 		mv ${P}.arm64 ${P} || die
 	fi
-}
-
-src_configure() {
-	default
-	chromium_suid_sandbox_check_kernel_config
 }
 
 src_prepare() {
