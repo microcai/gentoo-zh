@@ -22,6 +22,7 @@ BDEPEND="doc? ( app-text/doxygen )"
 PATCHES=(
 	# https://github.com/itay-grudev/SingleApplication/issues/190
 	"${FILESDIR}/singleapplication-3.5.2_p20250124-fix-single-instance-with-qt6.patch"
+	"${FILESDIR}/singleapplication-3.5.6-cmake-3.10.patch"
 )
 
 src_configure() {
