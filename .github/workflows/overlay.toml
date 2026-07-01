@@ -1615,7 +1615,7 @@ source = "github"
 github = "sorz/sstp-server"
 use_latest_release = true
 prefix = "v"
-github_account = "microcai"
+github_account = ["microcai", "gouwazi"]
 
 # live package only
 #["net-wireless/linux-wifi-hotspot"]
