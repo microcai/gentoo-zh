@@ -712,7 +712,7 @@ github_account = "blackteahamburger"
 ["dev-python/pyqt6-charts"]
 source = "pypi"
 pypi = "PyQt6-Charts"
-github_account = "blackteahamburger"
+github_account = ["blackteahamburger", "gouwazi"]
 
 ["dev-python/pytube"]
 source = "github"
