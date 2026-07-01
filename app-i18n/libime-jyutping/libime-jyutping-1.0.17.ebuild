@@ -1,4 +1,4 @@
-# Copyright 2023-2025 Gentoo Authors
+# Copyright 2023-2026 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -25,7 +25,7 @@ DEPEND="
 		dev-texlive/texlive-fontutils
 	)
 	engine? (
-		>=app-i18n/fcitx-5.1.12:5
+		>=app-i18n/fcitx-5.1.13:5
 		app-i18n/fcitx-chinese-addons:5
 		sys-devel/gettext
 	)
