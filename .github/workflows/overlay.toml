@@ -598,7 +598,7 @@ source = "github"
 github = "archspec/archspec"
 use_latest_release = true
 prefix = "v"
-github_account = "OriPoin"
+github_account = ["OriPoin", "gouwazi"]
 
 ["dev-python/conda"]
 source = "github"
