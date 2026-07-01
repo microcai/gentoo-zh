@@ -1059,6 +1059,13 @@ prefix = "v"
 use_latest_release = true
 github_account = "liuyujielol"
 
+["media-plugins/waywallen-display"]
+source = "github"
+github = "waywallen/waywallen-display"
+prefix = "v"
+use_latest_release = true
+github_account = "Puqns67"
+
 # live package only
 #["media-sound/barva"]
 
