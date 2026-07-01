@@ -878,6 +878,13 @@ prefix = "v"
 use_latest_release = true
 github_account = "liuyujielol"
 
+["gui-apps/waywallen"]
+source = "github"
+github = "waywallen/waywallen"
+prefix = "v"
+use_latest_release = true
+github_account = "Puqns67"
+
 ["gui-apps/tux-manager"]
 source = "github"
 github = "benapetr/TuxManager"
