@@ -20,5 +20,5 @@ RDEPEND="
 "
 
 PDEPEND="
-	media-sound/feeluown
+	>=media-sound/feeluown-4.1.8[${PYTHON_USEDEP}]
 "
