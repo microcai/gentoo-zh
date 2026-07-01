@@ -1,4 +1,4 @@
-# Copyright 2025 Gentoo Authors
+# Copyright 2025-2026 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -25,8 +25,8 @@ RDEPEND="
 "
 DEPEND="${RDEPEND}"
 BDEPEND="
-	>=dev-python/pyqt-builder-1.17[${PYTHON_USEDEP}]
-	>=dev-python/sip-6.9[${PYTHON_USEDEP}]
+	>=dev-python/pyqt-builder-1.19[${PYTHON_USEDEP}]
+	>=dev-python/sip-6.15[${PYTHON_USEDEP}]
 	>=dev-qt/qtbase-${QT_PV}
 "
 
