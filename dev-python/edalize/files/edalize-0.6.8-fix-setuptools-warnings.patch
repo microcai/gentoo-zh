@@ -1,0 +1,12 @@
+--- a/pyproject.toml
++++ b/pyproject.toml
+@@ -19,1 +19,0 @@
+-        "License :: OSI Approved :: BSD License",
+@@ -24,1 +23,3 @@
++license = "BSD-2-Clause"
++
+ dynamic = ["version"]
+@@ -52,2 +53,2 @@
+ [tool.setuptools.packages.find]
+-include = ["edalize", "edalize.tools", "edalize.flows", "edalize.build_runners"]
++include = ["edalize*"]

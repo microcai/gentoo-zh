@@ -8,6 +8,10 @@ PYTHON_COMPAT=( python3_{12..14} )
 
 inherit distutils-r1 pypi
 
+PATCHES=(
+	"${FILESDIR}/${P}-fix-setuptools-warnings.patch"
+)
+
 DESCRIPTION="
 	Library for interfacing EDA tools.
 "
