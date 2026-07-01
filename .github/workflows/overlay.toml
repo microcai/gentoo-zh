@@ -1386,6 +1386,7 @@ source = "gitlab"
 gitlab = "prips/prips"
 use_max_tag = true
 prefix = "release/"
+github_account = "gouwazi"
 
 ["net-misc/remmina-plugin-rustdesk"]
 source = "github"
