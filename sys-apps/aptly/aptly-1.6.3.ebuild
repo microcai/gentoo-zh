@@ -8,7 +8,7 @@ inherit shell-completion go-module systemd
 DESCRIPTION="A swiss army knife for Debian repository management"
 HOMEPAGE="https://github.com/aptly-dev/aptly"
 SRC_URI="https://github.com/aptly-dev/aptly/archive/v${PV}.tar.gz -> ${P}.tar.gz"
-SRC_URI+=" https://github.com/gentoo-zh-drafts/aptly/releases/download/v${PV}/${P}-deps.tar.xz"
+SRC_URI+=" https://github.com/gentoo-zh-drafts/aptly/releases/download/v${PV}/${P}-vendor.tar.xz"
 
 LICENSE="MIT"
 SLOT="0"
@@ -19,9 +19,15 @@ RDEPEND="
 	acct-group/aptly
 	acct-user/aptly
 "
+BDEPEND=">=dev-lang/go-1.25.0"
+
+src_prepare() {
+	default
+	printf '%s' "${PV}" > VERSION || die
+}
 
 src_compile() {
-	ego build -mod=readonly -o cmd/aptly -ldflags "-X main.Version=${PV}"
+	ego build -mod=vendor -o cmd/aptly -ldflags "-X main.Version=${PV}"
 }
 
 src_test() {
