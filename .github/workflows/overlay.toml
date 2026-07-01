@@ -875,6 +875,13 @@ prefix = "v"
 use_latest_release = true
 github_account = "liuyujielol"
 
+["gui-apps/tux-manager"]
+source = "github"
+github = "benapetr/TuxManager"
+prefix = "v"
+use_latest_release = true
+github_account = "Puqns67"
+
 ["gui-libs/libdecor"]
 source = "gitlab"
 host = "gitlab.freedesktop.org"
