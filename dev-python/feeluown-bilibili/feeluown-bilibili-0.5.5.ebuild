@@ -16,9 +16,12 @@ KEYWORDS="~amd64"
 RDEPEND="
 	dev-python/cachetools[${PYTHON_USEDEP}]
 	dev-python/beautifulsoup4[${PYTHON_USEDEP}]
+	>=dev-python/pydantic-2[${PYTHON_USEDEP}]
 	dev-python/pycryptodome[${PYTHON_USEDEP}]
 "
 
 PDEPEND="
 	>=media-sound/feeluown-4.1.8[${PYTHON_USEDEP}]
 "
+
+distutils_enable_tests pytest
