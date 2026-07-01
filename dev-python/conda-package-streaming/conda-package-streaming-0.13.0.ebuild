@@ -3,7 +3,7 @@
 
 EAPI=8
 DISTUTILS_USE_PEP517=flit
-PYTHON_COMPAT=(python3_{9..14})
+PYTHON_COMPAT=( python3_{12..14} )
 inherit distutils-r1
 
 DESCRIPTION="An efficient library to read from new and old conda packages"
@@ -16,8 +16,11 @@ KEYWORDS="~amd64 ~x86"
 
 DEPEND="
 	dev-python/requests[${PYTHON_USEDEP}]
-	dev-python/zstandard[${PYTHON_USEDEP}]"
+	$(python_gen_cond_dep '
+		dev-python/backports-zstd[${PYTHON_USEDEP}]
+	' python3_{12..13})"
 
 RDEPEND="${DEPEND}"
 
+EPYTEST_PLUGINS=()
 distutils_enable_tests pytest

@@ -5,11 +5,11 @@ EAPI=8
 
 DISTUTILS_USE_PEP517=hatchling
 DISTUTILS_SINGLE_IMPL=1
-PYTHON_COMPAT=( python3_{9..14} )
+PYTHON_COMPAT=( python3_{12..14} )
 inherit distutils-r1
 
 DESCRIPTION="OS-agnostic, system-level binary package manager and ecosystem"
-HOMEPAGE="https://conda.io/"
+HOMEPAGE="https://docs.conda.io/"
 SRC_URI="https://github.com/conda/conda/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="BSD"
@@ -45,6 +45,7 @@ RDEPEND="${DEPEND}"
 
 IUSE="+user +mamba"
 
+EPYTEST_PLUGINS=()
 distutils_enable_tests pytest
 
 PATCHES=(

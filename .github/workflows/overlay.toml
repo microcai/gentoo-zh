@@ -604,7 +604,7 @@ github_account = "OriPoin"
 source = "github"
 github = "conda/conda"
 use_latest_release = true
-github_account = "OriPoin"
+github_account = ["OriPoin", "gouwazi"]
 
 ["dev-python/conda-libmamba-solver"]
 source = "github"
@@ -616,14 +616,14 @@ github_account = ["OriPoin", "gouwazi"]
 source = "github"
 github = "conda/conda-package-handling"
 use_latest_release = true
-github_account = "OriPoin"
+github_account = ["OriPoin", "gouwazi"]
 
 ["dev-python/conda-package-streaming"]
 source = "github"
 github = "conda/conda-package-streaming"
 use_latest_release = true
 prefix = "v"
-github_account = "OriPoin"
+github_account = ["OriPoin", "gouwazi"]
 
 ["dev-python/daff"]
 source = "github"
