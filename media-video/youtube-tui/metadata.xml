@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<use>
+		<flag name="clipboard">Enable clipboard integration through X11</flag>
+		<flag name="halfblock">Enable terminal image rendering with half blocks</flag>
+		<flag name="invidious">Enable the Invidious provider</flag>
+		<flag name="mpv">Enable embedded mpv playback through libmpv</flag>
+		<flag name="rustypipe">Enable the rustypipe YouTube provider</flag>
+		<flag name="sixel">Enable terminal image rendering with Sixel</flag>
+	</use>
+	<upstream>
+		<remote-id type="github">Siriusmart/youtube-tui</remote-id>
+	</upstream>
+</pkgmetadata>
