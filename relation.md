@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-07-01 16:23:42 CST)
+(The last generation time: 2026-07-01 17:34:41 CST)
 
 ### Packages
 
@@ -864,7 +864,7 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  sec-policy/apparmor-profile-deepinwine                | 1.0.0              |            | https://gitlab.com/apparmor/apparmor/wikis/home                                         | A collection of AppArmor profiles for Deepinwine6
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- sys-apps/aptly                                        | 1.5.0              |            | https://github.com/aptly-dev/aptly                                                      | A swiss army knife for Debian repository management
+ sys-apps/aptly                                        | 1.6.3              |            | https://github.com/aptly-dev/aptly                                                      | A swiss army knife for Debian repository management
    acct-group/aptly                                    | 0                  | RD         |                                                                                         | A swiss army knife for Debian repository management
    acct-user/aptly                                     | 0                  | RD         |                                                                                         | A swiss army knife for Debian repository management
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
