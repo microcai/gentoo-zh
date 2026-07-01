@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-07-01 21:46:18 CST)
+(The last generation time: 2026-07-01 21:46:53 CST)
 
 ### Packages
 
@@ -804,7 +804,7 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/naiveproxy-bin                              | 149.0.7827.114_p1  |            | https://github.com/klzgrad/naiveproxy                                                   | A proxy using Chromium's network stack to camouflage traffic
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- net-proxy/proxy-server                                | 10.0.0             |            | https://github.com/jackarain/proxy                                                      | Implementation of all proxy protocols using modern c++
+ net-proxy/proxy-server                                | 11.0.1             |            | https://github.com/jackarain/proxy                                                      | Implementation of all proxy protocols using modern c++
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  net-proxy/qvplugin-command                            | 3.0.0              |            | https://github.com/Qv2ray/QvPlugin-Command                                              | Plugin for Qv2ray to run any commands when something happens in Qv2ray
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
