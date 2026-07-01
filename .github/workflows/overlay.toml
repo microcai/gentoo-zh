@@ -198,6 +198,12 @@ use_latest_release = true
 prefix = "v"
 github_account = ["yamader", "gouwazi"]
 
+["app-i18n/fcitx-hazkey"]
+source = "github"
+github = "7ka-Hiira/hazkey"
+use_latest_release = true
+github_account = "gouwazi"
+
 ["app-i18n/fcitx-skin-material"]
 source = "github"
 github = "hrko/fcitx-skin-material"
