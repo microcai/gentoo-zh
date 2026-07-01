@@ -5,7 +5,7 @@ EAPI=8
 
 DISTUTILS_USE_PEP517=hatchling
 DISTUTILS_SINGLE_IMPL=1
-PYTHON_COMPAT=( python3_13 )
+PYTHON_COMPAT=( python3_{12..14} )
 inherit distutils-r1
 
 DESCRIPTION="OS-agnostic, system-level binary package manager and ecosystem"
