@@ -8,6 +8,10 @@ PYTHON_COMPAT=( python3_{12..14} )
 
 inherit distutils-r1 pypi
 
+PATCHES=(
+	"${FILESDIR}/${P}-fix-setuptools-warnings.patch"
+)
+
 DESCRIPTION="
 	Library for interfacing EDA tools.
 "
@@ -19,5 +23,9 @@ HOMEPAGE="
 LICENSE="BSD-2"
 SLOT="0"
 KEYWORDS="~amd64"
+
+RDEPEND="
+	>=dev-python/jinja2-3[${PYTHON_USEDEP}]
+"
 
 distutils_enable_tests pytest
