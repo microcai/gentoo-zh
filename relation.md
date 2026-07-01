@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-07-02 03:28:47 CST)
+(The last generation time: 2026-07-02 04:04:33 CST)
 
 ### Packages
 
@@ -315,7 +315,7 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-python/adafruit-board-toolkit                     | 1.1.2              |            | https://github.com/adafruit/Adafruit_Board_Toolkit/                                     | CircuitPython board identification and information
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-python/archspec                                   | 0.2.5              |            | https://github.com/archspec/archspec                                                    | A library for detecting, labeling, and reasoning about microarchitectures
+ dev-python/archspec                                   | 0.2.6              |            | https://github.com/archspec/archspec                                                    | A library for detecting, labeling, and reasoning about microarchitectures
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-python/conda                                      | 26.5.3             |            | https://docs.conda.io/                                                                  | OS-agnostic, system-level binary package manager and ecosystem
    dev-python/conda-libmamba-solver                    | 26.6.0             |  D, RD     | https://github.com/conda/conda-libmamba-solver                                          | The libmamba based solver for conda
@@ -347,7 +347,7 @@
                                                        | 0.4.2              |            |                                                                                         |
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-python/fusesoc                                    | 2.4.4              |            | https://github.com/olofk/fusesoc/                                                       | Award-winnning package manager and build abstraction tool for HDL code.
-                                                       | 2.4.5              |            |                                                                                         |
+                                                       | 2.4.6              |            |                                                                                         |
    dev-python/edalize                                  | 0.6.2              | RD         | https://github.com/olofk/edalize/                                                       | Library for interfacing EDA tools.
    dev-python/simplesat                                | 0.9.2              | RD         | https://github.com/enthought/sat-solver                                                 | Prototype for SAT-based dependency handling.
      dev-python/okonomiyaki                            | 3.0.0              | RD         | https://github.com/enthought/okonomiyaki                                                | Self-contained library to deal with metadata in egg and runtime archives.
