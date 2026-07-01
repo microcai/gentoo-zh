@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-07-01 17:34:41 CST)
+(The last generation time: 2026-07-01 18:57:16 CST)
 
 ### Packages
 
@@ -504,6 +504,13 @@
  gui-apps/crystal-dock                                 | 2.16               |            | https://github.com/dangvd/crystal-dock                                                  | Cool dock (desktop panel) for Linux desktop
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  gui-apps/tux-manager                                  | 1.0.7              |            | https://github.com/benapetr/TuxManager                                                  | A Linux Task Manager alternative built with Qt6
+-------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
+ gui-apps/waywallen                                    | 0.2.2              |            | https://github.com/waywallen/waywallen                                                  | A dynamic wallpaper solution for Linux desktops
+   dev-libs/qml-material                               | 0.1.6_p20260630    |  D, RD     | https://github.com/hypengw/QmlMaterial                                                  | A library of Qml implementing Google's Material Design
+                                                       | 9999               |            |                                                                                         |
+   dev-qt/qtgrpc                                       | 6.10.3             |  D, RD     |                                                                                         | Qt GRPC and Protobuf generator and bindings
+                                                       | 6.11.1             |            |                                                                                         |
+   media-plugins/waywallen-display                     | 0.2.7              |  D, RD     | https://github.com/waywallen/waywallen-display                                          | Desktop integration for the waywallen wallpaper daemon
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  kde-misc/plasma-applet-netspeed-widget                | 3.1                |            | https://www.kde-look.org/p/998895/                                                      | Plasma 5 widget that displays the currently used network bandwidth.
                                                        | 9999               |            |                                                                                         |
