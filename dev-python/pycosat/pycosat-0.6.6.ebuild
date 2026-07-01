@@ -4,7 +4,7 @@
 EAPI=8
 
 DISTUTILS_USE_PEP517=setuptools
-PYTHON_COMPAT=(python3_{11..13})
+PYTHON_COMPAT=( python3_{11..14} )
 inherit distutils-r1
 
 DESCRIPTION="Python bindings to picosat (a SAT solver)"
@@ -15,4 +15,5 @@ LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~arm64 ~riscv ~x86"
 
+EPYTEST_PLUGINS=()
 distutils_enable_tests pytest
