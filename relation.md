@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-07-03 00:19:37 CST)
+(The last generation time: 2026-07-03 00:30:42 CST)
 
 ### Packages
 
@@ -321,7 +321,7 @@
    dev-python/conda-libmamba-solver                    | 26.6.0             |  D, RD     | https://github.com/conda/conda-libmamba-solver                                          | The libmamba based solver for conda
      dev-util/mamba                                    | 2.5.0              | RD         | https://github.com/mamba-org/mamba                                                      | The Fast Cross-Platform Package Manager
        dev-cpp/reproc                                  | 14.2.7             |  D, RD     | https://github.com/DaanDeMeyer/reproc                                                   | A cross-platform (C99/C++11) process library
-       sys-libs/libsolv                                | 0.7.33             |  D, RD     | https://github.com/openSUSE/libsolv                                                     | Library for solving packages and reading repositories
+       sys-libs/libsolv                                | 0.7.39             |  D, RD     | https://github.com/openSUSE/libsolv                                                     | Library for solving packages and reading repositories
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-python/conda-package-handling                     | 2.5.0              |            | https://github.com/conda/conda-package-handling                                         | Create and extract conda packages of various formats
    dev-python/conda-package-streaming                  | 0.13.0             |  D, RD     | https://github.com/conda/conda-package-streaming                                        | An efficient library to read from new and old conda packages
