@@ -1493,7 +1493,7 @@ source = "github"
 github = "apernet/hysteria"
 use_latest_release = true
 prefix = "app/v"
-github_account = "oatiz"
+github_account = ["oatiz", "gouwazi"]
 
 ["net-proxy/juicity"]
 source = "github"
