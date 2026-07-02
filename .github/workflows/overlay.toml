@@ -1762,7 +1762,7 @@ to_pattern = "\\1"
 source = "github"
 github = "openSUSE/libsolv"
 use_latest_tag = true
-github_account = "OriPoin"
+github_account = ["OriPoin", "gouwazi"]
 
 ["sys-power/tlpui"]
 source = "github"
