@@ -1,6 +1,6 @@
 - Reponame: **`gentoo-zh`**
 
-(The last generation time: 2026-07-02 23:40:33 CST)
+(The last generation time: 2026-07-03 00:19:37 CST)
 
 ### Packages
 
@@ -282,7 +282,7 @@
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-cpp/date                                          | 3.0.4              |            | https://github.com/HowardHinnant/date                                                   | A date and time library based on the C++11/14/17 <chrono> header
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
- dev-cpp/nameof                                        | 0.10.4             |            | https://github.com/Neargye/nameof                                                       | Nameof operator for modern C++
+ dev-cpp/nameof                                        | 0.10.5             |            | https://github.com/Neargye/nameof                                                       | Nameof operator for modern C++
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-cpp/tgbot-cpp                                     | 1.10               |            | https://github.com/reo7sp/tgbot-cpp                                                     | C++ library for Telegram bot API
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
@@ -320,7 +320,7 @@
  dev-python/conda                                      | 26.5.3             |            | https://docs.conda.io/                                                                  | OS-agnostic, system-level binary package manager and ecosystem
    dev-python/conda-libmamba-solver                    | 26.6.0             |  D, RD     | https://github.com/conda/conda-libmamba-solver                                          | The libmamba based solver for conda
      dev-util/mamba                                    | 2.5.0              | RD         | https://github.com/mamba-org/mamba                                                      | The Fast Cross-Platform Package Manager
-       dev-cpp/reproc                                  | 14.2.5             |  D, RD     | https://github.com/DaanDeMeyer/reproc                                                   | A cross-platform (C99/C++11) process library
+       dev-cpp/reproc                                  | 14.2.7             |  D, RD     | https://github.com/DaanDeMeyer/reproc                                                   | A cross-platform (C99/C++11) process library
        sys-libs/libsolv                                | 0.7.33             |  D, RD     | https://github.com/openSUSE/libsolv                                                     | Library for solving packages and reading repositories
 -------------------------------------------------------|--------------------|------------|-----------------------------------------------------------------------------------------|--------------------
  dev-python/conda-package-handling                     | 2.5.0              |            | https://github.com/conda/conda-package-handling                                         | Create and extract conda packages of various formats
