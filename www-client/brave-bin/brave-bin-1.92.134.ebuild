@@ -3,7 +3,7 @@
 
 EAPI=8
 
-CHROMIUM_LANGS="af am ar az bg bn ca cs da de el en-GB en-US es es-419 et fa fi fil fr
+CHROMIUM_LANGS="af am ar az bg bn bs ca cs da de el en-GB en-US es es-419 et fa fi fil fr
 	gu he hi hr hu id it ja ka kk km kn ko lo lt lv mk ml mn mr ms my nb nl pl pt-BR pt-PT ro ru
 	si sk sl sq sr-Latn sr sv sw ta te th tr uk ur uz vi zh-CN zh-TW"
 
@@ -68,6 +68,7 @@ QA_DESKTOP_FILE="usr/share/applications/brave-browser.*\\.desktop"
 BRAVE_HOME="opt/brave.com/brave"
 
 pkg_setup() {
+	[[ -e /usr/src/linux ]] || return
 	chromium_suid_sandbox_check_kernel_config
 }
 
