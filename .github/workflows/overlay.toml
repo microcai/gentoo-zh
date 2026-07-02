@@ -490,7 +490,7 @@ source = "github"
 github = "Neargye/nameof"
 use_latest_release = true
 prefix = "v"
-github_account = "CHN-beta"
+github_account = ["CHN-beta", "gouwazi"]
 
 ["dev-cpp/reproc"]
 source = "github"
