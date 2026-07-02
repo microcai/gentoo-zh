@@ -40,6 +40,12 @@ DEPEND="
 BDEPEND="${DEPEND}"
 REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
 
+src_prepare() {
+	default
+	sed -i -e 's/CMAKE_MINIMUM_REQUIRED (VERSION 3\.5)/CMAKE_MINIMUM_REQUIRED (VERSION 3.10)/' CMakeLists.txt || die
+	cmake_prepare
+}
+
 src_configure(){
 	mycmakeargs=(
 		-DCMAKE_C_FLAGS_RELEASE='-DNDEBUG'
