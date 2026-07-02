@@ -497,7 +497,7 @@ source = "github"
 github = "DaanDeMeyer/reproc"
 use_latest_release = true
 prefix = "v"
-github_account = "OriPoin"
+github_account = ["OriPoin", "gouwazi"]
 
 ["dev-cpp/tgbot-cpp"]
 source = "github"
