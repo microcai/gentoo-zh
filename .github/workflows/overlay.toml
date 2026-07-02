@@ -640,7 +640,7 @@ github_account = ["f3rmata", "gouwazi"]
 ["dev-python/feeluown-bilibili"]
 source = "pypi"
 pypi = "feeluown-bilibili"
-github_account = "wgjak47"
+github_account = ["wgjak47", "gouwazi"]
 
 ["dev-python/fuo-netease"]
 source = "pypi"
